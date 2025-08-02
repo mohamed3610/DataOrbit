@@ -3528,6 +3528,7 @@
                 this.setupNavigation();
                 this.setupPlanetInteractions();
                 this.setupContactForm();
+                this.setupHiddenLayer();
                 this.setupCounterAnimations();
                 this.setupLoadingScreen();
                 this.setupScrollIndicator();
@@ -3762,6 +3763,60 @@
                         }, 3000);
                     }, 2000);
                 });
+            }
+
+            // Setup hidden layer functionality
+            setupHiddenLayer() {
+                const toggle = document.getElementById('hiddenLayerToggle');
+                const layer = document.getElementById('hiddenLayer');
+                const close = document.getElementById('hiddenLayerClose');
+
+                if (toggle && layer && close) {
+                    toggle.addEventListener('click', () => {
+                        this.showHiddenLayer();
+                    });
+
+                    close.addEventListener('click', () => {
+                        this.hideHiddenLayer();
+                    });
+
+                    // Close on escape key
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape' && layer.classList.contains('active')) {
+                            this.hideHiddenLayer();
+                        }
+                    });
+
+                    // Close on overlay click
+                    layer.addEventListener('click', (e) => {
+                        if (e.target === layer) {
+                            this.hideHiddenLayer();
+                        }
+                    });
+                }
+            }
+
+            showHiddenLayer() {
+                const toggle = document.getElementById('hiddenLayerToggle');
+                const layer = document.getElementById('hiddenLayer');
+                
+                toggle.classList.add('active');
+                layer.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Track the reveal
+                if (typeof trackEvent === 'function') {
+                    trackEvent('hidden_layer_revealed', 'engagement', 'curiosity');
+                }
+            }
+
+            hideHiddenLayer() {
+                const toggle = document.getElementById('hiddenLayerToggle');
+                const layer = document.getElementById('hiddenLayer');
+                
+                toggle.classList.remove('active');
+                layer.classList.remove('active');
+                document.body.style.overflow = '';
             }
 
             // Animated counters for stats
@@ -4108,7 +4163,72 @@
             new SEOOptimizer();
             new AccessibilityEnhancer();
             new MobileOptimizer();
+            
+            // Initialize hidden layer functionality directly
+            initializeHiddenLayer();
         });
+
+        // Hidden layer functionality
+        function initializeHiddenLayer() {
+            const toggle = document.getElementById('hiddenLayerToggle');
+            const layer = document.getElementById('hiddenLayer');
+            const close = document.getElementById('hiddenLayerClose');
+
+            if (toggle && layer && close) {
+                console.log('Hidden layer elements found, setting up listeners...');
+                
+                toggle.addEventListener('click', () => {
+                    console.log('Toggle clicked!');
+                    showHiddenLayer();
+                });
+
+                close.addEventListener('click', () => {
+                    console.log('Close clicked!');
+                    hideHiddenLayer();
+                });
+
+                // Close on escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && layer.classList.contains('active')) {
+                        hideHiddenLayer();
+                    }
+                });
+
+                // Close on overlay click
+                layer.addEventListener('click', (e) => {
+                    if (e.target === layer) {
+                        hideHiddenLayer();
+                    }
+                });
+            } else {
+                console.log('Hidden layer elements not found:', { toggle, layer, close });
+            }
+        }
+
+        function showHiddenLayer() {
+            const toggle = document.getElementById('hiddenLayerToggle');
+            const layer = document.getElementById('hiddenLayer');
+            
+            console.log('Showing hidden layer...');
+            toggle.classList.add('active');
+            layer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Track the reveal
+            if (typeof trackEvent === 'function') {
+                trackEvent('hidden_layer_revealed', 'engagement', 'curiosity');
+            }
+        }
+
+        function hideHiddenLayer() {
+            const toggle = document.getElementById('hiddenLayerToggle');
+            const layer = document.getElementById('hiddenLayer');
+            
+            console.log('Hiding hidden layer...');
+            toggle.classList.remove('active');
+            layer.classList.remove('active');
+            document.body.style.overflow = '';
+        }
 
         // Service Worker for offline functionality
         if ('serviceWorker' in navigator) {
