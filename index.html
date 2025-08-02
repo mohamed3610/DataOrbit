@@ -452,10 +452,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 50px;
             box-shadow: 0 0 60px rgba(102, 126, 234, 0.8);
             animation: hub-pulse 4s ease-in-out infinite;
             z-index: 5;
+        }
+
+        .central-hub::before {
+            content: '';
+            width: 70px;
+            height: 70px;
+            background: url('logo.png') no-repeat center;
+            background-size: contain;
+            filter: brightness(0) invert(1);
         }
 
         @keyframes hub-pulse {
@@ -948,8 +956,11 @@
         }
 
         .loading-logo {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            width: 80px;
+            height: 80px;
+            background: url('logo.png') no-repeat center;
+            background-size: contain;
+            margin: 0 auto 20px;
             animation: loadingPulse 2s ease-in-out infinite;
         }
 
@@ -1093,7 +1104,7 @@
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-animation">
-            <div class="loading-logo">🛰️</div>
+            <div class="loading-logo"></div>
             <div class="loading-text">Initializing DataOrbit Systems...</div>
             <div class="loading-bar">
                 <div class="loading-fill"></div>
@@ -1142,7 +1153,7 @@
 
         <!-- Advanced 3D Orbital System -->
         <div class="orbital-system-3d">
-            <div class="central-hub">🛰️</div>
+            <div class="central-hub"></div>
             
             <div class="orbit-container">
                 <div class="orbit orbit-1">
@@ -1420,7 +1431,9 @@
                     <a href="#" aria-label="LinkedIn">💼</a>
                     <a href="#" aria-label="Twitter">🐦</a>
                     <a href="#" aria-label="GitHub">💻</a>
-                    <a href="#" aria-label="Email">📧</a>
+                    <a href="#" aria-label="Email">
+                        <img src="logo.png" alt="Contact" style="width: 20px; height: 20px; filter: brightness(0) invert(1);">
+                    </a>
                 </div>
             </div>
             
@@ -2086,7 +2099,7 @@
 
         // Console welcome message
         console.log(`
-        🛰️ Welcome to DataOrbit LLC
+        🚀 Welcome to DataOrbit LLC
         ========================
         Building the future of technology
         Website loaded successfully!
