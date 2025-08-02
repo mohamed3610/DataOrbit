@@ -10,10 +10,16 @@
     <meta property="og:description" content="Transform your business with our embedded tech partnerships, ERP optimization, and cutting-edge innovation solutions.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dataorbitllc.com">
+    <meta property="og:image" content="https://dataorbitllc.com/logo.png">
     
+    <!-- Preload critical resources -->
+    <link rel="preload" href="logo.png" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
     
     <style>
         :root {
@@ -31,6 +37,7 @@
             --glass-border: rgba(255, 255, 255, 0.1);
         }
 
+        /* Performance Optimizations */
         * {
             margin: 0;
             padding: 0;
@@ -38,14 +45,17 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, var(--deep-space) 0%, var(--space-blue) 50%, var(--cosmic-purple) 100%);
+            background-attachment: fixed;
             color: var(--text-primary);
             overflow-x: hidden;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Advanced Starfield with Multiple Layers */
+        /* Optimized Starfield - Reduced complexity */
         .starfield {
             position: fixed;
             top: 0;
@@ -53,13 +63,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            overflow: hidden;
-        }
-
-        .star-layer {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            will-change: transform;
         }
 
         .star {
@@ -67,6 +71,7 @@
             background: white;
             border-radius: 50%;
             animation: twinkle 3s infinite;
+            will-change: opacity, transform;
         }
 
         .star-small { width: 1px; height: 1px; }
@@ -74,8 +79,8 @@
         .star-large { width: 3px; height: 3px; }
 
         @keyframes twinkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.2); }
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
         }
 
         .shooting-star {
@@ -324,24 +329,17 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
-        /* Advanced 3D Orbital System */
+        /* Optimized Orbital System */
         .orbital-system-3d {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
-            max-width: 1000px;
-            height: 800px;
+            max-width: 800px;
+            height: 600px;
             z-index: 1;
-            perspective: 1000px;
-        }
-
-        .orbit-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform-style: preserve-3d;
+            will-change: transform;
         }
 
         .orbit {
@@ -350,73 +348,48 @@
             border-radius: 50%;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) rotateX(75deg);
-            animation: orbit-rotate 20s linear infinite;
+            transform: translate(-50%, -50%);
+            will-change: transform;
         }
 
         .orbit-1 { 
             width: 300px; 
             height: 300px; 
-            animation-duration: 20s;
-            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+            animation: rotate 20s linear infinite;
         }
         .orbit-2 { 
             width: 450px; 
             height: 450px; 
-            animation-duration: 35s; 
-            animation-direction: reverse;
-            box-shadow: 0 0 20px rgba(76, 201, 196, 0.3);
+            animation: rotate 30s linear infinite reverse;
         }
         .orbit-3 { 
             width: 600px; 
             height: 600px; 
-            animation-duration: 50s;
-            box-shadow: 0 0 20px rgba(240, 147, 251, 0.3);
+            animation: rotate 40s linear infinite;
         }
 
-        @keyframes orbit-rotate {
-            from { transform: translate(-50%, -50%) rotateX(75deg) rotateZ(0deg); }
-            to { transform: translate(-50%, -50%) rotateX(75deg) rotateZ(360deg); }
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
         .planet {
             position: absolute;
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             cursor: pointer;
-            transition: all 0.4s ease;
+            transition: transform 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 35px;
-            animation: planet-float 3s ease-in-out infinite;
-            transform-style: preserve-3d;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .planet::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            border-radius: 50%;
-            background: inherit;
-            filter: blur(20px);
-            opacity: 0.5;
-            z-index: -1;
+            font-size: 30px;
+            will-change: transform;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .planet:hover {
-            transform: scale(1.3) rotateY(20deg);
-            box-shadow: 0 20px 50px rgba(255, 255, 255, 0.3);
-        }
-
-        @keyframes planet-float {
-            0%, 100% { transform: translateZ(0px) rotateY(0deg); }
-            50% { transform: translateZ(20px) rotateY(180deg); }
+            transform: scale(1.2);
         }
 
         .planet-1 {
@@ -445,30 +418,31 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 140px;
-            height: 140px;
+            width: 120px;
+            height: 120px;
             background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 60px rgba(102, 126, 234, 0.8);
+            box-shadow: 0 0 40px rgba(102, 126, 234, 0.6);
             animation: hub-pulse 4s ease-in-out infinite;
             z-index: 5;
+            will-change: transform;
         }
 
         .central-hub::before {
             content: '';
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             background: url('logo.png') no-repeat center;
             background-size: contain;
             filter: brightness(0) invert(1);
         }
 
         @keyframes hub-pulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(1) rotateY(0deg); }
-            50% { transform: translate(-50%, -50%) scale(1.1) rotateY(180deg); }
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.05); }
         }
 
         /* Planet Modal */
@@ -1117,12 +1091,8 @@
         <div class="scroll-progress" id="scrollProgress"></div>
     </div>
 
-    <!-- Advanced Starfield Background -->
-    <div class="starfield" id="starfield">
-        <div class="star-layer" id="starLayer1"></div>
-        <div class="star-layer" id="starLayer2"></div>
-        <div class="star-layer" id="starLayer3"></div>
-    </div>
+    <!-- Optimized Starfield Background -->
+    <div class="starfield" id="starfield"></div>
 
     <!-- Navigation -->
     <nav id="navbar">
@@ -1151,31 +1121,25 @@
             </div>
         </div>
 
-        <!-- Advanced 3D Orbital System -->
+        <!-- Optimized Orbital System -->
         <div class="orbital-system-3d">
             <div class="central-hub"></div>
             
-            <div class="orbit-container">
-                <div class="orbit orbit-1">
-                    <div class="planet planet-1" data-service="orbit-incubator">
-                        🚀
-                    </div>
+            <div class="orbit orbit-1">
+                <div class="planet planet-1" data-service="orbit-incubator">
+                    🚀
                 </div>
             </div>
             
-            <div class="orbit-container">
-                <div class="orbit orbit-2">
-                    <div class="planet planet-2" data-service="erp-solutions">
-                        🔧
-                    </div>
+            <div class="orbit orbit-2">
+                <div class="planet planet-2" data-service="erp-solutions">
+                    🔧
                 </div>
             </div>
             
-            <div class="orbit-container">
-                <div class="orbit orbit-3">
-                    <div class="planet planet-3" data-service="innovation">
-                        💡
-                    </div>
+            <div class="orbit orbit-3">
+                <div class="planet planet-3" data-service="innovation">
+                    💡
                 </div>
             </div>
         </div>
@@ -1185,15 +1149,15 @@
     <section class="stats-section">
         <div class="stats-grid">
             <div class="stat-item">
-                <div class="stat-number" data-target="150">0</div>
+                <div class="stat-number" data-target="25">0</div>
                 <div class="stat-label">Projects Completed</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number" data-target="50">0</div>
-                <div class="stat-label">Happy Clients</div>
+                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-label">Active Clients</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number" data-target="95">0</div>
+                <div class="stat-number" data-target="100">0</div>
                 <div class="stat-label">Success Rate %</div>
             </div>
             <div class="stat-item">
@@ -1295,29 +1259,29 @@
             
             <div class="case-studies-grid">
                 <div class="case-study-card">
-                    <div class="case-study-tag">Manufacturing</div>
+                    <div class="case-study-tag">ERP Optimization</div>
+                    <h3>3 Chefs - Restaurant ERP Transformation</h3>
+                    <p>Optimized and enhanced the ERP system for 3 Chefs restaurant operations, streamlining inventory management, order processing, and financial reporting for improved operational efficiency.</p>
+                    <div class="case-study-result">
+                        <strong>Solutions Delivered:</strong> ERP system optimization, custom module development, workflow automation, and real-time reporting dashboards for restaurant operations.
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-tag">Platform Incubation</div>
+                    <h3>Takaful America - Islamic Insurance Platform</h3>
+                    <p>Serving as embedded development partner for Takaful America, incubating and developing their comprehensive Islamic insurance platform with Sharia-compliant features and modern technology architecture.</p>
+                    <div class="case-study-result">
+                        <strong>Partnership Scope:</strong> Full-stack platform development, embedded team integration, Islamic finance compliance features, and scalable cloud architecture.
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-tag">Innovation</div>
                     <h3>Smart Factory Transformation</h3>
                     <p>Implemented IoT-enabled ERP system for real-time production monitoring and waste reduction in a mid-size manufacturing facility.</p>
                     <div class="case-study-result">
                         <strong>Results:</strong> 35% reduction in waste, 50% faster decision-making, 25% increase in overall efficiency.
-                    </div>
-                </div>
-
-                <div class="case-study-card">
-                    <div class="case-study-tag">Logistics</div>
-                    <h3>Supply Chain Optimization</h3>
-                    <p>Custom development of integrated logistics platform connecting multiple warehouses with real-time inventory tracking.</p>
-                    <div class="case-study-result">
-                        <strong>Results:</strong> 40% improvement in inventory accuracy, 60% faster order processing, $2M annual savings.
-                    </div>
-                </div>
-
-                <div class="case-study-card">
-                    <div class="case-study-tag">Healthcare</div>
-                    <h3>Patient Management System</h3>
-                    <p>Developed HIPAA-compliant patient management platform with integrated scheduling, billing, and treatment tracking.</p>
-                    <div class="case-study-result">
-                        <strong>Results:</strong> 70% reduction in administrative overhead, 45% faster patient processing, improved compliance.
                     </div>
                 </div>
             </div>
@@ -1335,7 +1299,7 @@
                 </div>
                 <div class="feature-item">
                     <h4>🏭 Cross-Industry Expertise</h4>
-                    <p>Serving manufacturing, logistics, healthcare, and services with deep domain knowledge and proven methodologies.</p>
+                    <p>Proven success in hospitality (restaurant ERP optimization), fintech (Islamic insurance platforms), manufacturing, and more with deep domain knowledge.</p>
                 </div>
                 <div class="feature-item">
                     <h4>🔧 Modular Engagements</h4>
@@ -1502,47 +1466,39 @@
                 this.setupParallaxEffects();
             }
 
-            // Create multi-layered starfield with shooting stars
+            // Optimized starfield creation - single layer, fewer stars
             createAdvancedStarfield() {
-                const layers = [
-                    { count: 100, size: 'small', speed: 0.5 },
-                    { count: 50, size: 'medium', speed: 0.3 },
-                    { count: 25, size: 'large', speed: 0.1 }
-                ];
+                const starfield = document.getElementById('starfield');
+                const starCount = window.innerWidth <= 768 ? 50 : 100; // Fewer stars on mobile
+                
+                for (let i = 0; i < starCount; i++) {
+                    const star = document.createElement('div');
+                    const size = Math.random() < 0.7 ? 'small' : (Math.random() < 0.9 ? 'medium' : 'large');
+                    star.className = `star star-${size}`;
+                    star.style.left = Math.random() * 100 + '%';
+                    star.style.top = Math.random() * 100 + '%';
+                    star.style.animationDelay = Math.random() * 3 + 's';
+                    starfield.appendChild(star);
+                }
 
-                layers.forEach((layer, index) => {
-                    const layerElement = document.getElementById(`starLayer${index + 1}`);
-                    
-                    for (let i = 0; i < layer.count; i++) {
-                        const star = document.createElement('div');
-                        star.className = `star star-${layer.size}`;
-                        star.style.left = Math.random() * 100 + '%';
-                        star.style.top = Math.random() * 100 + '%';
-                        star.style.animationDelay = Math.random() * 3 + 's';
-                        star.style.animationDuration = (2 + Math.random() * 2) + 's';
-                        layerElement.appendChild(star);
+                // Reduced shooting star frequency
+                setInterval(() => {
+                    if (Math.random() < 0.1) { // Much less frequent
+                        this.createShootingStar();
                     }
-                });
-
-                // Add shooting stars
-                this.createShootingStars();
+                }, 5000); // Less frequent interval
             }
 
-            createShootingStars() {
-                setInterval(() => {
-                    if (Math.random() < 0.3) {
-                        const shootingStar = document.createElement('div');
-                        shootingStar.className = 'shooting-star';
-                        shootingStar.style.left = Math.random() * 100 + '%';
-                        shootingStar.style.top = Math.random() * 100 + '%';
-                        shootingStar.style.animationDelay = '0s';
-                        document.getElementById('starLayer1').appendChild(shootingStar);
+            createShootingStar() {
+                const shootingStar = document.createElement('div');
+                shootingStar.className = 'shooting-star';
+                shootingStar.style.left = Math.random() * 100 + '%';
+                shootingStar.style.top = Math.random() * 100 + '%';
+                document.getElementById('starfield').appendChild(shootingStar);
 
-                        setTimeout(() => {
-                            shootingStar.remove();
-                        }, 3000);
-                    }
-                }, 2000);
+                setTimeout(() => {
+                    shootingStar.remove();
+                }, 3000);
             }
 
             // Setup scroll effects and navbar behavior
