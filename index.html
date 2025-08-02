@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataOrbit - Empowering Business Through Technology</title>
+    <title>DataOrbit LLC - Empowering Business Through Technology | ERP Solutions & Custom Development</title>
+    <meta name="description" content="DataOrbit LLC transforms businesses through embedded tech partnerships, ERP optimization, and IoT integration. Custom software development and scalable technology solutions.">
+    <meta name="keywords" content="ERP optimization, custom software development, IoT integration, tech consulting, embedded partnerships">
+    <meta property="og:title" content="DataOrbit LLC - Technology Solutions & Innovation">
+    <meta property="og:description" content="Transform your business with our embedded tech partnerships, ERP optimization, and cutting-edge innovation solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dataorbitllc.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --primary-blue: #667eea;
+            --secondary-purple: #764ba2;
+            --accent-pink: #f093fb;
+            --deep-space: #0a0a23;
+            --space-blue: #1a1a3e;
+            --cosmic-purple: #2d1b69;
+            --nebula-teal: #4ecdc4;
+            --stellar-orange: #ff6b6b;
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,13 +38,14 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #0a0a23 0%, #1a1a3e 50%, #2d1b69 100%);
-            color: white;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--deep-space) 0%, var(--space-blue) 50%, var(--cosmic-purple) 100%);
+            color: var(--text-primary);
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        /* Starfield Background */
+        /* Advanced Starfield with Multiple Layers */
         .starfield {
             position: fixed;
             top: 0;
@@ -26,6 +53,13 @@
             width: 100%;
             height: 100%;
             z-index: -1;
+            overflow: hidden;
+        }
+
+        .star-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
         }
 
         .star {
@@ -35,36 +69,74 @@
             animation: twinkle 3s infinite;
         }
 
+        .star-small { width: 1px; height: 1px; }
+        .star-medium { width: 2px; height: 2px; }
+        .star-large { width: 3px; height: 3px; }
+
         @keyframes twinkle {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
         }
 
-        /* Navigation */
+        .shooting-star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: linear-gradient(45deg, white, transparent);
+            animation: shoot 3s linear infinite;
+        }
+
+        @keyframes shoot {
+            0% { transform: translateX(-100px) translateY(-100px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(100vw) translateY(100vh); opacity: 0; }
+        }
+
+        /* Navigation with Glass Effect */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
             padding: 20px 5%;
             background: rgba(10, 10, 35, 0.9);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 15px 5%;
+            background: rgba(10, 10, 35, 0.95);
         }
 
         .logo {
             display: flex;
             align-items: center;
-            font-size: 24px;
-            font-weight: bold;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-blue);
         }
 
         .logo::before {
-            content: '🛰️';
-            margin-right: 10px;
-            font-size: 30px;
+            content: '';
+            width: 40px;
+            height: 40px;
+            background: url('logo.png') no-repeat center;
+            background-size: contain;
+            margin-right: 12px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
         .nav-links {
@@ -74,33 +146,86 @@
         }
 
         .nav-links a {
-            color: white;
+            color: var(--text-secondary);
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 12px 18px;
             border-radius: 25px;
             transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-links a:hover::before {
+            left: 100%;
         }
 
         .nav-links a:hover {
-            background: rgba(100, 150, 255, 0.3);
+            background: var(--glass-bg);
+            color: var(--text-primary);
             transform: translateY(-2px);
         }
 
         .get-started-btn {
-            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
             padding: 12px 25px;
             border-radius: 25px;
             text-decoration: none;
             color: white;
+            font-weight: 600;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .get-started-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--secondary-purple), var(--accent-pink));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .get-started-btn:hover::before {
+            opacity: 1;
         }
 
         .get-started-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
         }
 
-        /* Hero Section */
+        .get-started-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section with Advanced 3D Orbital System */
         .hero {
             height: 100vh;
             display: flex;
@@ -113,29 +238,54 @@
 
         .hero-content {
             z-index: 10;
-            max-width: 800px;
+            max-width: 900px;
+            padding: 0 20px;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(3rem, 6vw, 5rem);
             margin-bottom: 20px;
-            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple), var(--accent-pink));
+            background-size: 200% 200%;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: glow 2s ease-in-out infinite alternate;
+            animation: gradientShift 4s ease-in-out infinite;
+            position: relative;
         }
 
-        @keyframes glow {
-            from { text-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
-            to { text-shadow: 0 0 30px rgba(118, 75, 162, 0.8); }
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
-        .hero p {
-            font-size: 1.3rem;
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--accent-pink));
+            border-radius: 2px;
+            animation: expand 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes expand {
+            from { width: 100px; }
+            to { width: 200px; }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
             margin-bottom: 40px;
             line-height: 1.6;
             opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-buttons {
@@ -143,26 +293,30 @@
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 60px;
         }
 
         .btn {
             padding: 15px 30px;
             border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             transition: all 0.3s ease;
             display: inline-block;
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
             color: white;
         }
 
         .btn-secondary {
             background: transparent;
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            border: 2px solid var(--glass-border);
+            backdrop-filter: blur(10px);
         }
 
         .btn:hover {
@@ -170,15 +324,24 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
-        /* Orbital System */
-        .orbital-system {
+        /* Advanced 3D Orbital System */
+        .orbital-system-3d {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 800px;
+            width: 100%;
+            max-width: 1000px;
             height: 800px;
             z-index: 1;
+            perspective: 1000px;
+        }
+
+        .orbit-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-style: preserve-3d;
         }
 
         .orbit {
@@ -187,61 +350,94 @@
             border-radius: 50%;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) rotateX(75deg);
+            animation: orbit-rotate 20s linear infinite;
         }
 
-        .orbit-1 { width: 300px; height: 300px; animation: rotate 20s linear infinite; }
-        .orbit-2 { width: 450px; height: 450px; animation: rotate 30s linear infinite reverse; }
-        .orbit-3 { width: 600px; height: 600px; animation: rotate 40s linear infinite; }
+        .orbit-1 { 
+            width: 300px; 
+            height: 300px; 
+            animation-duration: 20s;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        }
+        .orbit-2 { 
+            width: 450px; 
+            height: 450px; 
+            animation-duration: 35s; 
+            animation-direction: reverse;
+            box-shadow: 0 0 20px rgba(76, 201, 196, 0.3);
+        }
+        .orbit-3 { 
+            width: 600px; 
+            height: 600px; 
+            animation-duration: 50s;
+            box-shadow: 0 0 20px rgba(240, 147, 251, 0.3);
+        }
 
-        @keyframes rotate {
-            from { transform: translate(-50%, -50%) rotate(0deg); }
-            to { transform: translate(-50%, -50%) rotate(360deg); }
+        @keyframes orbit-rotate {
+            from { transform: translate(-50%, -50%) rotateX(75deg) rotateZ(0deg); }
+            to { transform: translate(-50%, -50%) rotateX(75deg) rotateZ(360deg); }
         }
 
         .planet {
             position: absolute;
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
-            animation: counter-rotate 20s linear infinite reverse;
+            font-size: 35px;
+            animation: planet-float 3s ease-in-out infinite;
+            transform-style: preserve-3d;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .planet::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: inherit;
+            filter: blur(20px);
+            opacity: 0.5;
+            z-index: -1;
         }
 
         .planet:hover {
-            transform: scale(1.2);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            transform: scale(1.3) rotateY(20deg);
+            box-shadow: 0 20px 50px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes planet-float {
+            0%, 100% { transform: translateZ(0px) rotateY(0deg); }
+            50% { transform: translateZ(20px) rotateY(180deg); }
         }
 
         .planet-1 {
-            background: linear-gradient(45deg, #ff6b6b, #ffa726);
-            top: -40px;
-            left: calc(50% - 40px);
-            animation-duration: 20s;
+            background: linear-gradient(45deg, #ff6b6b, #ffa726, #ff8a80);
+            top: -45px;
+            left: calc(50% - 45px);
+            animation-delay: 0s;
         }
 
         .planet-2 {
-            background: linear-gradient(45deg, #4ecdc4, #44a08d);
-            top: calc(50% - 40px);
-            right: -40px;
-            animation-duration: 30s;
+            background: linear-gradient(45deg, #4ecdc4, #44a08d, #26d0ce);
+            top: calc(50% - 45px);
+            right: -45px;
+            animation-delay: 1s;
         }
 
         .planet-3 {
-            background: linear-gradient(45deg, #a8edea, #fed6e3);
-            bottom: -40px;
-            left: calc(50% - 40px);
-            animation-duration: 40s;
-        }
-
-        @keyframes counter-rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(-360deg); }
+            background: linear-gradient(45deg, #a8edea, #fed6e3, #d299c2);
+            bottom: -45px;
+            left: calc(50% - 45px);
+            animation-delay: 2s;
         }
 
         .central-hub {
@@ -249,41 +445,129 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
-            box-shadow: 0 0 50px rgba(102, 126, 234, 0.6);
-            animation: pulse 3s ease-in-out infinite;
+            font-size: 50px;
+            box-shadow: 0 0 60px rgba(102, 126, 234, 0.8);
+            animation: hub-pulse 4s ease-in-out infinite;
+            z-index: 5;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); }
-            50% { transform: translate(-50%, -50%) scale(1.1); }
+        @keyframes hub-pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1) rotateY(0deg); }
+            50% { transform: translate(-50%, -50%) scale(1.1) rotateY(180deg); }
         }
 
-        /* Services Section */
+        /* Planet Modal */
+        .planet-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .planet-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .planet-modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Stats Counter */
+        .stats-section {
+            padding: 80px 5%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        /* Enhanced Services Section */
         .services-section {
-            padding: 100px 5%;
+            padding: 120px 5%;
             text-align: center;
         }
 
-        .services-section h2 {
-            font-size: 3rem;
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
             margin-bottom: 20px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .services-section p {
-            font-size: 1.2rem;
-            margin-bottom: 60px;
+        .section-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 80px;
             opacity: 0.8;
             max-width: 800px;
             margin-left: auto;
@@ -292,21 +576,22 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 40px;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         .service-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 40px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            background: var(--glass-bg);
+            border-radius: 25px;
+            padding: 50px;
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            transform-style: preserve-3d;
         }
 
         .service-card::before {
@@ -318,89 +603,242 @@
             height: 200%;
             background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
             transform: rotate(45deg);
-            transition: all 0.5s ease;
+            transition: all 0.6s ease;
             opacity: 0;
         }
 
         .service-card:hover::before {
             opacity: 1;
-            animation: shine 1s ease-in-out;
-        }
-
-        @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            animation: shine 1.5s ease-in-out;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
         }
 
         .service-icon {
-            font-size: 60px;
-            margin-bottom: 20px;
+            font-size: 70px;
+            margin-bottom: 25px;
             display: block;
+            animation: icon-float 3s ease-in-out infinite;
+        }
+
+        @keyframes icon-float {
+            0%, 100% { transform: translateY(0px) rotateZ(0deg); }
+            50% { transform: translateY(-10px) rotateZ(5deg); }
         }
 
         .service-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 1.8rem;
             margin-bottom: 15px;
-            color: #667eea;
+            color: var(--primary-blue);
         }
 
         .service-card p {
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             opacity: 0.8;
         }
 
+        .service-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            opacity: 0.7;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-features li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+
         .learn-more-btn {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
             color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 12px 25px;
+            border-radius: 25px;
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-block;
+            font-weight: 600;
         }
 
         .learn-more-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
 
-        /* Features Section */
-        .features-section {
-            padding: 100px 5%;
+        /* Process Section */
+        .process-section {
+            padding: 120px 5%;
             background: rgba(0, 0, 0, 0.2);
         }
 
-        .features-grid {
+        .process-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .feature-item {
+        .process-step {
             text-align: center;
-            padding: 30px;
+            padding: 40px 20px;
+            position: relative;
         }
 
-        .feature-item h4 {
-            color: #667eea;
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .process-step h4 {
+            color: var(--primary-blue);
             margin-bottom: 15px;
             font-size: 1.3rem;
         }
 
+        /* Case Studies Section */
+        .case-studies-section {
+            padding: 120px 5%;
+        }
+
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .case-study-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .case-study-tag {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .case-study-result {
+            background: rgba(102, 126, 234, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 120px 5%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-form {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary-blue);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
         /* Footer */
         footer {
-            background: rgba(10, 10, 35, 0.9);
-            padding: 50px 5%;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(10, 10, 35, 0.95);
+            padding: 60px 5% 30px;
+            border-top: 1px solid var(--glass-border);
         }
 
         .footer-content {
@@ -409,12 +847,12 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
-            text-align: left;
         }
 
         .footer-section h3 {
-            color: #667eea;
+            color: var(--primary-blue);
             margin-bottom: 20px;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .footer-section ul {
@@ -422,148 +860,455 @@
         }
 
         .footer-section ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .footer-section ul li a {
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--text-secondary);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .footer-section ul li a:hover {
-            color: #667eea;
+            color: var(--primary-blue);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--glass-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-blue);
+            transform: translateY(-3px);
         }
 
         .footer-bottom {
             text-align: center;
             margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid var(--glass-border);
             opacity: 0.6;
         }
 
-        /* Planet Tooltip */
-        .planet-tooltip {
-            position: absolute;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 14px;
-            min-width: 200px;
-            text-align: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-            z-index: 1000;
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 9999;
         }
 
-        .planet:hover .planet-tooltip {
-            opacity: 1;
+        .scroll-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple), var(--accent-pink));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Loading Animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--deep-space), var(--space-blue));
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-animation {
+            text-align: center;
+        }
+
+        .loading-logo {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: loadingPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes loadingPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(180deg); }
+        }
+
+        .loading-text {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+        }
+
+        .loading-bar {
+            width: 300px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .loading-fill {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 2px;
+            animation: loadingFill 3s ease-out forwards;
+        }
+
+        @keyframes loadingFill {
+            to { width: 100%; }
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .orbital-system-3d {
+                width: 90%;
+                height: 600px;
+            }
+            
+            .orbit-1 { width: 250px; height: 250px; }
+            .orbit-2 { width: 350px; height: 350px; }
+            .orbit-3 { width: 450px; height: 450px; }
+            
+            .planet { width: 70px; height: 70px; font-size: 25px; }
+            .central-hub { width: 100px; height: 100px; font-size: 35px; }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; }
-            .orbital-system { width: 400px; height: 400px; }
-            .orbit-1 { width: 200px; height: 200px; }
-            .orbit-2 { width: 300px; height: 300px; }
-            .orbit-3 { width: 400px; height: 400px; }
-            .planet { width: 60px; height: 60px; font-size: 20px; }
-            .central-hub { width: 80px; height: 80px; font-size: 30px; }
             .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            
+            .hero h1 { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            
+            .orbital-system-3d {
+                width: 95%;
+                height: 400px;
+            }
+            
+            .orbit-1 { width: 200px; height: 200px; }
+            .orbit-2 { width: 280px; height: 280px; }
+            .orbit-3 { width: 360px; height: 360px; }
+            
+            .planet { width: 60px; height: 60px; font-size: 20px; }
+            .central-hub { width: 80px; height: 80px; font-size: 25px; }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card {
+                padding: 30px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 250px;
+                text-align: center;
+            }
+            
+            .orbital-system-3d {
+                height: 300px;
+            }
+            
+            .orbit-1 { width: 150px; height: 150px; }
+            .orbit-2 { width: 200px; height: 200px; }
+            .orbit-3 { width: 250px; height: 250px; }
+            
+            .planet { width: 45px; height: 45px; font-size: 16px; }
+            .central-hub { width: 60px; height: 60px; font-size: 20px; }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .shooting-star {
+                display: none;
+            }
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --text-primary: #ffffff;
+                --text-secondary: #ffffff;
+                --glass-bg: rgba(0, 0, 0, 0.8);
+                --glass-border: #ffffff;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Starfield Background -->
-    <div class="starfield" id="starfield"></div>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-animation">
+            <div class="loading-logo">🛰️</div>
+            <div class="loading-text">Initializing DataOrbit Systems...</div>
+            <div class="loading-bar">
+                <div class="loading-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Advanced Starfield Background -->
+    <div class="starfield" id="starfield">
+        <div class="star-layer" id="starLayer1"></div>
+        <div class="star-layer" id="starLayer2"></div>
+        <div class="star-layer" id="starLayer3"></div>
+    </div>
 
     <!-- Navigation -->
-    <nav>
+    <nav id="navbar">
         <div class="logo">DataOrbit</div>
         <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#orbit-incubator">Orbit Incubator</a></li>
-            <li><a href="#erp-solutions">ERP Solutions</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="#contact" class="get-started-btn">Get Started</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <a href="#contact" class="get-started-btn">
+            <span>Get Started</span>
+        </a>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="hero-content">
             <h1>DataOrbit</h1>
-            <p>Empowering businesses through innovative technology solutions. From embedded tech partnerships to ERP optimization and IoT integration - we transform how companies build and optimize technology.</p>
+            <p class="hero-subtitle">Empowering businesses through innovative technology solutions. From embedded tech partnerships to ERP optimization and IoT integration - we transform how companies build and optimize technology in the digital cosmos.</p>
             <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary">Start Your Project</a>
+                <a href="#contact" class="btn btn-primary">Start Your Project</a>
                 <a href="#services" class="btn btn-secondary">Explore Services</a>
             </div>
         </div>
 
-        <!-- Orbital System -->
-        <div class="orbital-system">
+        <!-- Advanced 3D Orbital System -->
+        <div class="orbital-system-3d">
             <div class="central-hub">🛰️</div>
             
-            <div class="orbit orbit-1">
-                <div class="planet planet-1">
-                    🚀
-                    <div class="planet-tooltip">
-                        <strong>Orbit Incubator</strong><br>
-                        Your embedded tech partner for custom development and team augmentation
+            <div class="orbit-container">
+                <div class="orbit orbit-1">
+                    <div class="planet planet-1" data-service="orbit-incubator">
+                        🚀
                     </div>
                 </div>
             </div>
             
-            <div class="orbit orbit-2">
-                <div class="planet planet-2">
-                    🔧
-                    <div class="planet-tooltip">
-                        <strong>ERP Solutions</strong><br>
-                        Transform your ERP into a real-time decision-making engine
+            <div class="orbit-container">
+                <div class="orbit orbit-2">
+                    <div class="planet planet-2" data-service="erp-solutions">
+                        🔧
                     </div>
                 </div>
             </div>
             
-            <div class="orbit orbit-3">
-                <div class="planet planet-3">
-                    💡
-                    <div class="planet-tooltip">
-                        <strong>Innovation Orbit</strong><br>
-                        Cutting-edge innovation and emerging technology solutions
+            <div class="orbit-container">
+                <div class="orbit orbit-3">
+                    <div class="planet planet-3" data-service="innovation">
+                        💡
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number" data-target="150">0</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="95">0</div>
+                <div class="stat-label">Success Rate %</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="24">0</div>
+                <div class="stat-label">7 Support</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="services" class="services-section">
-        <h2>Our Service Divisions</h2>
-        <p>DataOrbit combines cutting-edge technology expertise with innovative solutions across three specialized divisions, each designed to address specific business transformation needs.</p>
+        <h2 class="section-title">Our Service Divisions</h2>
+        <p class="section-subtitle">DataOrbit combines cutting-edge technology expertise with innovative solutions across three specialized divisions, each designed to address specific business transformation needs in the digital universe.</p>
         
         <div class="services-grid">
-            <div class="service-card">
+            <div class="service-card" id="orbit-incubator">
                 <span class="service-icon">🚀</span>
                 <h3>Orbit Incubator</h3>
                 <p>Your embedded tech partner for custom software development, team augmentation, and scalable technology solutions. We integrate seamlessly as your internal tech team.</p>
-                <a href="#orbit-incubator" class="learn-more-btn">Learn More</a>
+                <ul class="service-features">
+                    <li>Team Augmentation & Hiring</li>
+                    <li>Custom Software Development</li>
+                    <li>Technical Consulting & Architecture</li>
+                    <li>Ongoing Support & Maintenance</li>
+                    <li>Continuous Innovation & R&D</li>
+                    <li>Lean & Agile Methodologies</li>
+                </ul>
+                <a href="#contact" class="learn-more-btn">Launch Project</a>
             </div>
 
-            <div class="service-card">
+            <div class="service-card" id="erp-solutions">
                 <span class="service-icon">🔧</span>
                 <h3>ERP Optimization & Innovation</h3>
                 <p>Transform your ERP from a record-keeping tool into a real-time decision-making engine with IoT integration and custom module development.</p>
-                <a href="#erp-solutions" class="learn-more-btn">Learn More</a>
+                <ul class="service-features">
+                    <li>ERP Health Check & Audit</li>
+                    <li>Custom Module Development</li>
+                    <li>IoT Integration & Monitoring</li>
+                    <li>Smart Dashboard Creation</li>
+                    <li>Change Management Support</li>
+                    <li>ROI Optimization & Analytics</li>
+                </ul>
+                <a href="#contact" class="learn-more-btn">Optimize Now</a>
             </div>
 
-            <div class="service-card">
+            <div class="service-card" id="innovation">
                 <span class="service-icon">💡</span>
                 <h3>Innovation Orbit</h3>
                 <p>Cutting-edge innovation services and emerging technology solutions to keep your business at the forefront of digital transformation.</p>
-                <a href="#innovation" class="learn-more-btn">Coming Soon</a>
+                <ul class="service-features">
+                    <li>AI & Machine Learning Integration</li>
+                    <li>Blockchain Solutions</li>
+                    <li>Cloud Migration & Optimization</li>
+                    <li>Digital Transformation Strategy</li>
+                    <li>Emerging Tech Consulting</li>
+                    <li>Future-Ready Architecture</li>
+                </ul>
+                <a href="#contact" class="learn-more-btn">Coming Soon</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="services-section">
+            <h2 class="section-title">Our Process</h2>
+            <p class="section-subtitle">A proven methodology that ensures successful project delivery and measurable business outcomes.</p>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Discovery & Analysis</h4>
+                    <p>Deep dive into your business needs, current systems, and strategic objectives to create a comprehensive roadmap.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Strategy & Planning</h4>
+                    <p>Develop detailed project plans, architecture designs, and implementation strategies aligned with your goals.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Implementation</h4>
+                    <p>Agile development and deployment with continuous feedback loops and transparent progress tracking.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Optimization</h4>
+                    <p>Continuous monitoring, performance tuning, and iterative improvements to maximize ROI and efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="case-studies-section">
+        <div class="services-section">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-subtitle">Real results from our embedded partnerships and innovative solutions across various industries.</p>
+            
+            <div class="case-studies-grid">
+                <div class="case-study-card">
+                    <div class="case-study-tag">Manufacturing</div>
+                    <h3>Smart Factory Transformation</h3>
+                    <p>Implemented IoT-enabled ERP system for real-time production monitoring and waste reduction in a mid-size manufacturing facility.</p>
+                    <div class="case-study-result">
+                        <strong>Results:</strong> 35% reduction in waste, 50% faster decision-making, 25% increase in overall efficiency.
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-tag">Logistics</div>
+                    <h3>Supply Chain Optimization</h3>
+                    <p>Custom development of integrated logistics platform connecting multiple warehouses with real-time inventory tracking.</p>
+                    <div class="case-study-result">
+                        <strong>Results:</strong> 40% improvement in inventory accuracy, 60% faster order processing, $2M annual savings.
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-tag">Healthcare</div>
+                    <h3>Patient Management System</h3>
+                    <p>Developed HIPAA-compliant patient management platform with integrated scheduling, billing, and treatment tracking.</p>
+                    <div class="case-study-result">
+                        <strong>Results:</strong> 70% reduction in administrative overhead, 45% faster patient processing, improved compliance.
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -571,118 +1316,783 @@
     <!-- Why Choose DataOrbit Section -->
     <section class="features-section">
         <div class="services-section">
-            <h2>Why Choose DataOrbit?</h2>
+            <h2 class="section-title">Why Choose DataOrbit?</h2>
             <div class="features-grid">
                 <div class="feature-item">
                     <h4>🎯 Strategic Mindset</h4>
-                    <p>We align your technology strategy with your broader business goals, ensuring every solution drives real value.</p>
+                    <p>We align your technology strategy with your broader business goals, ensuring every solution drives real value and measurable ROI.</p>
                 </div>
                 <div class="feature-item">
                     <h4>🏭 Cross-Industry Expertise</h4>
-                    <p>Serving manufacturing, logistics, services, and more with deep domain knowledge and proven methodologies.</p>
+                    <p>Serving manufacturing, logistics, healthcare, and services with deep domain knowledge and proven methodologies.</p>
                 </div>
                 <div class="feature-item">
                     <h4>🔧 Modular Engagements</h4>
-                    <p>Flexible scopes from targeted audits to full-scale digital transformation, adapting to your specific needs.</p>
+                    <p>Flexible scopes from targeted audits to full-scale digital transformation, adapting to your specific needs and budget.</p>
                 </div>
                 <div class="feature-item">
                     <h4>🌍 Global Delivery Model</h4>
-                    <p>Offshore efficiency with onshore quality - top-tier delivery at competitive costs through our global approach.</p>
+                    <p>Offshore efficiency with onshore quality - top-tier delivery at competitive costs through our distributed team approach.</p>
                 </div>
                 <div class="feature-item">
                     <h4>🤝 Embedded Partnership</h4>
-                    <p>We integrate as your internal team, taking full ownership and responsibility for delivering measurable results.</p>
+                    <p>We integrate as your internal team, taking full ownership and responsibility for delivering measurable business results.</p>
                 </div>
                 <div class="feature-item">
                     <h4>🚀 Innovation-Driven</h4>
-                    <p>Cutting-edge solutions that keep you ahead of the curve with emerging technologies and best practices.</p>
+                    <p>Cutting-edge solutions that keep you ahead of the curve with emerging technologies and industry best practices.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="services-section">
+            <h2 class="section-title">Transform Your Technology Today</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Ready to Launch Your Project?</h3>
+                    <p>Let's discuss your technology challenges and explore how DataOrbit can accelerate your digital transformation journey. Our embedded partnership approach ensures seamless integration with your existing team and processes.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>📧 Email</h4>
+                            <p>info@dataorbitllc.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>🌐 Website</h4>
+                            <p>www.dataorbitllc.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>⏰ Response Time</h4>
+                            <p>Within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Interest</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="orbit-incubator">Orbit Incubator</option>
+                            <option value="erp-solutions">ERP Solutions</option>
+                            <option value="innovation">Innovation Orbit</option>
+                            <option value="consultation">General Consultation</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, challenges, and goals..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>DataOrbit</h3>
+                <h3>DataOrbit LLC</h3>
                 <p>Technology Solutions & Innovation</p>
-                <p>Transforming businesses through embedded partnerships, ERP optimization, and cutting-edge innovation.</p>
+                <p>Transforming businesses through embedded partnerships, ERP optimization, and cutting-edge innovation in the digital cosmos.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="GitHub">💻</a>
+                    <a href="#" aria-label="Email">📧</a>
+                </div>
             </div>
+            
             <div class="footer-section">
                 <h3>Service Divisions</h3>
                 <ul>
                     <li><a href="#orbit-incubator">Orbit Incubator</a></li>
                     <li><a href="#erp-solutions">ERP Optimization</a></li>
                     <li><a href="#innovation">Innovation Orbit</a></li>
+                    <li><a href="#process">Our Process</a></li>
                 </ul>
             </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#contact">Free Consultation</a></li>
+                    <li><a href="#services">Service Overview</a></li>
+                    <li><a href="#process">Methodology</a></li>
+                </ul>
+            </div>
+            
             <div class="footer-section">
                 <h3>Contact</h3>
                 <ul>
                     <li><a href="mailto:info@dataorbitllc.com">info@dataorbitllc.com</a></li>
                     <li><a href="https://www.dataorbitllc.com">www.dataorbitllc.com</a></li>
+                    <li>Response within 24 hours</li>
+                    <li>Global delivery capabilities</li>
                 </ul>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2025 DataOrbit LLC. Building the future of technology.</p>
+            <p>&copy; 2025 DataOrbit LLC. Building the future of technology in the digital cosmos.</p>
         </div>
     </footer>
 
-    <script>
-        // Create starfield
-        function createStarfield() {
-            const starfield = document.getElementById('starfield');
-            const numberOfStars = 200;
+    <!-- Planet Modal -->
+    <div class="planet-modal" id="planetModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div id="modalBody">
+                <!-- Content will be dynamically inserted -->
+            </div>
+        </div>
+    </div>
 
-            for (let i = 0; i < numberOfStars; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.width = star.style.height = Math.random() * 3 + 1 + 'px';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                starfield.appendChild(star);
+    <script>
+        // Enhanced JavaScript functionality
+        class DataOrbitWebsite {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.createAdvancedStarfield();
+                this.setupScrollEffects();
+                this.setupNavigation();
+                this.setupPlanetInteractions();
+                this.setupContactForm();
+                this.setupCounterAnimations();
+                this.setupLoadingScreen();
+                this.setupScrollIndicator();
+                this.setupParallaxEffects();
+            }
+
+            // Create multi-layered starfield with shooting stars
+            createAdvancedStarfield() {
+                const layers = [
+                    { count: 100, size: 'small', speed: 0.5 },
+                    { count: 50, size: 'medium', speed: 0.3 },
+                    { count: 25, size: 'large', speed: 0.1 }
+                ];
+
+                layers.forEach((layer, index) => {
+                    const layerElement = document.getElementById(`starLayer${index + 1}`);
+                    
+                    for (let i = 0; i < layer.count; i++) {
+                        const star = document.createElement('div');
+                        star.className = `star star-${layer.size}`;
+                        star.style.left = Math.random() * 100 + '%';
+                        star.style.top = Math.random() * 100 + '%';
+                        star.style.animationDelay = Math.random() * 3 + 's';
+                        star.style.animationDuration = (2 + Math.random() * 2) + 's';
+                        layerElement.appendChild(star);
+                    }
+                });
+
+                // Add shooting stars
+                this.createShootingStars();
+            }
+
+            createShootingStars() {
+                setInterval(() => {
+                    if (Math.random() < 0.3) {
+                        const shootingStar = document.createElement('div');
+                        shootingStar.className = 'shooting-star';
+                        shootingStar.style.left = Math.random() * 100 + '%';
+                        shootingStar.style.top = Math.random() * 100 + '%';
+                        shootingStar.style.animationDelay = '0s';
+                        document.getElementById('starLayer1').appendChild(shootingStar);
+
+                        setTimeout(() => {
+                            shootingStar.remove();
+                        }, 3000);
+                    }
+                }, 2000);
+            }
+
+            // Setup scroll effects and navbar behavior
+            setupScrollEffects() {
+                const navbar = document.getElementById('navbar');
+                let lastScrollTop = 0;
+
+                window.addEventListener('scroll', () => {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    // Navbar scroll behavior
+                    if (scrollTop > 100) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+
+                    // Hide/show navbar on scroll
+                    if (scrollTop > lastScrollTop && scrollTop > 200) {
+                        navbar.style.transform = 'translateY(-100%)';
+                    } else {
+                        navbar.style.transform = 'translateY(0)';
+                    }
+                    lastScrollTop = scrollTop;
+                });
+            }
+
+            // Setup smooth scrolling navigation
+            setupNavigation() {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = document.querySelector(anchor.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            }
+
+            // Enhanced planet interactions
+            setupPlanetInteractions() {
+                const planets = document.querySelectorAll('.planet');
+                const modal = document.getElementById('planetModal');
+                const modalClose = document.getElementById('modalClose');
+                const modalBody = document.getElementById('modalBody');
+
+                const planetData = {
+                    'orbit-incubator': {
+                        title: 'Orbit Incubator',
+                        description: 'Your embedded tech partner for custom development and team augmentation.',
+                        features: [
+                            'Dedicated development teams',
+                            'Full-stack development capabilities',
+                            'DevOps and cloud architecture',
+                            'Quality assurance and testing',
+                            'Project management and delivery'
+                        ]
+                    },
+                    'erp-solutions': {
+                        title: 'ERP Solutions',
+                        description: 'Transform your ERP into a real-time decision-making engine.',
+                        features: [
+                            'ERP health checks and audits',
+                            'Custom module development',
+                            'IoT integration and monitoring',
+                            'Performance optimization',
+                            'Training and change management'
+                        ]
+                    },
+                    'innovation': {
+                        title: 'Innovation Orbit',
+                        description: 'Cutting-edge solutions for the future of business.',
+                        features: [
+                            'AI and machine learning',
+                            'Blockchain integration',
+                            'Cloud-native architecture',
+                            'Digital transformation strategy',
+                            'Emerging technology consulting'
+                        ]
+                    }
+                };
+
+                planets.forEach(planet => {
+                    planet.addEventListener('click', () => {
+                        const service = planet.getAttribute('data-service');
+                        const data = planetData[service];
+                        
+                        if (data) {
+                            modalBody.innerHTML = `
+                                <h2>${data.title}</h2>
+                                <p>${data.description}</p>
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    ${data.features.map(feature => `<li>${feature}</li>`).join('')}
+                                </ul>
+                                <a href="#contact" class="learn-more-btn">Get Started</a>
+                            `;
+                            modal.classList.add('active');
+                        }
+                    });
+                });
+
+                modalClose.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                });
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                    }
+                });
+            }
+
+            // Setup contact form handling
+            setupContactForm() {
+                const form = document.getElementById('contactForm');
+                
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // Simulate form submission
+                    const submitBtn = form.querySelector('.submit-btn');
+                    const originalText = submitBtn.textContent;
+                    
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    
+                    setTimeout(() => {
+                        submitBtn.textContent = 'Message Sent! ✓';
+                        submitBtn.style.background = 'linear-gradient(45deg, #4caf50, #45a049)';
+                        
+                        setTimeout(() => {
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                            submitBtn.style.background = '';
+                            form.reset();
+                        }, 3000);
+                    }, 2000);
+                });
+            }
+
+            // Animated counters for stats
+            setupCounterAnimations() {
+                const observerOptions = {
+                    threshold: 0.7
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const counters = entry.target.querySelectorAll('.stat-number');
+                            counters.forEach(counter => {
+                                this.animateCounter(counter);
+                            });
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                const statsSection = document.querySelector('.stats-section');
+                if (statsSection) {
+                    observer.observe(statsSection);
+                }
+            }
+
+            animateCounter(element) {
+                const target = parseInt(element.getAttribute('data-target'));
+                const increment = target / 50;
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    element.textContent = Math.round(current);
+
+                    if (current >= target) {
+                        element.textContent = target;
+                        clearInterval(timer);
+                    }
+                }, 50);
+            }
+
+            // Loading screen animation
+            setupLoadingScreen() {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        document.getElementById('loadingScreen').classList.add('hidden');
+                    }, 3000);
+                });
+            }
+
+            // Scroll progress indicator
+            setupScrollIndicator() {
+                const progressBar = document.getElementById('scrollProgress');
+                
+                window.addEventListener('scroll', () => {
+                    const scrollTop = window.pageYOffset;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const scrollPercent = (scrollTop / docHeight) * 100;
+                    progressBar.style.width = scrollPercent + '%';
+                });
+            }
+
+            // Parallax effects for orbital system
+            setupParallaxEffects() {
+                window.addEventListener('scroll', () => {
+                    const scrolled = window.pageYOffset;
+                    const rate = scrolled * -0.5;
+                    
+                    const orbitalSystem = document.querySelector('.orbital-system-3d');
+                    if (orbitalSystem) {
+                        orbitalSystem.style.transform = `translate(-50%, -50%) translateY(${rate}px)`;
+                    }
+
+                    // Parallax for service cards
+                    const serviceCards = document.querySelectorAll('.service-card');
+                    serviceCards.forEach((card, index) => {
+                        const rect = card.getBoundingClientRect();
+                        const speed = 0.1 + (index * 0.05);
+                        const yPos = -(rect.top * speed);
+                        card.style.transform = `translateY(${yPos}px)`;
+                    });
+                });
             }
         }
 
-        // Planet click handlers
-        document.addEventListener('DOMContentLoaded', function() {
-            createStarfield();
+        // Enhanced intersection observer for animations
+        class AnimationObserver {
+            constructor() {
+                this.setupObserver();
+            }
 
-            // Add click handlers to planets
-            const planets = document.querySelectorAll('.planet');
-            planets.forEach((planet, index) => {
-                planet.addEventListener('click', function() {
-                    const services = ['#services', '#services', '#services'];
-                    window.location.hash = services[index];
+            setupObserver() {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-in');
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all animatable elements
+                const animatableElements = document.querySelectorAll(
+                    '.service-card, .process-step, .case-study-card, .feature-item, .stat-item'
+                );
+
+                animatableElements.forEach((el, index) => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(50px)';
+                    el.style.transition = `all 0.6s ease ${index * 0.1}s`;
+                    observer.observe(el);
                 });
-            });
 
-            // Smooth scrolling
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                // Add CSS for animate-in class
+                const style = document.createElement('style');
+                style.textContent = `
+                    .animate-in {
+                        opacity: 1 !important;
+                        transform: translateY(0) !important;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+
+        // Performance monitoring
+        class PerformanceMonitor {
+            constructor() {
+                this.monitor();
+            }
+
+            monitor() {
+                // Monitor loading performance
+                window.addEventListener('load', () => {
+                    const loadTime = performance.now();
+                    console.log(`Website loaded in ${loadTime.toFixed(2)}ms`);
+                    
+                    // Log performance metrics
+                    if ('performance' in window && 'navigation' in performance) {
+                        const perfData = performance.getEntriesByType('navigation')[0];
+                        console.log('Performance Metrics:', {
+                            DNS: perfData.domainLookupEnd - perfData.domainLookupStart,
+                            TCP: perfData.connectEnd - perfData.connectStart,
+                            Request: perfData.responseStart - perfData.requestStart,
+                            Response: perfData.responseEnd - perfData.responseStart,
+                            DOM: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart
                         });
                     }
                 });
-            });
+
+                // Monitor scroll performance
+                let isScrolling = false;
+                window.addEventListener('scroll', () => {
+                    if (!isScrolling) {
+                        requestAnimationFrame(() => {
+                            isScrolling = false;
+                        });
+                        isScrolling = true;
+                    }
+                });
+            }
+        }
+
+        // SEO and Analytics helpers
+        class SEOOptimizer {
+            constructor() {
+                this.optimizeImages();
+                this.setupStructuredData();
+            }
+
+            optimizeImages() {
+                // Lazy load images if any are added
+                const images = document.querySelectorAll('img[data-src]');
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+
+                images.forEach(img => imageObserver.observe(img));
+            }
+
+            setupStructuredData() {
+                const structuredData = {
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "DataOrbit LLC",
+                    "description": "Technology solutions and innovation company specializing in ERP optimization, custom development, and IoT integration.",
+                    "url": "https://dataorbitllc.com",
+                    "logo": "https://dataorbitllc.com/logo.png",
+                    "sameAs": [
+                        "https://linkedin.com/company/dataorbit",
+                        "https://github.com/dataorbit"
+                    ],
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "telephone": "+1-XXX-XXX-XXXX",
+                        "contactType": "customer service",
+                        "email": "info@dataorbitllc.com"
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressCountry": "US"
+                    },
+                    "foundingDate": "2024",
+                    "numberOfEmployees": "10-50",
+                    "industry": "Technology Services"
+                };
+
+                const script = document.createElement('script');
+                script.type = 'application/ld+json';
+                script.textContent = JSON.stringify(structuredData);
+                document.head.appendChild(script);
+            }
+        }
+
+        // Accessibility enhancements
+        class AccessibilityEnhancer {
+            constructor() {
+                this.setupKeyboardNavigation();
+                this.setupFocusManagement();
+                this.setupARIALabels();
+            }
+
+            setupKeyboardNavigation() {
+                // Escape key to close modal
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        const modal = document.getElementById('planetModal');
+                        if (modal.classList.contains('active')) {
+                            modal.classList.remove('active');
+                        }
+                    }
+                });
+
+                // Tab navigation for planets
+                const planets = document.querySelectorAll('.planet');
+                planets.forEach(planet => {
+                    planet.setAttribute('tabindex', '0');
+                    planet.setAttribute('role', 'button');
+                    
+                    planet.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            planet.click();
+                        }
+                    });
+                });
+            }
+
+            setupFocusManagement() {
+                // Focus management for modal
+                const modal = document.getElementById('planetModal');
+                const modalClose = document.getElementById('modalClose');
+
+                modal.addEventListener('transitionend', () => {
+                    if (modal.classList.contains('active')) {
+                        modalClose.focus();
+                    }
+                });
+            }
+
+            setupARIALabels() {
+                // Add ARIA labels to interactive elements
+                const planets = document.querySelectorAll('.planet');
+                planets.forEach((planet, index) => {
+                    const services = ['Orbit Incubator', 'ERP Solutions', 'Innovation Orbit'];
+                    planet.setAttribute('aria-label', `Learn more about ${services[index]}`);
+                });
+
+                // Form accessibility
+                const form = document.getElementById('contactForm');
+                const requiredFields = form.querySelectorAll('[required]');
+                requiredFields.forEach(field => {
+                    field.setAttribute('aria-required', 'true');
+                });
+            }
+        }
+
+        // Mobile optimization
+        class MobileOptimizer {
+            constructor() {
+                this.setupTouchHandlers();
+                this.optimizeForMobile();
+            }
+
+            setupTouchHandlers() {
+                // Touch handling for planets
+                const planets = document.querySelectorAll('.planet');
+                planets.forEach(planet => {
+                    let touchStartTime;
+                    
+                    planet.addEventListener('touchstart', (e) => {
+                        touchStartTime = Date.now();
+                    });
+
+                    planet.addEventListener('touchend', (e) => {
+                        const touchDuration = Date.now() - touchStartTime;
+                        if (touchDuration < 500) { // Short tap
+                            e.preventDefault();
+                            planet.click();
+                        }
+                    });
+                });
+            }
+
+            optimizeForMobile() {
+                // Reduce animations on mobile for better performance
+                const isMobile = window.innerWidth <= 768;
+                if (isMobile) {
+                    document.body.classList.add('mobile');
+                    
+                    // Reduce star count on mobile
+                    const starLayers = document.querySelectorAll('.star-layer');
+                    starLayers.forEach(layer => {
+                        const stars = layer.querySelectorAll('.star');
+                        stars.forEach((star, index) => {
+                            if (index % 3 !== 0) star.remove(); // Keep only every 3rd star
+                        });
+                    });
+                }
+            }
+        }
+
+        // Initialize all classes when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new DataOrbitWebsite();
+            new AnimationObserver();
+            new PerformanceMonitor();
+            new SEOOptimizer();
+            new AccessibilityEnhancer();
+            new MobileOptimizer();
         });
 
-        // Parallax effect for orbital system
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const orbitalSystem = document.querySelector('.orbital-system');
-            if (orbitalSystem) {
-                orbitalSystem.style.transform = `translate(-50%, -50%) translateY(${scrolled * 0.5}px)`;
+        // Service Worker for offline functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Analytics tracking (placeholder)
+        function trackEvent(action, category, label) {
+            // Google Analytics or other tracking service
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    event_category: category,
+                    event_label: label
+                });
+            }
+        }
+
+        // Track planet interactions
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('planet')) {
+                const service = e.target.getAttribute('data-service');
+                trackEvent('planet_click', 'engagement', service);
             }
         });
+
+        // Track form submissions
+        document.getElementById('contactForm').addEventListener('submit', () => {
+            trackEvent('form_submit', 'conversion', 'contact_form');
+        });
+
+        // Error handling and logging
+        window.addEventListener('error', (e) => {
+            console.error('JavaScript Error:', {
+                message: e.message,
+                filename: e.filename,
+                lineno: e.lineno,
+                colno: e.colno,
+                error: e.error
+            });
+            
+            // Send error to logging service if available
+            if (typeof logError === 'function') {
+                logError(e);
+            }
+        });
+
+        // Performance optimization: Preload critical resources
+        const preloadLinks = [
+            { href: 'https://fonts.googleapis.com', rel: 'preconnect' },
+            { href: 'https://fonts.gstatic.com', rel: 'preconnect', crossorigin: '' }
+        ];
+
+        preloadLinks.forEach(link => {
+            const linkElement = document.createElement('link');
+            Object.keys(link).forEach(attr => {
+                linkElement.setAttribute(attr, link[attr]);
+            });
+            document.head.appendChild(linkElement);
+        });
+
+        // Console welcome message
+        console.log(`
+        🛰️ Welcome to DataOrbit LLC
+        ========================
+        Building the future of technology
+        Website loaded successfully!
+        
+        Contact: info@dataorbitllc.com
+        `);
     </script>
 </body>
 </html>
