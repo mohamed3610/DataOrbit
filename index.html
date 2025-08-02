@@ -1,4 +1,346 @@
-<!DOCTYPE html>
+/* Cosmic Journey Process Section */
+        .cosmic-journey {
+            background: radial-gradient(circle at 50% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 70%),
+                        linear-gradient(135deg, rgba(10, 10, 35, 0.95), rgba(26, 26, 62, 0.95));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cosmic-journey::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.5), transparent);
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            animation: cosmic-beam 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes cosmic-beam {
+            from { opacity: 0.3; }
+            to { opacity: 0.8; }
+        }
+
+        .journey-path {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .journey-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            max-width: 250px;
+            position: relative;
+        }
+
+        .step-planet {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 25px;
+            animation: step-float 3s ease-in-out infinite;
+        }
+
+        .journey-step:nth-child(2n) .step-planet {
+            animation-delay: -1.5s;
+        }
+
+        @keyframes step-float {
+            0%, 100% { transform: translateY(0px) rotateY(0deg); }
+            50% { transform: translateY(-15px) rotateY(180deg); }
+        }
+
+        .step-core {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            z-index: 3;
+            box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+            animation: core-glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes core-glow {
+            from { box-shadow: 0 0 30px rgba(102, 126, 234, 0.6); }
+            to { box-shadow: 0 0 50px rgba(118, 75, 162, 0.8); }
+        }
+
+        .step-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgba(102, 126, 234, 0.4);
+            border-radius: 50%;
+            animation: step-ring-rotate 8s linear infinite;
+        }
+
+        .step-ring::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px var(--primary-blue);
+        }
+
+        @keyframes step-ring-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .step-content h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .step-content p {
+            opacity: 0.8;
+            line-height: 1.6;
+            max-width: 220px;
+        }
+
+        .cosmic-connector {
+            height: 2px;
+            flex: 1;
+            max-width: 150px;
+            background: linear-gradient(90deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.5), rgba(102, 126, 234, 0.3));
+            position: relative;
+            margin: 0 20px;
+        }
+
+        .cosmic-connector::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--accent-pink);
+            border-radius: 50%;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            animation: energy-flow 2s ease-in-out infinite;
+            box-shadow: 0 0 15px var(--accent-pink);
+        }
+
+        @keyframes energy-flow {
+            0% { left: 0; opacity: 1; }
+            100% { left: calc(100% - 10px); opacity: 0.3; }
+        }
+
+        /* Stats Section - Enhanced Cosmic Style */
+        .stats-section {
+            padding: 100px 5%;
+            background: radial-gradient(circle at 20% 80%, rgba(76, 201, 196, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.06) 0%, transparent 50%),
+                        rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            top: 15%;
+            left: 8%;
+            box-shadow: 
+                120px 60px 0 0 rgba(255, 255, 255, 0.3),
+                240px 120px 0 0 rgba(255, 255, 255, 0.2),
+                360px 40px 0 0 rgba(255, 255, 255, 0.4),
+                480px 100px 0 0 rgba(255, 255, 255, 0.3),
+                600px 80px 0 0 rgba(255, 255, 255, 0.2);
+            animation: twinkle 4s ease-in-out infinite;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .stat-item:hover::before {
+            opacity: 1;
+            animation: shine 1.5s ease-in-out;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .stat-number::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--accent-pink));
+            border-radius: 2px;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        /* Case Studies - Cosmic Enhancement */
+        .case-studies-section {
+            padding: 120px 5%;
+            background: radial-gradient(circle at 70% 30%, rgba(168, 237, 234, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 30% 70%, rgba(254, 214, 227, 0.06) 0%, transparent 50%),
+                        linear-gradient(135deg, rgba(10, 10, 35, 0.95), rgba(26, 26, 62, 0.95));
+            position: relative;
+        }
+
+        .case-study-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-study-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .case-study-card:hover::before {
+            left: 100%;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .case-study-tag {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .case-study-tag::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 22px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.6;
+        }
+
+        .case-study-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+
+        .case-study-result {
+            background: rgba(102, 126, 234, 0.15);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 25px;
+            border-left: 4px solid var(--primary-blue);
+            position: relative;
+        }
+
+        .case-study-result::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), transparent);
+            border-radius: 15px;
+        }<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -531,7 +873,331 @@
             opacity: 0.8;
         }
 
-        /* Enhanced Services Section */
+        /* Planet Sections - Each Service as a Planet */
+        .planet-section {
+            min-height: 100vh;
+            padding: 120px 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .planet-incubator {
+            background: radial-gradient(circle at 30% 70%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255, 167, 38, 0.08) 0%, transparent 50%),
+                        linear-gradient(135deg, rgba(10, 10, 35, 0.95), rgba(26, 26, 62, 0.95));
+        }
+
+        .planet-erp {
+            background: radial-gradient(circle at 20% 30%, rgba(76, 201, 196, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(68, 160, 141, 0.08) 0%, transparent 50%),
+                        linear-gradient(135deg, rgba(10, 10, 35, 0.95), rgba(26, 26, 62, 0.95));
+        }
+
+        .planet-innovation {
+            background: radial-gradient(circle at 50% 50%, rgba(168, 237, 234, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 20% 80%, rgba(254, 214, 227, 0.08) 0%, transparent 50%),
+                        linear-gradient(135deg, rgba(10, 10, 35, 0.95), rgba(26, 26, 62, 0.95));
+        }
+
+        .planet-atmosphere {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        .planet-atmosphere::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            top: 10%;
+            left: 5%;
+            box-shadow: 
+                80px 40px 0 -1px rgba(255, 255, 255, 0.4),
+                160px 80px 0 -1px rgba(255, 255, 255, 0.3),
+                240px 20px 0 -1px rgba(255, 255, 255, 0.5),
+                320px 60px 0 -1px rgba(255, 255, 255, 0.3),
+                400px 100px 0 -1px rgba(255, 255, 255, 0.4),
+                480px 30px 0 -1px rgba(255, 255, 255, 0.2),
+                560px 70px 0 -1px rgba(255, 255, 255, 0.4);
+            animation: cosmic-drift 15s linear infinite;
+        }
+
+        @keyframes cosmic-drift {
+            0% { transform: translateX(0px); }
+            100% { transform: translateX(50px); }
+        }
+
+        .planet-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 80px;
+            align-items: center;
+            min-height: 80vh;
+            position: relative;
+            z-index: 2;
+        }
+
+        .planet-erp .planet-content {
+            grid-template-columns: 400px 1fr;
+        }
+
+        .planet-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            animation: cosmic-pulse 3s ease-in-out infinite alternate;
+            position: relative;
+        }
+
+        .planet-badge::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 28px;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.7;
+        }
+
+        .planet-icon {
+            font-size: 1.3rem;
+        }
+
+        .planet-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple), var(--accent-pink));
+            background-size: 200% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 4s ease-in-out infinite;
+        }
+
+        .planet-description {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .planet-features {
+            display: grid;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .feature-orbit {
+            position: relative;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .feature-orbit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .feature-orbit:hover::before {
+            left: 100%;
+        }
+
+        .feature-orbit:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-satellite {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .satellite-icon {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            animation: satellite-orbit 4s ease-in-out infinite;
+        }
+
+        @keyframes satellite-orbit {
+            0%, 100% { transform: rotateZ(0deg); }
+            50% { transform: rotateZ(5deg); }
+        }
+
+        .satellite-info h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .satellite-info p {
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        .planet-cta {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 18px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .planet-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--secondary-purple), var(--accent-pink));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .planet-cta:hover::before {
+            opacity: 1;
+        }
+
+        .planet-cta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.4);
+        }
+
+        .planet-cta span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Planet Visual Elements */
+        .planet-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 500px;
+        }
+
+        .planet-sphere {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: planet-rotation 20s linear infinite;
+        }
+
+        .planet-sphere-1 {
+            background: linear-gradient(135deg, #ff6b6b, #ffa726, #ff8a80);
+            box-shadow: 0 0 80px rgba(255, 107, 107, 0.4);
+        }
+
+        .planet-sphere-2 {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d, #26d0ce);
+            box-shadow: 0 0 80px rgba(76, 201, 196, 0.4);
+        }
+
+        .planet-sphere-3 {
+            background: linear-gradient(135deg, #a8edea, #fed6e3, #d299c2);
+            box-shadow: 0 0 80px rgba(168, 237, 234, 0.4);
+        }
+
+        @keyframes planet-rotation {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        .planet-core {
+            font-size: 4rem;
+            z-index: 3;
+            position: relative;
+            animation: core-pulse 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes core-pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .planet-ring {
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ring-1 {
+            width: 350px;
+            height: 350px;
+            animation: ring-orbit 15s linear infinite;
+            border-color: rgba(102, 126, 234, 0.4);
+        }
+
+        .ring-2 {
+            width: 400px;
+            height: 400px;
+            animation: ring-orbit 25s linear infinite reverse;
+            border-color: rgba(118, 75, 162, 0.3);
+        }
+
+        .ring-3 {
+            width: 450px;
+            height: 450px;
+            animation: ring-orbit 35s linear infinite;
+            border-color: rgba(240, 147, 251, 0.2);
+        }
+
+        @keyframes ring-orbit {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
         .services-section {
             padding: 120px 5%;
             text-align: center;
@@ -1250,7 +1916,141 @@
             to { width: 100%; }
         }
 
-        /* Responsive Design */
+        /* Galactic Advantages Section */
+        .galactic-advantages {
+            padding: 120px 5%;
+            background: radial-gradient(circle at 40% 60%, rgba(102, 126, 234, 0.1) 0%, transparent 60%),
+                        radial-gradient(circle at 60% 40%, rgba(118, 75, 162, 0.08) 0%, transparent 60%),
+                        rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .galactic-advantages::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            background: white;
+            border-radius: 50%;
+            top: 20%;
+            left: 10%;
+            box-shadow: 
+                100px 80px 0 1px rgba(255, 255, 255, 0.4),
+                200px 40px 0 0 rgba(255, 255, 255, 0.3),
+                300px 120px 0 1px rgba(255, 255, 255, 0.5),
+                400px 60px 0 0 rgba(255, 255, 255, 0.2),
+                500px 100px 0 1px rgba(255, 255, 255, 0.4),
+                600px 20px 0 0 rgba(255, 255, 255, 0.3),
+                700px 140px 0 1px rgba(255, 255, 255, 0.2);
+            animation: constellation-twinkle 6s ease-in-out infinite;
+        }
+
+        @keyframes constellation-twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .galaxy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .advantage-constellation {
+            text-align: center;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            transition: all 0.5s ease;
+            overflow: hidden;
+        }
+
+        .advantage-constellation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .advantage-constellation:hover::before {
+            opacity: 1;
+        }
+
+        .advantage-constellation:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(102, 126, 234, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .constellation-star {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            position: relative;
+            animation: star-pulse 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes star-pulse {
+            from { 
+                box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+                transform: scale(1);
+            }
+            to { 
+                box-shadow: 0 0 50px rgba(118, 75, 162, 0.8);
+                transform: scale(1.05);
+            }
+        }
+
+        .constellation-star::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 50%;
+            animation: constellation-orbit 8s linear infinite;
+        }
+
+        @keyframes constellation-orbit {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .advantage-constellation h4 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+        }
+
+        .advantage-constellation p {
+            line-height: 1.7;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive Design for Planet Sections */
         @media (max-width: 1024px) {
             .announcement-banner {
                 grid-template-columns: 1fr;
@@ -1262,10 +2062,57 @@
                 grid-template-columns: 1fr;
             }
             
+            .planet-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+            
+            .planet-erp .planet-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .planet-visual {
+                height: 400px;
+            }
+            
+            .planet-sphere {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .journey-path {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .cosmic-connector {
+                width: 2px;
+                height: 80px;
+                max-width: none;
+                margin: 20px 0;
+                background: linear-gradient(180deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.5), rgba(102, 126, 234, 0.3));
+            }
+            
+            .cosmic-connector::before {
+                width: 10px;
+                height: 10px;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                animation: energy-flow-vertical 2s ease-in-out infinite;
+            }
+            
+            @keyframes energy-flow-vertical {
+                0% { top: 0; opacity: 1; }
+                100% { top: calc(100% - 10px); opacity: 0.3; }
+            }
+            
             .orbital-system-3d {
                 width: 90%;
                 height: 600px;
             }
+        }
             
             .orbit-1 { width: 250px; height: 250px; }
             .orbit-2 { width: 350px; height: 350px; }
@@ -1297,23 +2144,220 @@
             .orbit-3 { width: 360px; height: 360px; }
             
             .planet { width: 60px; height: 60px; font-size: 20px; }
-            .central-hub { width: 80px; height: 80px; font-size: 25px; }
+            .central-hub { width: 80px; height: 80px; }
+            .central-hub::before { width: 40px; height: 40px; }
             
-            .services-grid {
-                grid-template-columns: 1fr;
+            /* Planet Sections Mobile */
+            .planet-section {
+                padding: 80px 5%;
+                min-height: auto;
             }
             
-            .service-card {
-                padding: 30px;
+            .planet-content {
+                gap: 40px;
             }
             
+            .planet-title {
+                font-size: 2.5rem;
+            }
+            
+            .planet-description {
+                font-size: 1.1rem;
+            }
+            
+            .planet-visual {
+                height: 300px;
+            }
+            
+            .planet-sphere {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .ring-1 { width: 250px; height: 250px; }
+            .ring-2 { width: 280px; height: 280px; }
+            .ring-3 { width: 310px; height: 310px; }
+            
+            .planet-core {
+                font-size: 3rem;
+            }
+            
+            .feature-orbit {
+                padding: 20px;
+            }
+            
+            .satellite-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 2rem;
+            }
+            
+            .satellite-info h4 {
+                font-size: 1.1rem;
+            }
+            
+            .satellite-info p {
+                font-size: 0.9rem;
+            }
+            
+            .planet-cta {
+                padding: 15px 25px;
+                font-size: 1rem;
+            }
+            
+            /* Journey Path Mobile */
+            .journey-step {
+                max-width: 100%;
+            }
+            
+            .step-planet {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .step-core {
+                width: 50px;
+                height: 50px;
+                font-size: 1.4rem;
+            }
+            
+            .step-ring {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .step-content h4 {
+                font-size: 1.2rem;
+            }
+            
+            .step-content p {
+                font-size: 0.9rem;
+                max-width: 100%;
+            }
+            
+            /* Stats Mobile */
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
             }
             
-            .process-grid {
+            .stat-item {
+                padding: 30px 20px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            /* Galaxy Grid Mobile */
+            .galaxy-grid {
                 grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .advantage-constellation {
+                padding: 40px 30px;
+            }
+            
+            .constellation-star {
+                width: 80px;
+                height: 80px;
+                font-size: 3rem;
+            }
+            
+            .advantage-constellation h4 {
+                font-size: 1.3rem;
+            }
+            
+            .advantage-constellation p {
+                font-size: 1rem;
+            }
+            
+            /* Case Studies Mobile */
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-study-card {
+                padding: 40px 30px;
+            }
+            
+            .case-study-card h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 250px;
+                text-align: center;
+            }
+            
+            .orbital-system-3d {
+                height: 300px;
+            }
+            
+            .orbit-1 { width: 150px; height: 150px; }
+            .orbit-2 { width: 200px; height: 200px; }
+            .orbit-3 { width: 250px; height: 250px; }
+            
+            .planet { width: 45px; height: 45px; font-size: 16px; }
+            .central-hub { width: 60px; height: 60px; }
+            .central-hub::before { width: 30px; height: 30px; }
+            
+            /* Planet Sections Extra Small */
+            .planet-title {
+                font-size: 2rem;
+            }
+            
+            .planet-sphere {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .ring-1 { width: 180px; height: 180px; }
+            .ring-2 { width: 200px; height: 200px; }
+            .ring-3 { width: 220px; height: 220px; }
+            
+            .planet-core {
+                font-size: 2.5rem;
+            }
+            
+            .feature-satellite {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .satellite-icon {
+                margin: 0 auto;
+            }
+            
+            .step-planet {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .step-core {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+            
+            .step-ring {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .constellation-star {
+                width: 70px;
+                height: 70px;
+                font-size: 2.5rem;
             }
         }
 
@@ -1389,9 +2433,10 @@
         <div class="logo">DataOrbit</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#orbit-incubator">Orbit Incubator</a></li>
+            <li><a href="#erp-solutions">ERP Solutions</a></li>
+            <li><a href="#innovation">Innovation</a></li>
             <li><a href="#process">Process</a></li>
-            <li><a href="#case-studies">Case Studies</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
@@ -1492,85 +2537,274 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section - Planet Orbit Incubator -->
     <section id="services" class="services-section">
-        <h2 class="section-title">Our Service Divisions</h2>
-        <p class="section-subtitle">DataOrbit combines cutting-edge technology expertise with innovative solutions across three specialized divisions, each designed to address specific business transformation needs in the digital universe.</p>
-        
-        <div class="services-grid">
-            <div class="service-card" id="orbit-incubator">
-                <span class="service-icon">🚀</span>
-                <h3>Orbit Incubator</h3>
-                <p>Your embedded tech partner for custom software development, team augmentation, and scalable technology solutions. We integrate seamlessly as your internal tech team.</p>
-                <ul class="service-features">
-                    <li>Team Augmentation & Hiring</li>
-                    <li>Custom Software Development</li>
-                    <li>Technical Consulting & Architecture</li>
-                    <li>Ongoing Support & Maintenance</li>
-                    <li>Continuous Innovation & R&D</li>
-                    <li>Lean & Agile Methodologies</li>
-                </ul>
-                <a href="#contact" class="learn-more-btn">Launch Project</a>
-            </div>
+        <h2 class="section-title">Our Service Planets</h2>
+        <p class="section-subtitle">Explore the DataOrbit universe where each service division operates as its own specialized planet, delivering cutting-edge solutions across the digital cosmos.</p>
+    </section>
 
-            <div class="service-card" id="erp-solutions">
-                <span class="service-icon">🔧</span>
-                <h3>ERP Optimization & Innovation</h3>
-                <p>Transform your ERP from a record-keeping tool into a real-time decision-making engine with IoT integration and custom module development.</p>
-                <ul class="service-features">
-                    <li>ERP Health Check & Audit</li>
-                    <li>Custom Module Development</li>
-                    <li>IoT Integration & Monitoring</li>
-                    <li>Smart Dashboard Creation</li>
-                    <li>Change Management Support</li>
-                    <li>ROI Optimization & Analytics</li>
-                </ul>
-                <a href="#contact" class="learn-more-btn">Optimize Now</a>
-            </div>
-
-            <div class="service-card" id="innovation">
-                <span class="service-icon">💡</span>
-                <h3>Innovation Orbit</h3>
-                <p>Cutting-edge innovation services and emerging technology solutions to keep your business at the forefront of digital transformation.</p>
-                <ul class="service-features">
-                    <li>AI & Machine Learning Integration</li>
-                    <li>Blockchain Solutions</li>
-                    <li>Cloud Migration & Optimization</li>
-                    <li>Digital Transformation Strategy</li>
-                    <li>Emerging Tech Consulting</li>
-                    <li>Future-Ready Architecture</li>
-                </ul>
-                <a href="#contact" class="learn-more-btn">Coming Soon</a>
+    <!-- Planet 1: Orbit Incubator -->
+    <section id="orbit-incubator" class="planet-section planet-incubator">
+        <div class="planet-atmosphere">
+            <div class="planet-content">
+                <div class="planet-info">
+                    <div class="planet-badge">
+                        <span class="planet-icon">🚀</span>
+                        Planet Incubator
+                    </div>
+                    <h2 class="planet-title">Orbit Incubator</h2>
+                    <p class="planet-description">Your embedded tech partner for custom software development, team augmentation, and scalable technology solutions. We integrate seamlessly as your internal tech team in this dynamic development ecosystem.</p>
+                    
+                    <div class="planet-features">
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">👥</span>
+                                <div class="satellite-info">
+                                    <h4>Team Augmentation & Hiring</h4>
+                                    <p>Dedicated development teams that integrate with your workflow</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">💻</span>
+                                <div class="satellite-info">
+                                    <h4>Custom Software Development</h4>
+                                    <p>Full-stack development from architecture to deployment</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">🔧</span>
+                                <div class="satellite-info">
+                                    <h4>Technical Consulting & Architecture</h4>
+                                    <p>Expert guidance on scalability and product strategy</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">🔄</span>
+                                <div class="satellite-info">
+                                    <h4>Ongoing Support & Innovation</h4>
+                                    <p>Proactive maintenance and continuous R&D</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="planet-cta">Launch Your Project</a>
+                </div>
+                
+                <div class="planet-visual">
+                    <div class="planet-sphere planet-sphere-1">
+                        <div class="planet-core">🚀</div>
+                        <div class="planet-ring ring-1"></div>
+                        <div class="planet-ring ring-2"></div>
+                        <div class="planet-ring ring-3"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section id="process" class="process-section">
+    <!-- Planet 2: ERP Solutions -->
+    <section id="erp-solutions" class="planet-section planet-erp">
+        <div class="planet-atmosphere">
+            <div class="planet-content">
+                <div class="planet-visual">
+                    <div class="planet-sphere planet-sphere-2">
+                        <div class="planet-core">🔧</div>
+                        <div class="planet-ring ring-1"></div>
+                        <div class="planet-ring ring-2"></div>
+                        <div class="planet-ring ring-3"></div>
+                    </div>
+                </div>
+                
+                <div class="planet-info">
+                    <div class="planet-badge">
+                        <span class="planet-icon">🔧</span>
+                        Planet ERP
+                    </div>
+                    <h2 class="planet-title">ERP Optimization & Innovation</h2>
+                    <p class="planet-description">Transform your ERP from a record-keeping tool into a real-time decision-making engine. This planet specializes in IoT integration and custom module development for manufacturing excellence.</p>
+                    
+                    <div class="planet-features">
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">🔍</span>
+                                <div class="satellite-info">
+                                    <h4>ERP Health Check & Audit</h4>
+                                    <p>Comprehensive evaluation and optimization roadmap</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">🏭</span>
+                                <div class="satellite-info">
+                                    <h4>Custom Manufacturing Modules</h4>
+                                    <p>Tailored solutions for production and quality control</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">📡</span>
+                                <div class="satellite-info">
+                                    <h4>IoT Integration & Monitoring</h4>
+                                    <p>Real-time production and waste monitoring systems</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">📊</span>
+                                <div class="satellite-info">
+                                    <h4>Smart Dashboards & Analytics</h4>
+                                    <p>Role-specific reporting and business intelligence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="planet-cta">Optimize Your Systems</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planet 3: Innovation Orbit -->
+    <section id="innovation" class="planet-section planet-innovation">
+        <div class="planet-atmosphere">
+            <div class="planet-content">
+                <div class="planet-info">
+                    <div class="planet-badge">
+                        <span class="planet-icon">💡</span>
+                        Planet Innovation
+                    </div>
+                    <h2 class="planet-title">Innovation Orbit</h2>
+                    <p class="planet-description">Cutting-edge innovation services and emerging technology solutions. This advanced planet keeps your business at the forefront of digital transformation with AI, blockchain, and next-generation technologies.</p>
+                    
+                    <div class="planet-features">
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">🤖</span>
+                                <div class="satellite-info">
+                                    <h4>AI & Machine Learning</h4>
+                                    <p>Intelligent automation and predictive analytics</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">🔗</span>
+                                <div class="satellite-info">
+                                    <h4>Blockchain Integration</h4>
+                                    <p>Secure, decentralized solutions for modern business</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">☁️</span>
+                                <div class="satellite-info">
+                                    <h4>Cloud-Native Architecture</h4>
+                                    <p>Scalable, resilient infrastructure for the future</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-orbit">
+                            <div class="feature-satellite">
+                                <span class="satellite-icon">🚀</span>
+                                <div class="satellite-info">
+                                    <h4>Digital Transformation Strategy</h4>
+                                    <p>Future-ready roadmaps and emerging tech consulting</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="planet-cta">Explore the Future</a>
+                </div>
+                
+                <div class="planet-visual">
+                    <div class="planet-sphere planet-sphere-3">
+                        <div class="planet-core">💡</div>
+                        <div class="planet-ring ring-1"></div>
+                        <div class="planet-ring ring-2"></div>
+                        <div class="planet-ring ring-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section - Cosmic Journey -->
+    <section id="process" class="process-section cosmic-journey">
         <div class="services-section">
-            <h2 class="section-title">Our Process</h2>
-            <p class="section-subtitle">A proven methodology that ensures successful project delivery and measurable business outcomes.</p>
+            <h2 class="section-title">Our Cosmic Journey</h2>
+            <p class="section-subtitle">Navigate through our proven methodology that ensures successful project delivery across all planets in the DataOrbit universe.</p>
             
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h4>Discovery & Analysis</h4>
-                    <p>Deep dive into your business needs, current systems, and strategic objectives to create a comprehensive roadmap.</p>
+            <div class="journey-path">
+                <div class="journey-step" data-step="1">
+                    <div class="step-planet">
+                        <div class="step-core">1</div>
+                        <div class="step-ring"></div>
+                    </div>
+                    <div class="step-content">
+                        <h4>Discovery & Analysis</h4>
+                        <p>Deep space exploration of your business needs, current systems, and strategic objectives to create a comprehensive navigation chart.</p>
+                    </div>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h4>Strategy & Planning</h4>
-                    <p>Develop detailed project plans, architecture designs, and implementation strategies aligned with your goals.</p>
+                
+                <div class="cosmic-connector"></div>
+                
+                <div class="journey-step" data-step="2">
+                    <div class="step-planet">
+                        <div class="step-core">2</div>
+                        <div class="step-ring"></div>
+                    </div>
+                    <div class="step-content">
+                        <h4>Strategy & Planning</h4>
+                        <p>Orbital mechanics planning with detailed project trajectories, architecture designs, and implementation strategies aligned with your mission goals.</p>
+                    </div>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h4>Implementation</h4>
-                    <p>Agile development and deployment with continuous feedback loops and transparent progress tracking.</p>
+                
+                <div class="cosmic-connector"></div>
+                
+                <div class="journey-step" data-step="3">
+                    <div class="step-planet">
+                        <div class="step-core">3</div>
+                        <div class="step-ring"></div>
+                    </div>
+                    <div class="step-content">
+                        <h4>Launch & Implementation</h4>
+                        <p>Agile development and deployment with continuous feedback loops and transparent mission control progress tracking.</p>
+                    </div>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h4>Optimization</h4>
-                    <p>Continuous monitoring, performance tuning, and iterative improvements to maximize ROI and efficiency.</p>
+                
+                <div class="cosmic-connector"></div>
+                
+                <div class="journey-step" data-step="4">
+                    <div class="step-planet">
+                        <div class="step-core">4</div>
+                        <div class="step-ring"></div>
+                    </div>
+                    <div class="step-content">
+                        <h4>Optimization & Evolution</h4>
+                        <p>Continuous monitoring, performance tuning, and iterative improvements to maximize ROI and maintain optimal orbital efficiency.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1613,34 +2847,47 @@
         </div>
     </section>
 
-    <!-- Why Choose DataOrbit Section -->
-    <section class="features-section">
+    <!-- Why Choose DataOrbit - Galactic Advantages -->
+    <section class="features-section galactic-advantages">
         <div class="services-section">
             <h2 class="section-title">Why Choose DataOrbit?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <h4>🎯 Strategic Mindset</h4>
-                    <p>We align your technology strategy with your broader business goals, ensuring every solution drives real value and measurable ROI.</p>
+            <p class="section-subtitle">Discover the advantages of partnering with our cosmic technology ecosystem across the digital universe.</p>
+            
+            <div class="galaxy-grid">
+                <div class="advantage-constellation">
+                    <div class="constellation-star">🎯</div>
+                    <h4>Strategic Mindset</h4>
+                    <p>We align your technology strategy with your broader business goals, ensuring every solution drives real value and measurable ROI across the cosmos.</p>
                 </div>
-                <div class="feature-item">
-                    <h4>🏭 Cross-Industry Expertise</h4>
+                
+                <div class="advantage-constellation">
+                    <div class="constellation-star">🏭</div>
+                    <h4>Cross-Industry Expertise</h4>
                     <p>Proven success in food manufacturing (frozen food production ERP), fintech (Islamic insurance platforms), and manufacturing with deep domain knowledge.</p>
                 </div>
-                <div class="feature-item">
-                    <h4>🔧 Modular Engagements</h4>
-                    <p>Flexible scopes from targeted audits to full-scale digital transformation, adapting to your specific needs and budget.</p>
+                
+                <div class="advantage-constellation">
+                    <div class="constellation-star">🔧</div>
+                    <h4>Modular Engagements</h4>
+                    <p>Flexible orbital missions from targeted system audits to full-scale digital transformation, adapting to your specific needs and trajectory.</p>
                 </div>
-                <div class="feature-item">
-                    <h4>🌍 Global Delivery Model</h4>
-                    <p>Offshore efficiency with onshore quality - top-tier delivery at competitive costs through our distributed team approach.</p>
+                
+                <div class="advantage-constellation">
+                    <div class="constellation-star">🌍</div>
+                    <h4>Global Delivery Model</h4>
+                    <p>Intergalactic efficiency with stellar quality - top-tier delivery at competitive costs through our distributed cosmic network.</p>
                 </div>
-                <div class="feature-item">
-                    <h4>🤝 Embedded Partnership</h4>
-                    <p>We integrate as your internal team, taking full ownership and responsibility for delivering measurable business results.</p>
+                
+                <div class="advantage-constellation">
+                    <div class="constellation-star">🤝</div>
+                    <h4>Embedded Partnership</h4>
+                    <p>We integrate as your internal navigation system, taking full ownership and responsibility for delivering measurable stellar results.</p>
                 </div>
-                <div class="feature-item">
-                    <h4>🚀 Innovation-Driven</h4>
-                    <p>Cutting-edge solutions that keep you ahead of the curve with emerging technologies and industry best practices.</p>
+                
+                <div class="advantage-constellation">
+                    <div class="constellation-star">🚀</div>
+                    <h4>Innovation-Driven</h4>
+                    <p>Cutting-edge solutions that keep you ahead of the cosmic curve with emerging technologies and best practices from across the galaxy.</p>
                 </div>
             </div>
         </div>
@@ -1761,16 +3008,7 @@
             <p>&copy; 2025 DataOrbit LLC. Building the future of technology in the digital cosmos.</p>
         </div>
     </footer>
-
-    <!-- Planet Modal -->
-    <div class="planet-modal" id="planetModal">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <div id="modalBody">
-                <!-- Content will be dynamically inserted -->
-            </div>
-        </div>
-    </div>
+</body>
 
     <script>
         // Enhanced JavaScript functionality
@@ -1867,76 +3105,75 @@
                 });
             }
 
-            // Enhanced planet interactions
+            // Enhanced planet interactions - scroll to planet sections
             setupPlanetInteractions() {
                 const planets = document.querySelectorAll('.planet');
-                const modal = document.getElementById('planetModal');
-                const modalClose = document.getElementById('modalClose');
-                const modalBody = document.getElementById('modalBody');
-
-                const planetData = {
-                    'orbit-incubator': {
-                        title: 'Orbit Incubator',
-                        description: 'Your embedded tech partner for custom development and team augmentation.',
-                        features: [
-                            'Dedicated development teams',
-                            'Full-stack development capabilities',
-                            'DevOps and cloud architecture',
-                            'Quality assurance and testing',
-                            'Project management and delivery'
-                        ]
-                    },
-                    'erp-solutions': {
-                        title: 'ERP Solutions',
-                        description: 'Transform your ERP into a real-time decision-making engine.',
-                        features: [
-                            'ERP health checks and audits',
-                            'Custom module development',
-                            'IoT integration and monitoring',
-                            'Performance optimization',
-                            'Training and change management'
-                        ]
-                    },
-                    'innovation': {
-                        title: 'Innovation Orbit',
-                        description: 'Cutting-edge solutions for the future of business.',
-                        features: [
-                            'AI and machine learning',
-                            'Blockchain integration',
-                            'Cloud-native architecture',
-                            'Digital transformation strategy',
-                            'Emerging technology consulting'
-                        ]
-                    }
-                };
-
+                
                 planets.forEach(planet => {
                     planet.addEventListener('click', () => {
                         const service = planet.getAttribute('data-service');
-                        const data = planetData[service];
+                        const targetSection = document.getElementById(service);
                         
-                        if (data) {
-                            modalBody.innerHTML = `
-                                <h2>${data.title}</h2>
-                                <p>${data.description}</p>
-                                <h3>Key Features:</h3>
-                                <ul>
-                                    ${data.features.map(feature => `<li>${feature}</li>`).join('')}
-                                </ul>
-                                <a href="#contact" class="learn-more-btn">Get Started</a>
-                            `;
-                            modal.classList.add('active');
+                        if (targetSection) {
+                            targetSection.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
                         }
+                    });
+
+                    // Enhanced hover effects
+                    planet.addEventListener('mouseenter', () => {
+                        planet.style.transform = 'scale(1.2)';
+                        planet.style.boxShadow = '0 20px 50px rgba(255, 255, 255, 0.3)';
+                    });
+
+                    planet.addEventListener('mouseleave', () => {
+                        planet.style.transform = 'scale(1)';
+                        planet.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
                     });
                 });
 
-                modalClose.addEventListener('click', () => {
-                    modal.classList.remove('active');
-                });
+                // Add cosmic trail effect when scrolling between planets
+                this.setupCosmicTrail();
+            }
 
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        modal.classList.remove('active');
+            setupCosmicTrail() {
+                let activeSection = '';
+                const sections = ['orbit-incubator', 'erp-solutions', 'innovation'];
+                
+                const observerOptions = {
+                    threshold: 0.3,
+                    rootMargin: '-100px 0px -100px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const sectionId = entry.target.id;
+                            if (sections.includes(sectionId)) {
+                                this.updateActiveOrbit(sectionId);
+                            }
+                        }
+                    });
+                }, observerOptions);
+
+                sections.forEach(sectionId => {
+                    const section = document.getElementById(sectionId);
+                    if (section) observer.observe(section);
+                });
+            }
+
+            updateActiveOrbit(activeSection) {
+                const planets = document.querySelectorAll('.planet');
+                planets.forEach(planet => {
+                    const service = planet.getAttribute('data-service');
+                    if (service === activeSection) {
+                        planet.style.boxShadow = '0 0 50px rgba(102, 126, 234, 0.8)';
+                        planet.style.transform = 'scale(1.1)';
+                    } else {
+                        planet.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
+                        planet.style.transform = 'scale(1)';
                     }
                 });
             }
@@ -2382,12 +3619,15 @@
 
         // Console welcome message
         console.log(`
-        🚀 Welcome to DataOrbit LLC
-        ========================
-        Building the future of technology
-        Website loaded successfully!
+        🌌 Welcome to the DataOrbit Universe
+        ===================================
+        Explore our cosmic ecosystem of technology solutions
+        🚀 Orbit Incubator - Development Planet
+        🔧 ERP Solutions - Manufacturing Planet  
+        💡 Innovation Orbit - Future Technology Planet
         
         Contact: info@dataorbitllc.com
+        Navigate the cosmos at: dataorbitllc.com
         `);
     </script>
 </body>
