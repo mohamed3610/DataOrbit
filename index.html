@@ -887,7 +887,144 @@
             opacity: 0.6;
         }
 
-        /* Scroll Indicator */
+        /* Partnership Announcement Section */
+        .announcement-section {
+            padding: 80px 5%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .announcement-banner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 50px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .announcement-badge {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
+            to { box-shadow: 0 0 30px rgba(118, 75, 162, 0.8); }
+        }
+
+        .announcement-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.3;
+        }
+
+        .announcement-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .partnership-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .feature-highlight {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 1.2rem;
+        }
+
+        .announcement-cta {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .announcement-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .partnership-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .partnership-symbol {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .client-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chef-icon {
+            font-size: 3rem;
+            background: linear-gradient(45deg, #ff6b6b, #ffa726);
+            border-radius: 50%;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .company-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        /* Stats Section */
         .scroll-indicator {
             position: fixed;
             top: 0;
@@ -972,6 +1109,16 @@
 
         /* Responsive Design */
         @media (max-width: 1024px) {
+            .announcement-banner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px;
+            }
+            
+            .partnership-features {
+                grid-template-columns: 1fr;
+            }
+            
             .orbital-system-3d {
                 width: 90%;
                 height: 600px;
@@ -1146,6 +1293,46 @@
     </section>
 
     <!-- Stats Section -->
+    <section class="announcement-section">
+        <div class="services-section">
+            <div class="announcement-banner">
+                <div class="announcement-content">
+                    <div class="announcement-badge">🎉 Latest Partnership</div>
+                    <h2>Proud to Announce Our Digital Transformation Partnership with 3 Chefs!</h2>
+                    <p>DataOrbit is excited to partner with 3 Chefs, a leading frozen food manufacturer, to optimize their production ERP systems and streamline operations for fried chicken, burgers, and ready-to-eat products.</p>
+                    <div class="partnership-features">
+                        <div class="feature-highlight">
+                            <span class="feature-icon">🏭</span>
+                            <span>Production ERP Optimization</span>
+                        </div>
+                        <div class="feature-highlight">
+                            <span class="feature-icon">📊</span>
+                            <span>Real-time Manufacturing Dashboards</span>
+                        </div>
+                        <div class="feature-highlight">
+                            <span class="feature-icon">🔗</span>
+                            <span>Supply Chain Integration</span>
+                        </div>
+                        <div class="feature-highlight">
+                            <span class="feature-icon">✅</span>
+                            <span>Quality Control Systems</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="announcement-cta">Learn About Our ERP Solutions</a>
+                </div>
+                <div class="announcement-visual">
+                    <div class="partnership-logo">
+                        <img src="logo.png" alt="DataOrbit Logo" class="logo-img">
+                        <span class="partnership-symbol">×</span>
+                        <div class="client-logo">
+                            <span class="chef-icon">👨‍🍳</span>
+                            <span class="company-name">3 Chefs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="stats-section">
         <div class="stats-grid">
             <div class="stat-item">
@@ -1260,10 +1447,10 @@
             <div class="case-studies-grid">
                 <div class="case-study-card">
                     <div class="case-study-tag">ERP Optimization</div>
-                    <h3>3 Chefs - Restaurant ERP Transformation</h3>
-                    <p>Optimized and enhanced the ERP system for 3 Chefs restaurant operations, streamlining inventory management, order processing, and financial reporting for improved operational efficiency.</p>
+                    <h3>3 Chefs - Frozen Food Production ERP Transformation</h3>
+                    <p>Digital transformation partnership with 3 Chefs, a leading frozen food manufacturer specializing in fried chicken, burgers, and ready-to-eat products. Optimized their ERP system for large-scale food production operations.</p>
                     <div class="case-study-result">
-                        <strong>Solutions Delivered:</strong> ERP system optimization, custom module development, workflow automation, and real-time reporting dashboards for restaurant operations.
+                        <strong>Solutions Delivered:</strong> Production ERP optimization, inventory management systems, supply chain integration, quality control modules, and real-time production monitoring dashboards.
                     </div>
                 </div>
 
@@ -1278,10 +1465,10 @@
 
                 <div class="case-study-card">
                     <div class="case-study-tag">Innovation</div>
-                    <h3>Smart Factory Transformation</h3>
-                    <p>Implemented IoT-enabled ERP system for real-time production monitoring and waste reduction in a mid-size manufacturing facility.</p>
+                    <h3>Smart Manufacturing Solutions</h3>
+                    <p>Implementing IoT-enabled production monitoring and waste reduction systems for food manufacturing facilities with real-time quality control.</p>
                     <div class="case-study-result">
-                        <strong>Results:</strong> 35% reduction in waste, 50% faster decision-making, 25% increase in overall efficiency.
+                        <strong>Results:</strong> 35% reduction in production waste, 50% faster quality control processes, 25% increase in operational efficiency.
                     </div>
                 </div>
             </div>
@@ -1299,7 +1486,7 @@
                 </div>
                 <div class="feature-item">
                     <h4>🏭 Cross-Industry Expertise</h4>
-                    <p>Proven success in hospitality (restaurant ERP optimization), fintech (Islamic insurance platforms), manufacturing, and more with deep domain knowledge.</p>
+                    <p>Proven success in food manufacturing (frozen food production ERP), fintech (Islamic insurance platforms), and manufacturing with deep domain knowledge.</p>
                 </div>
                 <div class="feature-item">
                     <h4>🔧 Modular Engagements</h4>
@@ -1705,25 +1892,27 @@
                 });
             }
 
-            // Parallax effects for orbital system
+            // Optimized parallax effects
             setupParallaxEffects() {
-                window.addEventListener('scroll', () => {
+                let ticking = false;
+                
+                function updateParallax() {
                     const scrolled = window.pageYOffset;
-                    const rate = scrolled * -0.5;
+                    const rate = scrolled * -0.3; // Reduced parallax intensity
                     
                     const orbitalSystem = document.querySelector('.orbital-system-3d');
                     if (orbitalSystem) {
                         orbitalSystem.style.transform = `translate(-50%, -50%) translateY(${rate}px)`;
                     }
+                    
+                    ticking = false;
+                }
 
-                    // Parallax for service cards
-                    const serviceCards = document.querySelectorAll('.service-card');
-                    serviceCards.forEach((card, index) => {
-                        const rect = card.getBoundingClientRect();
-                        const speed = 0.1 + (index * 0.05);
-                        const yPos = -(rect.top * speed);
-                        card.style.transform = `translateY(${yPos}px)`;
-                    });
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        requestAnimationFrame(updateParallax);
+                        ticking = true;
+                    }
                 });
             }
         }
@@ -1931,7 +2120,7 @@
             }
         }
 
-        // Mobile optimization
+        // Optimized mobile performance
         class MobileOptimizer {
             constructor() {
                 this.setupTouchHandlers();
@@ -1939,39 +2128,39 @@
             }
 
             setupTouchHandlers() {
-                // Touch handling for planets
                 const planets = document.querySelectorAll('.planet');
                 planets.forEach(planet => {
-                    let touchStartTime;
-                    
-                    planet.addEventListener('touchstart', (e) => {
-                        touchStartTime = Date.now();
-                    });
-
-                    planet.addEventListener('touchend', (e) => {
-                        const touchDuration = Date.now() - touchStartTime;
-                        if (touchDuration < 500) { // Short tap
-                            e.preventDefault();
-                            planet.click();
-                        }
-                    });
+                    planet.addEventListener('touchstart', this.handleTouchStart, { passive: true });
+                    planet.addEventListener('touchend', this.handleTouchEnd, { passive: true });
                 });
             }
 
+            handleTouchStart(e) {
+                this.touchStartTime = Date.now();
+            }
+
+            handleTouchEnd(e) {
+                const touchDuration = Date.now() - this.touchStartTime;
+                if (touchDuration < 300) {
+                    e.preventDefault();
+                    this.click();
+                }
+            }
+
             optimizeForMobile() {
-                // Reduce animations on mobile for better performance
-                const isMobile = window.innerWidth <= 768;
-                if (isMobile) {
+                if (window.innerWidth <= 768) {
                     document.body.classList.add('mobile');
                     
-                    // Reduce star count on mobile
-                    const starLayers = document.querySelectorAll('.star-layer');
-                    starLayers.forEach(layer => {
-                        const stars = layer.querySelectorAll('.star');
-                        stars.forEach((star, index) => {
-                            if (index % 3 !== 0) star.remove(); // Keep only every 3rd star
-                        });
-                    });
+                    // Disable complex animations on mobile
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        @media (max-width: 768px) {
+                            .planet { animation: none !important; }
+                            .central-hub { animation: none !important; }
+                            .shooting-star { display: none !important; }
+                        }
+                    `;
+                    document.head.appendChild(style);
                 }
             }
         }
