@@ -136,12 +136,12 @@
             background-size: contain;
             margin-right: 12px;
             display: inline-block;
-            animation: float 3s ease-in-out infinite;
+            animation: spin 3s linear infinite;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .nav-links {
@@ -228,6 +228,76 @@
             color: white;
             font-size: 24px;
             cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: rgba(10, 10, 35, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 9999;
+            transition: left 0.3s ease;
+            padding: 80px 0 20px;
+        }
+
+        .mobile-nav.active {
+            left: 0;
+        }
+
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0 20px;
+        }
+
+        .mobile-nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--primary-blue);
+            padding-left: 10px;
+        }
+
+        .mobile-nav .get-started-btn {
+            margin: 20px;
+            text-align: center;
+            display: block;
         }
 
         /* Hero Section with Advanced 3D Orbital System */
@@ -2102,6 +2172,22 @@
             <span>Get Started</span>
         </a>
     </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#orbit-incubator">Orbit Incubator</a></li>
+            <li><a href="#erp-solutions">ERP Solutions</a></li>
+            <li><a href="#innovation">Innovation</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="get-started-btn">
+            <span>Get Started</span>
+        </a>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
