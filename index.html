@@ -2237,6 +2237,518 @@
                 --glass-border: #ffffff;
             }
         }
+
+        /* Hidden Layer Toggle Button */
+        .hidden-layer-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        .hidden-layer-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+
+        .hidden-layer-toggle.active {
+            background: linear-gradient(45deg, var(--accent-pink), var(--secondary-purple));
+            animation: none;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { 
+                box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 15px 50px rgba(102, 126, 234, 0.8);
+                transform: scale(1.05);
+            }
+        }
+
+        .toggle-tooltip {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            font-style: italic;
+        }
+
+        .hidden-layer-toggle:hover .toggle-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hidden Layer Overlay */
+        .hidden-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(10, 10, 35, 0.98) 0%, 
+                rgba(26, 26, 62, 0.98) 50%, 
+                rgba(45, 27, 105, 0.98) 100%);
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            overflow-y: auto;
+        }
+
+        .hidden-layer.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .hidden-layer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 5% 50px;
+            position: relative;
+        }
+
+        .hidden-layer-close {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 2001;
+        }
+
+        .hidden-layer-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .layer-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .layer-badge {
+            background: linear-gradient(45deg, var(--accent-pink), var(--secondary-purple));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 30px;
+            animation: cosmic-pulse 2s ease-in-out infinite alternate;
+        }
+
+        .layer-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--accent-pink), var(--secondary-purple));
+            background-size: 200% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 4s ease-in-out infinite;
+            line-height: 1.2;
+        }
+
+        .layer-subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            margin-bottom: 100px;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .mission-content h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+        }
+
+        .mission-content p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .mission-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .renaissance-symbol {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--accent-pink));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            position: relative;
+            animation: renaissance-pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes renaissance-pulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 50px rgba(102, 126, 234, 0.6);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 0 80px rgba(240, 147, 251, 0.8);
+            }
+        }
+
+        .renaissance-rings {
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ring-mena-1 {
+            width: 350px;
+            height: 350px;
+            animation: ring-orbit 20s linear infinite;
+        }
+
+        .ring-mena-2 {
+            width: 400px;
+            height: 400px;
+            animation: ring-orbit 30s linear infinite reverse;
+        }
+
+        /* Story Timeline */
+        .story-timeline {
+            margin-bottom: 100px;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-blue), var(--secondary-purple), var(--accent-pink));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 0 40px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 40px;
+            margin-left: 0;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 40px;
+            margin-right: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--accent-pink));
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .timeline-year {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            color: var(--accent-pink);
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        .timeline-description {
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        /* Values Grid */
+        .values-section {
+            margin-bottom: 100px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .value-card:hover::before {
+            opacity: 1;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .value-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Team Section */
+        .team-section {
+            margin-bottom: 100px;
+        }
+
+        .team-philosophy {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .team-philosophy h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .team-philosophy p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Vision Section */
+        .vision-section {
+            text-align: center;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1));
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 60px;
+        }
+
+        .vision-section h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            color: var(--accent-pink);
+            margin-bottom: 25px;
+        }
+
+        .vision-section p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Mobile Responsive for Hidden Layer */
+        @media (max-width: 768px) {
+            .hidden-layer-toggle {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 1.3rem;
+            }
+
+            .toggle-tooltip {
+                bottom: 70px;
+                font-size: 0.8rem;
+            }
+
+            .hidden-layer-content {
+                padding: 80px 5% 30px;
+            }
+
+            .layer-title {
+                font-size: 2.5rem;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .renaissance-symbol {
+                width: 200px;
+                height: 200px;
+                font-size: 3rem;
+            }
+
+            .ring-mena-1 {
+                width: 250px;
+                height: 250px;
+            }
+
+            .ring-mena-2 {
+                width: 280px;
+                height: 280px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+            }
+
+            .timeline-item .timeline-content {
+                margin: 20px 0 !important;
+            }
+
+            .timeline-line {
+                display: none;
+            }
+
+            .timeline-dot {
+                position: relative;
+                left: auto;
+                transform: none;
+                margin: 0 auto 20px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .vision-section {
+                padding: 50px 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2802,6 +3314,153 @@
             </div>
         </div>
     </section>
+
+    <!-- Hidden Layer Toggle Button -->
+    <button class="hidden-layer-toggle" id="hiddenLayerToggle">
+        🔮
+        <div class="toggle-tooltip">We hide nothing. We anticipate your curiosity.</div>
+    </button>
+
+    <!-- Hidden Layer - MENA Renaissance Mission -->
+    <div class="hidden-layer" id="hiddenLayer">
+        <button class="hidden-layer-close" id="hiddenLayerClose">✕</button>
+        
+        <div class="hidden-layer-content">
+            <!-- Header -->
+            <div class="layer-header">
+                <div class="layer-badge">🌟 The Hidden Orbit</div>
+                <h1 class="layer-title">Inspiring the MENA Renaissance Through Technology</h1>
+                <p class="layer-subtitle">Beyond our services lies our true mission: to catalyze a technological renaissance across the Middle East and North Africa, empowering innovators, entrepreneurs, and visionaries to build the future they envision.</p>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="mission-section">
+                <div class="mission-grid">
+                    <div class="mission-content">
+                        <h3>Our True North</h3>
+                        <p>We believe the MENA region stands at the threshold of a new renaissance - one powered by technology, innovation, and boundless human potential. DataOrbit exists not just to deliver projects, but to be a catalyst for this transformation.</p>
+                        <p>Every line of code we write, every system we optimize, every partnership we forge is guided by a singular vision: empowering the brilliant minds of the Middle East and North Africa to build solutions that will define the next century.</p>
+                    </div>
+                    <div class="mission-visual">
+                        <div class="renaissance-symbol">
+                            🌍
+                            <div class="renaissance-rings ring-mena-1"></div>
+                            <div class="renaissance-rings ring-mena-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story Timeline -->
+            <div class="story-timeline">
+                <h3 class="section-title">Our Journey</h3>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-title">The Spark</div>
+                            <div class="timeline-description">Founded with a vision to bridge the gap between world-class technology solutions and emerging markets in the MENA region. Our first clients taught us that excellence has no geographical boundaries.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-title">Embedded Partnerships</div>
+                            <div class="timeline-description">Pioneered our "embedded partnership" model with Takaful America and 3 Chefs, proving that MENA-based teams can deliver enterprise-grade solutions that compete globally.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-title">The Renaissance Begins</div>
+                            <div class="timeline-description">Expanding our mission to incubate local startups, mentor emerging tech talent, and build the infrastructure for the next wave of MENA innovation.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">Future</div>
+                            <div class="timeline-title">Global Recognition</div>
+                            <div class="timeline-description">Our vision: Making "Built in MENA" a mark of excellence recognized worldwide, with DataOrbit alumni founding the next generation of global tech companies.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="values-section">
+                <h3 class="section-title">Our Core Values</h3>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🔥</div>
+                        <h4>Audacious Ambition</h4>
+                        <p>We don't just solve problems; we reimagine what's possible. Every project is an opportunity to push boundaries and set new standards.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h4>Radical Transparency</h4>
+                        <p>No hidden agendas, no surprises. We share our processes, challenges, and successes openly because trust is the foundation of transformation.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">⚡</div>
+                        <h4>Relentless Excellence</h4>
+                        <p>Good enough isn't good enough. We obsess over details, optimize for the future, and deliver solutions that stand the test of time.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">🌱</div>
+                        <h4>Ecosystem Thinking</h4>
+                        <p>We don't just build for today's needs; we architect solutions that grow, adapt, and empower entire ecosystems to flourish.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h4>Impact Over Revenue</h4>
+                        <p>While we run a sustainable business, our true metric of success is the transformational impact we create for our partners and region.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">🚀</div>
+                        <h4>Future-First Mindset</h4>
+                        <p>We don't follow trends; we anticipate the technologies and approaches that will define the next decade of innovation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Philosophy -->
+            <div class="team-section">
+                <div class="team-philosophy">
+                    <h3>Built by Believers</h3>
+                    <p>Our team isn't just skilled in technology; we're believers in the transformative power of innovation. Every DataOrbit team member is carefully selected not just for their technical expertise, but for their passion for building something greater than themselves.</p>
+                    <p>We're entrepreneurs at heart, engineers by training, and visionaries by choice. We've experienced firsthand the challenges of building in emerging markets, and we're committed to ensuring the next generation doesn't face the same barriers.</p>
+                </div>
+            </div>
+
+            <!-- Vision Section -->
+            <div class="vision-section">
+                <h3>The Future We're Building</h3>
+                <p>Imagine a world where the most innovative companies, the most groundbreaking technologies, and the most transformative solutions emerge from the heart of the Middle East and North Africa. Where "Made in MENA" becomes synonymous with innovation, quality, and vision.</p>
+                <p>This isn't just our dream—it's our commitment. Every partnership, every project, every line of code is a step toward this future.</p>
+            </div>
+
+            <!-- Call to Action -->
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="#contact" class="planet-cta" style="font-size: 1.2rem; padding: 20px 40px;">
+                    <span>Join the Renaissance</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
