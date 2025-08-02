@@ -981,47 +981,23 @@
             box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
         }
 
-        .partnership-logo {
+        .partnership-image {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            gap: 20px;
-            text-align: center;
-        }
-
-        .logo-img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-        }
-
-        .partnership-symbol {
-            font-size: 2rem;
-            color: var(--primary-blue);
-            font-weight: bold;
-        }
-
-        .client-logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .chef-icon {
-            font-size: 3rem;
-            background: linear-gradient(45deg, #ff6b6b, #ffa726);
-            border-radius: 50%;
             padding: 20px;
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
         }
 
-        .company-name {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--primary-blue);
+        .partnership-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .partnership-img:hover {
+            transform: scale(1.05);
         }
 
         /* Stats Section */
@@ -1321,13 +1297,8 @@
                     <a href="#contact" class="announcement-cta">Learn About Our ERP Solutions</a>
                 </div>
                 <div class="announcement-visual">
-                    <div class="partnership-logo">
-                        <img src="logo.png" alt="DataOrbit Logo" class="logo-img">
-                        <span class="partnership-symbol">×</span>
-                        <div class="client-logo">
-                            <span class="chef-icon">👨‍🍳</span>
-                            <span class="company-name">3 Chefs</span>
-                        </div>
+                    <div class="partnership-image">
+                        <img src="partnership.png" alt="DataOrbit x 3 Chefs Partnership" class="partnership-img">
                     </div>
                 </div>
             </div>
