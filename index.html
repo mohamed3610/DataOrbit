@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataOrbit LLC - Empowering Business Through Technology | ERP Solutions & Custom Development</title>
     <meta name="description" content="DataOrbit LLC transforms businesses through embedded tech partnerships, ERP optimization, and IoT integration. Custom software development and scalable technology solutions.">
     <meta name="keywords" content="ERP optimization, custom software development, IoT integration, tech consulting, embedded partnerships">
@@ -53,10 +53,9 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            touch-action: manipulation;
         }
 
-        /* Mobile-First Interactive Starfield */
+        /* Optimized Starfield - Reduced complexity */
         .starfield {
             position: fixed;
             top: 0;
@@ -73,30 +72,11 @@
             border-radius: 50%;
             animation: twinkle 3s infinite;
             will-change: opacity, transform;
-            transition: all 0.3s ease;
         }
 
         .star-small { width: 1px; height: 1px; }
         .star-medium { width: 2px; height: 2px; }
         .star-large { width: 3px; height: 3px; }
-
-        /* Interactive stars that respond to touch */
-        .star.interactive {
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .star.interactive:hover,
-        .star.interactive.touched {
-            transform: scale(3);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-            animation: star-pulse 1s ease-in-out;
-        }
-
-        @keyframes star-pulse {
-            0%, 100% { opacity: 1; transform: scale(3); }
-            50% { opacity: 0.3; transform: scale(5); }
-        }
 
         @keyframes twinkle {
             0%, 100% { opacity: 0.3; }
@@ -118,25 +98,7 @@
             100% { transform: translateX(100vw) translateY(100vh); opacity: 0; }
         }
 
-        /* Mobile Touch Ripple Effect */
-        .touch-ripple {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(102, 126, 234, 0.6) 0%, transparent 70%);
-            transform: scale(0);
-            animation: ripple 1s ease-out forwards;
-            pointer-events: none;
-            z-index: 1000;
-        }
-
-        @keyframes ripple {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-
-        /* Navigation with Mobile Enhancements */
+        /* Navigation with Glass Effect */
         nav {
             position: fixed;
             top: 0;
@@ -258,7 +220,7 @@
             z-index: 1;
         }
 
-        /* Enhanced Mobile Menu */
+        /* Mobile Menu */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -266,8 +228,8 @@
             color: white;
             font-size: 24px;
             cursor: pointer;
-            padding: 12px;
-            border-radius: 8px;
+            padding: 8px;
+            border-radius: 4px;
             transition: all 0.3s ease;
             z-index: 10001;
             position: relative;
@@ -275,7 +237,6 @@
 
         .mobile-menu-btn:hover {
             background: rgba(255, 255, 255, 0.1);
-            transform: scale(1.1);
         }
 
         .mobile-menu-btn:focus {
@@ -287,15 +248,14 @@
             position: fixed;
             top: 0;
             left: -100%;
-            width: 85%;
-            max-width: 320px;
+            width: 80%;
+            max-width: 300px;
             height: 100vh;
-            background: rgba(10, 10, 35, 0.98);
+            background: rgba(10, 10, 35, 0.95);
             backdrop-filter: blur(20px);
             z-index: 9999;
-            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            padding: 100px 0 20px;
-            border-right: 1px solid var(--glass-border);
+            transition: left 0.3s ease;
+            padding: 80px 0 20px;
         }
 
         .mobile-nav.active {
@@ -308,12 +268,11 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 9998;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.4s ease;
-            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
         }
 
         .mobile-nav-overlay.active {
@@ -331,47 +290,24 @@
         .mobile-nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
-            padding: 18px 0;
+            padding: 15px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
             font-weight: 500;
-            font-size: 1.1rem;
-            position: relative;
         }
 
-        .mobile-nav-links a::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(45deg, var(--primary-blue), var(--accent-pink));
-            transition: width 0.3s ease;
-            transform: translateY(-50%);
-        }
-
-        .mobile-nav-links a:hover::before,
-        .mobile-nav-links a:focus::before {
-            width: 30px;
-        }
-
-        .mobile-nav-links a:hover,
-        .mobile-nav-links a:focus {
+        .mobile-nav-links a:hover {
             color: var(--primary-blue);
-            padding-left: 40px;
-            transform: translateX(5px);
+            padding-left: 10px;
         }
 
         .mobile-nav .get-started-btn {
-            margin: 30px 20px 0;
+            margin: 20px;
             text-align: center;
             display: block;
-            padding: 18px 30px;
-            font-size: 1.1rem;
         }
 
-        /* Mobile-Optimized Hero Section */
+        /* Hero Section with Advanced 3D Orbital System */
         .hero {
             height: 100vh;
             display: flex;
@@ -380,14 +316,12 @@
             text-align: center;
             position: relative;
             padding-top: 80px;
-            overflow: hidden;
         }
 
         .hero-content {
             z-index: 10;
             max-width: 900px;
             padding: 0 20px;
-            position: relative;
         }
 
         .hero h1 {
@@ -453,7 +387,6 @@
             display: inline-block;
             position: relative;
             overflow: hidden;
-            touch-action: manipulation;
         }
 
         .btn-primary {
@@ -468,13 +401,12 @@
             backdrop-filter: blur(10px);
         }
 
-        .btn:hover,
-        .btn:focus {
+        .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
-        /* Interactive Mobile Orbital System */
+        /* Optimized Orbital System */
         .orbital-system-3d {
             position: absolute;
             top: 50%;
@@ -485,7 +417,6 @@
             height: 600px;
             z-index: 1;
             will-change: transform;
-            touch-action: manipulation;
         }
 
         .orbit {
@@ -496,12 +427,6 @@
             left: 50%;
             transform: translate(-50%, -50%);
             will-change: transform;
-            transition: all 0.3s ease;
-        }
-
-        .orbit.interactive {
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
         }
 
         .orbit-1 { 
@@ -531,32 +456,17 @@
             height: 80px;
             border-radius: 50%;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 30px;
             will-change: transform;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            touch-action: manipulation;
-            user-select: none;
         }
 
-        .planet:hover,
-        .planet:focus,
-        .planet.touched {
-            transform: scale(1.3);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            z-index: 10;
-        }
-
-        .planet.pulse {
-            animation: planet-pulse 0.6s ease-in-out;
-        }
-
-        @keyframes planet-pulse {
-            0%, 100% { transform: scale(1.2); }
-            50% { transform: scale(1.5); }
+        .planet:hover {
+            transform: scale(1.2);
         }
 
         .planet-1 {
@@ -596,15 +506,6 @@
             animation: hub-pulse 4s ease-in-out infinite;
             z-index: 5;
             will-change: transform;
-            cursor: pointer;
-            touch-action: manipulation;
-        }
-
-        .central-hub:hover,
-        .central-hub:focus,
-        .central-hub.touched {
-            transform: translate(-50%, -50%) scale(1.1);
-            box-shadow: 0 0 60px rgba(102, 126, 234, 0.8);
         }
 
         .central-hub::before {
@@ -621,193 +522,61 @@
             50% { transform: translate(-50%, -50%) scale(1.05); }
         }
 
-        /* Mobile Planet Tooltip */
-        .planet-tooltip {
-            position: absolute;
-            bottom: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.9);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            pointer-events: none;
-            border: 1px solid var(--glass-border);
-        }
-
-        .planet:hover .planet-tooltip,
-        .planet:focus .planet-tooltip,
-        .planet.touched .planet-tooltip {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(-5px);
-        }
-
-        /* Mobile Touch Particles */
-        .touch-particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: radial-gradient(circle, rgba(102, 126, 234, 0.8), transparent);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 1000;
-            animation: particle-float 2s ease-out forwards;
-        }
-
-        @keyframes particle-float {
-            0% {
-                transform: scale(0) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(3) rotate(360deg) translateY(-100px);
-                opacity: 0;
-            }
-        }
-
-        /* Mobile Constellation Effect */
-        .constellation-point {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: rgba(102, 126, 234, 0.8);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 999;
-        }
-
-        /* Partnership Announcement Section */
-        .announcement-section {
-            padding: 80px 5%;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .announcement-section::before {
-            content: '';
-            position: absolute;
+        /* Planet Modal */
+        .planet-modal {
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 70%, rgba(118, 75, 162, 0.08) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .announcement-banner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 60px;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            border-radius: 25px;
-            padding: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            position: relative;
-            z-index: 2;
-        }
-
-        .announcement-badge {
-            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 20px;
-            animation: cosmic-pulse 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes cosmic-pulse {
-            from { 
-                box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
-                transform: scale(1);
-            }
-            to { 
-                box-shadow: 0 0 30px rgba(118, 75, 162, 0.8);
-                transform: scale(1.02);
-            }
-        }
-
-        .announcement-content h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple), var(--accent-pink));
-            background-size: 200% 200%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.3;
-            animation: gradientShift 4s ease-in-out infinite;
-        }
-
-        .partnership-features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .feature-highlight {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .feature-highlight:hover {
-            background: rgba(255, 255, 255, 0.08);
-            transform: translateY(-2px);
-        }
-
-        .announcement-cta {
-            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
-            color: white;
-            padding: 15px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .announcement-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
-        }
-
-        .partnership-image {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-            position: relative;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
         }
 
-        /* Stats Section with Mobile Enhancements */
+        .planet-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .planet-modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Stats Counter */
         .stats-section {
             padding: 80px 5%;
             background: rgba(0, 0, 0, 0.3);
-            position: relative;
         }
 
         .stats-grid {
@@ -825,17 +594,6 @@
             backdrop-filter: blur(10px);
             border-radius: 15px;
             border: 1px solid var(--glass-border);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            touch-action: manipulation;
-        }
-
-        .stat-item:hover,
-        .stat-item:focus,
-        .stat-item.touched {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-            background: rgba(255, 255, 255, 0.1);
         }
 
         .stat-number {
@@ -843,43 +601,11 @@
             font-weight: 700;
             color: var(--primary-blue);
             margin-bottom: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .stat-item:hover .stat-number,
-        .stat-item.touched .stat-number {
-            transform: scale(1.1);
-            text-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
         }
 
         .stat-label {
             font-size: 1.1rem;
             opacity: 0.8;
-        }
-
-        /* Services Section */
-        .services-section {
-            padding: 120px 5%;
-            text-align: center;
-        }
-
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .section-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 80px;
-            opacity: 0.8;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         /* Planet Sections - Each Service as a Planet */
@@ -915,6 +641,31 @@
             height: 100%;
         }
 
+        .planet-atmosphere::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            top: 10%;
+            left: 5%;
+            box-shadow: 
+                80px 40px 0 -1px rgba(255, 255, 255, 0.4),
+                160px 80px 0 -1px rgba(255, 255, 255, 0.3),
+                240px 20px 0 -1px rgba(255, 255, 255, 0.5),
+                320px 60px 0 -1px rgba(255, 255, 255, 0.3),
+                400px 100px 0 -1px rgba(255, 255, 255, 0.4),
+                480px 30px 0 -1px rgba(255, 255, 255, 0.2),
+                560px 70px 0 -1px rgba(255, 255, 255, 0.4);
+            animation: cosmic-drift 15s linear infinite;
+        }
+
+        @keyframes cosmic-drift {
+            0% { transform: translateX(0px); }
+            100% { transform: translateX(50px); }
+        }
+
         .planet-content {
             display: grid;
             grid-template-columns: 1fr 400px;
@@ -941,6 +692,21 @@
             font-weight: 600;
             margin-bottom: 25px;
             animation: cosmic-pulse 3s ease-in-out infinite alternate;
+            position: relative;
+        }
+
+        .planet-badge::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 28px;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.7;
         }
 
         .planet-icon {
@@ -982,12 +748,24 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.4s ease;
             overflow: hidden;
-            cursor: pointer;
-            touch-action: manipulation;
         }
 
-        .feature-orbit:hover,
-        .feature-orbit.touched {
+        .feature-orbit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .feature-orbit:hover::before {
+            left: 100%;
+        }
+
+        .feature-orbit:hover {
             background: rgba(255, 255, 255, 0.08);
             transform: translateY(-5px);
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
@@ -1041,6 +819,22 @@
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+        }
+
+        .planet-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--secondary-purple), var(--accent-pink));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .planet-cta:hover::before {
+            opacity: 1;
         }
 
         .planet-cta:hover {
@@ -1139,11 +933,861 @@
             from { transform: translate(-50%, -50%) rotate(0deg); }
             to { transform: translate(-50%, -50%) rotate(360deg); }
         }
+        .services-section {
+            padding: 120px 5%;
+            text-align: center;
+        }
 
-        /* Process Section - Cosmic Journey */
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 80px;
+            opacity: 0.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--glass-bg);
+            border-radius: 25px;
+            padding: 50px;
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+            animation: shine 1.5s ease-in-out;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-icon {
+            font-size: 70px;
+            margin-bottom: 25px;
+            display: block;
+            animation: icon-float 3s ease-in-out infinite;
+        }
+
+        @keyframes icon-float {
+            0%, 100% { transform: translateY(0px) rotateZ(0deg); }
+            50% { transform: translateY(-10px) rotateZ(5deg); }
+        }
+
+        .service-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        .service-card p {
+            line-height: 1.6;
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+
+        .service-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            opacity: 0.7;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-features li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+
+        .learn-more-btn {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .learn-more-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Process Section */
         .process-section {
             padding: 120px 5%;
             background: rgba(0, 0, 0, 0.2);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .process-step h4 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* Case Studies Section */
+        .case-studies-section {
+            padding: 120px 5%;
+        }
+
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .case-study-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .case-study-tag {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .case-study-result {
+            background: rgba(102, 126, 234, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 120px 5%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-form {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary-blue);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 10, 35, 0.95);
+            padding: 60px 5% 30px;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--primary-blue);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--glass-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--glass-border);
+            opacity: 0.6;
+        }
+
+        /* Partnership Announcement Section - Enhanced Cosmic Integration */
+        .announcement-section {
+            padding: 80px 5%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .announcement-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(118, 75, 162, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .announcement-section::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            top: 20%;
+            left: 10%;
+            box-shadow: 
+                100px 50px 0 0 rgba(255, 255, 255, 0.3),
+                200px 100px 0 0 rgba(255, 255, 255, 0.2),
+                300px 30px 0 0 rgba(255, 255, 255, 0.4),
+                450px 80px 0 0 rgba(255, 255, 255, 0.2),
+                600px 120px 0 0 rgba(255, 255, 255, 0.3),
+                750px 40px 0 0 rgba(255, 255, 255, 0.2);
+            animation: twinkle 4s ease-in-out infinite;
+        }
+
+        .announcement-banner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            z-index: 2;
+        }
+
+        .announcement-banner::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: linear-gradient(45deg, 
+                rgba(102, 126, 234, 0.3), 
+                transparent, 
+                rgba(118, 75, 162, 0.3), 
+                transparent);
+            border-radius: 25px;
+            z-index: -1;
+            animation: border-glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes border-glow {
+            from { opacity: 0.5; }
+            to { opacity: 0.8; }
+        }
+
+        .announcement-badge {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            animation: cosmic-pulse 2s ease-in-out infinite alternate;
+            position: relative;
+        }
+
+        .announcement-badge::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 22px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.6;
+        }
+
+        @keyframes cosmic-pulse {
+            from { 
+                box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+                transform: scale(1);
+            }
+            to { 
+                box-shadow: 0 0 30px rgba(118, 75, 162, 0.8);
+                transform: scale(1.02);
+            }
+        }
+
+        .announcement-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple), var(--accent-pink));
+            background-size: 200% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.3;
+            animation: gradientShift 4s ease-in-out infinite;
+        }
+
+        .announcement-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .partnership-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .feature-highlight {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .feature-highlight:hover::before {
+            left: 100%;
+        }
+
+        .feature-highlight:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 1.2rem;
+        }
+
+        .announcement-cta {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .announcement-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--secondary-purple), var(--accent-pink));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .announcement-cta:hover::before {
+            opacity: 1;
+        }
+
+        .announcement-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .announcement-cta:contains(text) {
+            position: relative;
+            z-index: 1;
+        }
+
+        .partnership-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .partnership-image::before {
+            content: '';
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbital-ring 20s linear infinite;
+        }
+
+        .partnership-image::after {
+            content: '';
+            position: absolute;
+            width: 140%;
+            height: 140%;
+            border: 1px solid rgba(118, 75, 162, 0.2);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbital-ring 30s linear infinite reverse;
+        }
+
+        @keyframes orbital-ring {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .partnership-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+            animation: cosmic-float 4s ease-in-out infinite;
+            position: relative;
+            z-index: 3;
+        }
+
+        .partnership-img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes cosmic-float {
+            0%, 100% { transform: translateY(0px) rotateY(0deg); }
+            50% { transform: translateY(-10px) rotateY(5deg); }
+        }
+
+        /* Stats Section */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 9999;
+        }
+
+        .scroll-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple), var(--accent-pink));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Loading Animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--deep-space), var(--space-blue));
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-animation {
+            text-align: center;
+        }
+
+        .loading-logo {
+            width: 80px;
+            height: 80px;
+            background: url('logo.png') no-repeat center;
+            background-size: contain;
+            margin: 0 auto 20px;
+            animation: loadingPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes loadingPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(180deg); }
+        }
+
+        .loading-text {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+        }
+
+        .loading-bar {
+            width: 300px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .loading-fill {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 2px;
+            animation: loadingFill 3s ease-out forwards;
+        }
+
+        @keyframes loadingFill {
+            to { width: 100%; }
+        }
+
+        /* Galactic Advantages Section */
+        .galactic-advantages {
+            padding: 120px 5%;
+            background: radial-gradient(circle at 40% 60%, rgba(102, 126, 234, 0.1) 0%, transparent 60%),
+                        radial-gradient(circle at 60% 40%, rgba(118, 75, 162, 0.08) 0%, transparent 60%),
+                        rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .galactic-advantages::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            background: white;
+            border-radius: 50%;
+            top: 20%;
+            left: 10%;
+            box-shadow: 
+                100px 80px 0 1px rgba(255, 255, 255, 0.4),
+                200px 40px 0 0 rgba(255, 255, 255, 0.3),
+                300px 120px 0 1px rgba(255, 255, 255, 0.5),
+                400px 60px 0 0 rgba(255, 255, 255, 0.2),
+                500px 100px 0 1px rgba(255, 255, 255, 0.4),
+                600px 20px 0 0 rgba(255, 255, 255, 0.3),
+                700px 140px 0 1px rgba(255, 255, 255, 0.2);
+            animation: constellation-twinkle 6s ease-in-out infinite;
+        }
+
+        @keyframes constellation-twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .galaxy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .advantage-constellation {
+            text-align: center;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            transition: all 0.5s ease;
+            overflow: hidden;
+        }
+
+        .advantage-constellation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .advantage-constellation:hover::before {
+            opacity: 1;
+        }
+
+        .advantage-constellation:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(102, 126, 234, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .constellation-star {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            position: relative;
+            animation: star-pulse 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes star-pulse {
+            from { 
+                box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+                transform: scale(1);
+            }
+            to { 
+                box-shadow: 0 0 50px rgba(118, 75, 162, 0.8);
+                transform: scale(1.05);
+            }
+        }
+
+        .constellation-star::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 50%;
+            animation: constellation-orbit 8s linear infinite;
+        }
+
+        @keyframes constellation-orbit {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .advantage-constellation h4 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+        }
+
+        .advantage-constellation p {
+            line-height: 1.7;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        /* Process Journey Path CSS */
+        .cosmic-journey {
+            position: relative;
         }
 
         .journey-path {
@@ -1177,13 +1821,6 @@
             position: relative;
             animation: step-orbit 4s ease-in-out infinite;
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-            cursor: pointer;
-            touch-action: manipulation;
-        }
-
-        .step-planet:hover,
-        .step-planet.touched {
-            transform: scale(1.1);
         }
 
         .step-core {
@@ -1255,213 +1892,350 @@
             100% { left: calc(100% - 20px); opacity: 0.3; }
         }
 
-        /* Case Studies Section */
-        .case-studies-section {
-            padding: 120px 5%;
-        }
-
-        .case-studies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .case-study-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(15px);
-            border-radius: 20px;
-            padding: 40px;
-            border: 1px solid var(--glass-border);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            touch-action: manipulation;
-        }
-
-        .case-study-card:hover,
-        .case-study-card.touched {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .case-study-tag {
-            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-
-        .case-study-result {
-            background: rgba(102, 126, 234, 0.2);
-            padding: 20px;
-            border-radius: 15px;
-            margin-top: 20px;
-            border-left: 4px solid var(--primary-blue);
-        }
-
-        /* Why Choose DataOrbit - Galactic Advantages */
-        .galactic-advantages {
-            padding: 120px 5%;
-            background: radial-gradient(circle at 40% 60%, rgba(102, 126, 234, 0.1) 0%, transparent 60%),
-                        radial-gradient(circle at 60% 40%, rgba(118, 75, 162, 0.08) 0%, transparent 60%),
-                        rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .galaxy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .advantage-constellation {
-            text-align: center;
-            padding: 50px;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            position: relative;
-            transition: all 0.5s ease;
-            overflow: hidden;
-            cursor: pointer;
-            touch-action: manipulation;
-        }
-
-        .advantage-constellation:hover,
-        .advantage-constellation.touched {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 60px rgba(102, 126, 234, 0.3);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .constellation-star {
-            font-size: 4rem;
-            margin-bottom: 25px;
-            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            position: relative;
-            animation: star-pulse 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes star-pulse {
-            from { 
-                box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
-                transform: scale(1);
+        /* Responsive Design for Planet Sections */
+        @media (max-width: 1024px) {
+            .nav-links { 
+                display: none; 
             }
-            to { 
-                box-shadow: 0 0 50px rgba(118, 75, 162, 0.8);
-                transform: scale(1.05);
+            
+            .mobile-menu-btn { 
+                display: block; 
+            }
+            
+            .announcement-banner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px;
+            }
+            
+            .partnership-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .planet-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+            
+            .planet-erp .planet-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .planet-visual {
+                height: 400px;
+            }
+            
+            .planet-sphere {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .journey-path {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .cosmic-connector {
+                width: 2px;
+                height: 80px;
+                max-width: none;
+                margin: 20px 0;
+                background: linear-gradient(180deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.5), rgba(102, 126, 234, 0.3));
+            }
+            
+            .cosmic-connector::before {
+                width: 10px;
+                height: 10px;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                animation: energy-flow-vertical 2s ease-in-out infinite;
+            }
+            
+            @keyframes energy-flow-vertical {
+                0% { top: 0; opacity: 1; }
+                100% { top: calc(100% - 10px); opacity: 0.3; }
+            }
+            
+            .orbital-system-3d {
+                width: 90%;
+                height: 600px;
+            }
+        
+            .orbit-1 { width: 250px; height: 250px; }
+            .orbit-2 { width: 350px; height: 350px; }
+            .orbit-3 { width: 450px; height: 450px; }
+            
+            .planet { width: 70px; height: 70px; font-size: 25px; }
+            .central-hub { width: 100px; height: 100px; font-size: 35px; }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
         }
 
-        .advantage-constellation h4 {
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
+        @media (max-width: 768px) {
+            .nav-links { 
+                display: none; 
+            }
+            
+            .mobile-menu-btn { 
+                display: block; 
+            }
+            
+            .hero h1 { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            
+            .orbital-system-3d {
+                width: 95%;
+                height: 400px;
+            }
+            
+            .orbit-1 { width: 200px; height: 200px; }
+            .orbit-2 { width: 280px; height: 280px; }
+            .orbit-3 { width: 360px; height: 360px; }
+            
+            .planet { width: 60px; height: 60px; font-size: 20px; }
+            .central-hub { width: 80px; height: 80px; }
+            .central-hub::before { width: 40px; height: 40px; }
+            
+            /* Planet Sections Mobile */
+            .planet-section {
+                padding: 80px 5%;
+                min-height: auto;
+            }
+            
+            .planet-content {
+                gap: 40px;
+            }
+            
+            .planet-title {
+                font-size: 2.5rem;
+            }
+            
+            .planet-description {
+                font-size: 1.1rem;
+            }
+            
+            .planet-visual {
+                height: 300px;
+            }
+            
+            .planet-sphere {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .ring-1 { width: 250px; height: 250px; }
+            .ring-2 { width: 280px; height: 280px; }
+            .ring-3 { width: 310px; height: 310px; }
+            
+            .planet-core {
+                font-size: 3rem;
+            }
+            
+            .feature-orbit {
+                padding: 20px;
+            }
+            
+            .satellite-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 2rem;
+            }
+            
+            .satellite-info h4 {
+                font-size: 1.1rem;
+            }
+            
+            .satellite-info p {
+                font-size: 0.9rem;
+            }
+            
+            .planet-cta {
+                padding: 15px 25px;
+                font-size: 1rem;
+            }
+            
+            /* Journey Path Mobile */
+            .journey-step {
+                max-width: 100%;
+            }
+            
+            .step-planet {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .step-core {
+                width: 50px;
+                height: 50px;
+                font-size: 1.4rem;
+            }
+            
+            .step-ring {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .step-content h4 {
+                font-size: 1.2rem;
+            }
+            
+            .step-content p {
+                font-size: 0.9rem;
+                max-width: 100%;
+            }
+            
+            /* Stats Mobile */
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .stat-item {
+                padding: 30px 20px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            /* Galaxy Grid Mobile */
+            .galaxy-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .advantage-constellation {
+                padding: 40px 30px;
+            }
+            
+            .constellation-star {
+                width: 80px;
+                height: 80px;
+                font-size: 3rem;
+            }
+            
+            .advantage-constellation h4 {
+                font-size: 1.3rem;
+            }
+            
+            .advantage-constellation p {
+                font-size: 1rem;
+            }
+            
+            /* Case Studies Mobile */
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-study-card {
+                padding: 40px 30px;
+            }
+            
+            .case-study-card h3 {
+                font-size: 1.5rem;
+            }
         }
 
-        .advantage-constellation p {
-            line-height: 1.7;
-            opacity: 0.9;
-            font-size: 1.1rem;
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 250px;
+                text-align: center;
+            }
+            
+            .orbital-system-3d {
+                height: 300px;
+            }
+            
+            .orbit-1 { width: 150px; height: 150px; }
+            .orbit-2 { width: 200px; height: 200px; }
+            .orbit-3 { width: 250px; height: 250px; }
+            
+            .planet { width: 45px; height: 45px; font-size: 16px; }
+            .central-hub { width: 60px; height: 60px; }
+            .central-hub::before { width: 30px; height: 30px; }
+            
+            /* Planet Sections Extra Small */
+            .planet-title {
+                font-size: 2rem;
+            }
+            
+            .planet-sphere {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .ring-1 { width: 180px; height: 180px; }
+            .ring-2 { width: 200px; height: 200px; }
+            .ring-3 { width: 220px; height: 220px; }
+            
+            .planet-core {
+                font-size: 2.5rem;
+            }
+            
+            .feature-satellite {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .satellite-icon {
+                margin: 0 auto;
+            }
+            
+            .step-planet {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .step-core {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+            
+            .step-ring {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .constellation-star {
+                width: 70px;
+                height: 70px;
+                font-size: 2.5rem;
+            }
         }
 
-        /* Contact Section */
-        .contact-section {
-            padding: 120px 5%;
-            background: rgba(0, 0, 0, 0.3);
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .shooting-star {
+                display: none;
+            }
         }
 
-        .contact-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .contact-form {
-            background: var(--glass-bg);
-            backdrop-filter: blur(15px);
-            border-radius: 20px;
-            padding: 40px;
-            border: 1px solid var(--glass-border);
-            position: relative;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--primary-blue);
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid var(--glass-border);
-            border-radius: 10px;
-            color: white;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            touch-action: manipulation;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-blue);
-            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .submit-btn {
-            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            touch-action: manipulation;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .submit-btn:hover,
-        .submit-btn:focus {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --text-primary: #ffffff;
+                --text-secondary: #ffffff;
+                --glass-bg: rgba(0, 0, 0, 0.8);
+                --glass-border: #ffffff;
+            }
         }
 
         /* Hidden Layer Toggle Button */
@@ -1484,13 +2258,16 @@
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
             transition: all 0.3s ease;
             animation: pulse-glow 3s ease-in-out infinite;
-            touch-action: manipulation;
         }
 
-        .hidden-layer-toggle:hover,
-        .hidden-layer-toggle.touched {
+        .hidden-layer-toggle:hover {
             transform: scale(1.1);
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+
+        .hidden-layer-toggle.active {
+            background: linear-gradient(45deg, var(--accent-pink), var(--secondary-purple));
+            animation: none;
         }
 
         @keyframes pulse-glow {
@@ -1573,274 +2350,335 @@
             justify-content: center;
             transition: all 0.3s ease;
             z-index: 2001;
-            touch-action: manipulation;
         }
 
-        .hidden-layer-close:hover,
-        .hidden-layer-close.touched {
+        .hidden-layer-close:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: scale(1.1);
         }
 
-        /* Footer */
-        footer {
-            background: rgba(10, 10, 35, 0.95);
-            padding: 60px 5% 30px;
-            border-top: 1px solid var(--glass-border);
+        .layer-header {
+            text-align: center;
+            margin-bottom: 80px;
         }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
+        .layer-badge {
+            background: linear-gradient(45deg, var(--accent-pink), var(--secondary-purple));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 30px;
+            animation: cosmic-pulse 2s ease-in-out infinite alternate;
         }
 
-        .footer-section h3 {
-            color: var(--primary-blue);
-            margin-bottom: 20px;
+        .layer-title {
             font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--accent-pink), var(--secondary-purple));
+            background-size: 200% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 4s ease-in-out infinite;
+            line-height: 1.2;
         }
 
-        .footer-section ul {
-            list-style: none;
+        .layer-subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .footer-section ul li {
-            margin-bottom: 12px;
+        /* Mission Section */
+        .mission-section {
+            margin-bottom: 100px;
         }
 
-        .footer-section ul li a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s ease;
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 80px;
         }
 
-        .footer-section ul li a:hover {
+        .mission-content h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
             color: var(--primary-blue);
+            margin-bottom: 25px;
         }
 
-        .social-links {
+        .mission-content p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .mission-visual {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
 
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: var(--glass-bg);
+        .renaissance-symbol {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--accent-pink));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
+            font-size: 5rem;
+            position: relative;
+            animation: renaissance-pulse 4s ease-in-out infinite;
         }
 
-        .social-links a:hover {
-            background: var(--primary-blue);
-            transform: translateY(-3px);
+        @keyframes renaissance-pulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 50px rgba(102, 126, 234, 0.6);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 0 80px rgba(240, 147, 251, 0.8);
+            }
         }
 
-        .footer-bottom {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--glass-border);
-            opacity: 0.6;
+        .renaissance-rings {
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        /* Loading Animation */
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--deep-space), var(--space-blue));
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.5s ease;
+        .ring-mena-1 {
+            width: 350px;
+            height: 350px;
+            animation: ring-orbit 20s linear infinite;
         }
 
-        .loading-screen.hidden {
-            opacity: 0;
-            pointer-events: none;
+        .ring-mena-2 {
+            width: 400px;
+            height: 400px;
+            animation: ring-orbit 30s linear infinite reverse;
         }
 
-        .loading-animation {
-            text-align: center;
+        /* Story Timeline */
+        .story-timeline {
+            margin-bottom: 100px;
         }
 
-        .loading-logo {
-            width: 80px;
-            height: 80px;
-            background: url('logo.png') no-repeat center;
-            background-size: contain;
-            margin: 0 auto 20px;
-            animation: loadingPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes loadingPulse {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.2) rotate(180deg); }
-        }
-
-        .loading-text {
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 30px;
-        }
-
-        .loading-bar {
-            width: 300px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 2px;
-            overflow: hidden;
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .loading-fill {
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple));
-            border-radius: 2px;
-            animation: loadingFill 3s ease-out forwards;
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-blue), var(--secondary-purple), var(--accent-pink));
+            transform: translateX(-50%);
         }
 
-        @keyframes loadingFill {
-            to { width: 100%; }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
         }
 
-        /* Scroll Progress Indicator */
-        .scroll-indicator {
-            position: fixed;
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 0 40px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 40px;
+            margin-left: 0;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 40px;
+            margin-right: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--accent-pink));
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .timeline-year {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            color: var(--accent-pink);
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        .timeline-description {
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        /* Values Grid */
+        .values-section {
+            margin-bottom: 100px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.1);
-            z-index: 9999;
-        }
-
-        .scroll-progress {
             height: 100%;
-            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple), var(--accent-pink));
-            width: 0%;
-            transition: width 0.3s ease;
+            background: radial-gradient(circle at center, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        /* Mobile Swipe Navigation */
-        .mobile-swipe-indicator {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: none;
+        .value-card:hover::before {
+            opacity: 1;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
             align-items: center;
-            gap: 10px;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-            z-index: 20;
+            justify-content: center;
+            margin: 0 auto 20px;
         }
 
-        .swipe-arrow {
-            font-size: 1.2rem;
-            animation: swipe-hint 2s ease-in-out infinite;
+        .value-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
-        @keyframes swipe-hint {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(10px); }
+        /* Team Section */
+        .team-section {
+            margin-bottom: 100px;
         }
 
-        /* Mobile-Specific Responsive Design */
-        @media (max-width: 1024px) {
-            .nav-links { 
-                display: none; 
-            }
-            
-            .mobile-menu-btn { 
-                display: block; 
-            }
-            
-            .mobile-swipe-indicator {
-                display: flex;
-            }
-            
-            .announcement-banner {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 40px;
-            }
-            
-            .partnership-features {
-                grid-template-columns: 1fr;
-            }
-            
-            .planet-content {
-                grid-template-columns: 1fr;
-                gap: 60px;
-                text-align: center;
-            }
-            
-            .planet-erp .planet-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .planet-visual {
-                height: 400px;
-            }
-            
-            .planet-sphere {
-                width: 250px;
-                height: 250px;
-            }
-            
-            .journey-path {
-                flex-direction: column;
-                gap: 40px;
-            }
-            
-            .cosmic-connector {
-                width: 2px;
-                height: 80px;
-                max-width: none;
-                margin: 20px 0;
-                background: linear-gradient(180deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.5), rgba(102, 126, 234, 0.3));
-            }
-            
-            .orbital-system-3d {
-                width: 90%;
-                height: 500px;
-            }
-        
-            .orbit-1 { width: 250px; height: 250px; }
-            .orbit-2 { width: 350px; height: 350px; }
-            .orbit-3 { width: 450px; height: 450px; }
-            
-            .planet { 
-                width: 70px; 
-                height: 70px; 
-                font-size: 25px;
-            }
-            
-            .central-hub { 
-                width: 100px; 
-                height: 100px;
-            }
-            
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
+        .team-philosophy {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
+        .team-philosophy h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .team-philosophy p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Vision Section */
+        .vision-section {
+            text-align: center;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1));
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 60px;
+        }
+
+        .vision-section h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            color: var(--accent-pink);
+            margin-bottom: 25px;
+        }
+
+        .vision-section p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Mobile Responsive for Hidden Layer */
+        @media (max-width: 768px) {
             .hidden-layer-toggle {
                 width: 60px;
                 height: 60px;
@@ -1848,258 +2686,67 @@
                 right: 20px;
                 font-size: 1.3rem;
             }
-        }
 
-        @media (max-width: 768px) {
-            body {
-                touch-action: pan-y;
-            }
-            
-            .hero h1 { 
-                font-size: 2.5rem;
-                margin-bottom: 15px;
-            }
-            
-            .hero-subtitle { 
-                font-size: 1.1rem;
-                margin-bottom: 30px;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-            
-            .btn {
-                width: 280px;
-                text-align: center;
-                padding: 18px 30px;
-                font-size: 1.1rem;
-            }
-            
-            .orbital-system-3d {
-                width: 95%;
-                height: 400px;
-            }
-            
-            .orbit-1 { width: 200px; height: 200px; }
-            .orbit-2 { width: 280px; height: 280px; }
-            .orbit-3 { width: 360px; height: 360px; }
-            
-            .planet { 
-                width: 60px; 
-                height: 60px; 
-                font-size: 20px;
-            }
-            
-            .central-hub { 
-                width: 80px; 
-                height: 80px;
-            }
-            
-            .central-hub::before { 
-                width: 40px; 
-                height: 40px;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            
-            .stat-item {
-                padding: 25px 15px;
-            }
-            
-            .stat-number {
-                font-size: 2.5rem;
-            }
-            
-            .planet-section {
-                padding: 80px 5%;
-                min-height: auto;
+            .toggle-tooltip {
+                bottom: 70px;
+                font-size: 0.8rem;
             }
 
-            .planet-title {
+            .hidden-layer-content {
+                padding: 80px 5% 30px;
+            }
+
+            .layer-title {
                 font-size: 2.5rem;
             }
-            
-            .planet-description {
-                font-size: 1.1rem;
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
             }
-            
-            .planet-visual {
-                height: 300px;
-            }
-            
-            .planet-sphere {
+
+            .renaissance-symbol {
                 width: 200px;
                 height: 200px;
-            }
-            
-            .ring-1 { width: 250px; height: 250px; }
-            .ring-2 { width: 280px; height: 280px; }
-            .ring-3 { width: 310px; height: 310px; }
-            
-            .planet-core {
                 font-size: 3rem;
             }
-            
-            .feature-orbit {
-                padding: 20px;
+
+            .ring-mena-1 {
+                width: 250px;
+                height: 250px;
             }
-            
-            .satellite-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 2rem;
+
+            .ring-mena-2 {
+                width: 280px;
+                height: 280px;
             }
-            
-            .galaxy-grid {
+
+            .timeline-item {
+                flex-direction: column !important;
+            }
+
+            .timeline-item .timeline-content {
+                margin: 20px 0 !important;
+            }
+
+            .timeline-line {
+                display: none;
+            }
+
+            .timeline-dot {
+                position: relative;
+                left: auto;
+                transform: none;
+                margin: 0 auto 20px;
+            }
+
+            .values-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-            
-            .advantage-constellation {
-                padding: 40px 30px;
-            }
-            
-            .constellation-star {
-                width: 80px;
-                height: 80px;
-                font-size: 3rem;
-            }
-            
-            .case-studies-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .case-study-card {
-                padding: 40px 30px;
-            }
-        }
 
-        @media (max-width: 480px) {
-            .hero-buttons {
-                width: 100%;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .orbital-system-3d {
-                height: 350px;
-            }
-            
-            .orbit-1 { width: 180px; height: 180px; }
-            .orbit-2 { width: 240px; height: 240px; }
-            .orbit-3 { width: 300px; height: 300px; }
-            
-            .planet { 
-                width: 50px; 
-                height: 50px; 
-                font-size: 18px;
-            }
-            
-            .central-hub { 
-                width: 70px; 
-                height: 70px;
-            }
-            
-            .central-hub::before { 
-                width: 35px; 
-                height: 35px;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .stat-item {
-                padding: 20px;
-            }
-            
-            .mobile-nav {
-                width: 100%;
-                max-width: none;
-            }
-
-            .planet-title {
-                font-size: 2rem;
-            }
-            
-            .planet-sphere {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .ring-1 { width: 180px; height: 180px; }
-            .ring-2 { width: 200px; height: 200px; }
-            .ring-3 { width: 220px; height: 220px; }
-            
-            .planet-core {
-                font-size: 2.5rem;
-            }
-            
-            .feature-satellite {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
-            }
-            
-            .satellite-icon {
-                margin: 0 auto;
-            }
-            
-            .step-planet {
-                width: 70px;
-                height: 70px;
-            }
-            
-            .step-core {
-                width: 45px;
-                height: 45px;
-                font-size: 1.2rem;
-            }
-            
-            .step-ring {
-                width: 70px;
-                height: 70px;
-            }
-            
-            .constellation-star {
-                width: 70px;
-                height: 70px;
-                font-size: 2.5rem;
-            }
-        }
-
-        /* Accessibility */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-            
-            .shooting-star,
-            .touch-particle,
-            .constellation-point {
-                display: none !important;
-            }
-        }
-
-        /* High contrast mode */
-        @media (prefers-contrast: high) {
-            :root {
-                --text-primary: #ffffff;
-                --text-secondary: #ffffff;
-                --glass-bg: rgba(0, 0, 0, 0.8);
-                --glass-border: #ffffff;
+            .vision-section {
+                padding: 50px 20px;
             }
         }
     </style>
@@ -2121,7 +2768,7 @@
         <div class="scroll-progress" id="scrollProgress"></div>
     </div>
 
-    <!-- Interactive Starfield Background -->
+    <!-- Optimized Starfield Background -->
     <div class="starfield" id="starfield"></div>
 
     <!-- Navigation -->
@@ -2164,92 +2811,85 @@
             <p class="hero-subtitle">Empowering businesses through innovative technology solutions. From embedded tech partnerships to ERP optimization and IoT integration - we transform how companies build and optimize technology in the digital cosmos.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">Start Your Project</a>
-                <a href="#orbit-incubator" class="btn btn-secondary">Explore Services</a>
+                <a href="#services" class="btn btn-secondary">Explore Services</a>
             </div>
         </div>
 
-        <!-- Interactive Mobile Orbital System -->
-        <div class="orbital-system-3d" id="orbitalSystem">
-            <div class="central-hub" id="centralHub"></div>
+        <!-- Optimized Orbital System -->
+        <div class="orbital-system-3d">
+            <div class="central-hub"></div>
             
-            <div class="orbit orbit-1" id="orbit1">
-                <div class="planet planet-1" data-service="orbit-incubator" id="planet1">
+            <div class="orbit orbit-1">
+                <div class="planet planet-1" data-service="orbit-incubator">
                     🚀
-                    <div class="planet-tooltip">Orbit Incubator</div>
                 </div>
             </div>
             
-            <div class="orbit orbit-2" id="orbit2">
-                <div class="planet planet-2" data-service="erp-solutions" id="planet2">
+            <div class="orbit orbit-2">
+                <div class="planet planet-2" data-service="erp-solutions">
                     🔧
-                    <div class="planet-tooltip">ERP Solutions</div>
                 </div>
             </div>
             
-            <div class="orbit orbit-3" id="orbit3">
-                <div class="planet planet-3" data-service="innovation" id="planet3">
+            <div class="orbit orbit-3">
+                <div class="planet planet-3" data-service="innovation">
                     💡
-                    <div class="planet-tooltip">Innovation</div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Mobile Swipe Indicator -->
-        <div class="mobile-swipe-indicator">
-            <span>Touch planets to explore</span>
-            <span class="swipe-arrow">↓</span>
-        </div>
-    </section>
-
-    <!-- Partnership Announcement Section -->
-    <section class="announcement-section">
-        <div class="announcement-banner">
-            <div class="announcement-content">
-                <div class="announcement-badge">🎉 Latest Partnership</div>
-                <h2>Proud to Announce Our Digital Transformation Partnership with 3 Chefs!</h2>
-                <p>DataOrbit is excited to partner with 3 Chefs, a leading frozen food manufacturer, to optimize their production ERP systems and streamline operations for fried chicken, burgers, and ready-to-eat products.</p>
-                <div class="partnership-features">
-                    <div class="feature-highlight">
-                        <span class="feature-icon">🏭</span>
-                        <span>Production ERP Optimization</span>
-                    </div>
-                    <div class="feature-highlight">
-                        <span class="feature-icon">📊</span>
-                        <span>Real-time Manufacturing Dashboards</span>
-                    </div>
-                    <div class="feature-highlight">
-                        <span class="feature-icon">🔗</span>
-                        <span>Supply Chain Integration</span>
-                    </div>
-                    <div class="feature-highlight">
-                        <span class="feature-icon">✅</span>
-                        <span>Quality Control Systems</span>
-                    </div>
-                </div>
-                <a href="#contact" class="announcement-cta">Learn About Our ERP Solutions</a>
-            </div>
-            <div class="partnership-image">
-                <img src="partnership.png" alt="DataOrbit x 3 Chefs Partnership" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
+    <section class="announcement-section">
+        <div class="services-section">
+            <div class="announcement-banner">
+                <div class="announcement-content">
+                    <div class="announcement-badge">🎉 Latest Partnership</div>
+                    <h2>Proud to Announce Our Digital Transformation Partnership with 3 Chefs!</h2>
+                    <p>DataOrbit is excited to partner with 3 Chefs, a leading frozen food manufacturer, to optimize their production ERP systems and streamline operations for fried chicken, burgers, and ready-to-eat products.</p>
+                    <div class="partnership-features">
+                        <div class="feature-highlight">
+                            <span class="feature-icon">🏭</span>
+                            <span>Production ERP Optimization</span>
+                        </div>
+                        <div class="feature-highlight">
+                            <span class="feature-icon">📊</span>
+                            <span>Real-time Manufacturing Dashboards</span>
+                        </div>
+                        <div class="feature-highlight">
+                            <span class="feature-icon">🔗</span>
+                            <span>Supply Chain Integration</span>
+                        </div>
+                        <div class="feature-highlight">
+                            <span class="feature-icon">✅</span>
+                            <span>Quality Control Systems</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="announcement-cta">Learn About Our ERP Solutions</a>
+                </div>
+                <div class="announcement-visual">
+                    <div class="partnership-image">
+                        <img src="partnership.png" alt="DataOrbit x 3 Chefs Partnership" class="partnership-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="stats-section">
         <div class="stats-grid">
-            <div class="stat-item" id="stat1">
+            <div class="stat-item">
                 <div class="stat-number" data-target="25">0</div>
                 <div class="stat-label">Projects Completed</div>
             </div>
-            <div class="stat-item" id="stat2">
+            <div class="stat-item">
                 <div class="stat-number" data-target="2">0</div>
                 <div class="stat-label">Active Clients</div>
             </div>
-            <div class="stat-item" id="stat3">
+            <div class="stat-item">
                 <div class="stat-number" data-target="100">0</div>
                 <div class="stat-label">Success Rate %</div>
             </div>
-            <div class="stat-item" id="stat4">
+            <div class="stat-item">
                 <div class="stat-number" data-target="24">0</div>
                 <div class="stat-label">7 Support</div>
             </div>
@@ -2257,7 +2897,7 @@
     </section>
 
     <!-- Services Section - Planet Orbit Incubator -->
-    <section class="services-section">
+    <section id="services" class="services-section">
         <h2 class="section-title">Our Service Planets</h2>
         <p class="section-subtitle">Explore the DataOrbit universe where each service division operates as its own specialized planet, delivering cutting-edge solutions across the digital cosmos.</p>
     </section>
@@ -2316,7 +2956,7 @@
                         </div>
                     </div>
                     
-                    <a href="#contact" class="planet-cta"><span>Launch Your Project</span></a>
+                    <a href="#contact" class="planet-cta">Launch Your Project</a>
                 </div>
                 
                 <div class="planet-visual">
@@ -2394,7 +3034,7 @@
                         </div>
                     </div>
                     
-                    <a href="#contact" class="planet-cta"><span>Optimize Your Systems</span></a>
+                    <a href="#contact" class="planet-cta">Optimize Your Systems</a>
                 </div>
             </div>
         </div>
@@ -2454,7 +3094,7 @@
                         </div>
                     </div>
                     
-                    <a href="#contact" class="planet-cta"><span>Explore the Future</span></a>
+                    <a href="#contact" class="planet-cta">Explore the Future</a>
                 </div>
                 
                 <div class="planet-visual">
@@ -2470,7 +3110,7 @@
     </section>
 
     <!-- Process Section - Cosmic Journey -->
-    <section id="process" class="process-section">
+    <section id="process" class="process-section cosmic-journey">
         <div class="services-section">
             <h2 class="section-title">Our Cosmic Journey</h2>
             <p class="section-subtitle">Navigate through our proven methodology that ensures successful project delivery across all planets in the DataOrbit universe.</p>
@@ -2567,7 +3207,7 @@
     </section>
 
     <!-- Why Choose DataOrbit - Galactic Advantages -->
-    <section class="galactic-advantages">
+    <section class="features-section galactic-advantages">
         <div class="services-section">
             <h2 class="section-title">Why Choose DataOrbit?</h2>
             <p class="section-subtitle">Discover the advantages of partnering with our cosmic technology ecosystem across the digital universe.</p>
@@ -2621,17 +3261,17 @@
                     <h3>Ready to Launch Your Project?</h3>
                     <p>Let's discuss your technology challenges and explore how DataOrbit can accelerate your digital transformation journey. Our embedded partnership approach ensures seamless integration with your existing team and processes.</p>
                     
-                    <div style="margin-bottom: 2rem;">
-                        <div style="margin-bottom: 1rem;">
-                            <h4 style="color: var(--primary-blue);">📧 Email</h4>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>📧 Email</h4>
                             <p>info@dataorbitllc.com</p>
                         </div>
-                        <div style="margin-bottom: 1rem;">
-                            <h4 style="color: var(--primary-blue);">🌐 Website</h4>
+                        <div class="contact-item">
+                            <h4>🌐 Website</h4>
                             <p>www.dataorbitllc.com</p>
                         </div>
-                        <div style="margin-bottom: 1rem;">
-                            <h4 style="color: var(--primary-blue);">⏰ Response Time</h4>
+                        <div class="contact-item">
+                            <h4>⏰ Response Time</h4>
                             <p>Within 24 hours</p>
                         </div>
                     </div>
@@ -2687,123 +3327,130 @@
         
         <div class="hidden-layer-content">
             <!-- Header -->
-            <div style="text-align: center; margin-bottom: 80px;">
-                <div style="background: linear-gradient(45deg, var(--accent-pink), var(--secondary-purple)); color: white; padding: 12px 30px; border-radius: 25px; font-size: 1rem; font-weight: 600; display: inline-block; margin-bottom: 30px; animation: cosmic-pulse 2s ease-in-out infinite alternate;">🌟 The Hidden Orbit</div>
-                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 25px; background: linear-gradient(45deg, var(--primary-blue), var(--accent-pink), var(--secondary-purple)); background-size: 200% 200%; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: gradientShift 4s ease-in-out infinite; line-height: 1.2;">Inspiring the MENA Renaissance Through Technology</h1>
-                <p style="font-size: 1.4rem; opacity: 0.9; line-height: 1.6; max-width: 800px; margin: 0 auto;">Beyond our services lies our true mission: to catalyze a technological renaissance across the Middle East and North Africa, empowering innovators, entrepreneurs, and visionaries to build the future they envision.</p>
+            <div class="layer-header">
+                <div class="layer-badge">🌟 The Hidden Orbit</div>
+                <h1 class="layer-title">Inspiring the MENA Renaissance Through Technology</h1>
+                <p class="layer-subtitle">Beyond our services lies our true mission: to catalyze a technological renaissance across the Middle East and North Africa, empowering innovators, entrepreneurs, and visionaries to build the future they envision.</p>
             </div>
 
             <!-- Mission Section -->
-            <div style="margin-bottom: 100px;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 80px;">
-                    <div>
-                        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 25px;">Our True North</h3>
-                        <p style="font-size: 1.2rem; line-height: 1.7; opacity: 0.9; margin-bottom: 25px;">We believe the MENA region stands at the threshold of a new renaissance - one powered by technology, innovation, and boundless human potential. DataOrbit exists not just to deliver projects, but to be a catalyst for this transformation.</p>
-                        <p style="font-size: 1.2rem; line-height: 1.7; opacity: 0.9;">Every line of code we write, every system we optimize, every partnership we forge is guided by a singular vision: empowering the brilliant minds of the Middle East and North Africa to build solutions that will define the next century.</p>
+            <div class="mission-section">
+                <div class="mission-grid">
+                    <div class="mission-content">
+                        <h3>Our True North</h3>
+                        <p>We believe the MENA region stands at the threshold of a new renaissance - one powered by technology, innovation, and boundless human potential. DataOrbit exists not just to deliver projects, but to be a catalyst for this transformation.</p>
+                        <p>Every line of code we write, every system we optimize, every partnership we forge is guided by a singular vision: empowering the brilliant minds of the Middle East and North Africa to build solutions that will define the next century.</p>
                     </div>
-                    <div style="display: flex; align-items: center; justify-content: center; position: relative;">
-                        <div style="width: 300px; height: 300px; background: linear-gradient(45deg, var(--primary-blue), var(--accent-pink)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 5rem; position: relative; animation: renaissance-pulse 4s ease-in-out infinite;">
+                    <div class="mission-visual">
+                        <div class="renaissance-symbol">
                             🌍
+                            <div class="renaissance-rings ring-mena-1"></div>
+                            <div class="renaissance-rings ring-mena-2"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Story Timeline -->
-            <div style="margin-bottom: 100px;">
+            <div class="story-timeline">
                 <h3 class="section-title">Our Journey</h3>
-                <div style="position: relative; max-width: 800px; margin: 0 auto;">
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
                     
-                    <div style="position: relative; margin-bottom: 60px; display: flex; align-items: center;">
-                        <div style="flex: 1; padding: 30px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); margin-right: 40px;">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: var(--accent-pink); margin-bottom: 10px;">2023</div>
-                            <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: var(--primary-blue);">The MENA Vision</div>
-                            <div style="opacity: 0.8; line-height: 1.5;">The idea crystallized: What if the next wave of global tech innovation emerged from the heart of the Middle East and North Africa? DataOrbit was born from this audacious belief in regional potential.</div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-title">The MENA Vision</div>
+                            <div class="timeline-description">The idea crystallized: What if the next wave of global tech innovation emerged from the heart of the Middle East and North Africa? DataOrbit was born from this audacious belief in regional potential.</div>
                         </div>
                     </div>
 
-                    <div style="position: relative; margin-bottom: 60px; display: flex; align-items: center; flex-direction: row-reverse;">
-                        <div style="flex: 1; padding: 30px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); margin-left: 40px;">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: var(--accent-pink); margin-bottom: 10px;">2024</div>
-                            <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: var(--primary-blue);">Market Validation</div>
-                            <div style="opacity: 0.8; line-height: 1.5;">Attracting forward-thinking clients like Takaful America and 3 Chefs, we tested our embedded partnership model and validated that MENA-based teams could deliver world-class solutions that exceed expectations.</div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-title">Market Validation</div>
+                            <div class="timeline-description">Attracting forward-thinking clients like Takaful America and 3 Chefs, we tested our embedded partnership model and validated that MENA-based teams could deliver world-class solutions that exceed expectations.</div>
                         </div>
                     </div>
 
-                    <div style="position: relative; margin-bottom: 60px; display: flex; align-items: center;">
-                        <div style="flex: 1; padding: 30px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); margin-right: 40px;">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: var(--accent-pink); margin-bottom: 10px;">2025</div>
-                            <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: var(--primary-blue);">Renaissance Launch</div>
-                            <div style="opacity: 0.8; line-height: 1.5;">This is our year. The MENA Renaissance officially begins. We're scaling our impact, incubating local talent, and proving that "Built in MENA" represents the future of technology excellence.</div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-title">Renaissance Launch</div>
+                            <div class="timeline-description">This is our year. The MENA Renaissance officially begins. We're scaling our impact, incubating local talent, and proving that "Built in MENA" represents the future of technology excellence.</div>
                         </div>
                     </div>
 
-                    <div style="position: relative; margin-bottom: 60px; display: flex; align-items: center; flex-direction: row-reverse;">
-                        <div style="flex: 1; padding: 30px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); margin-left: 40px;">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: var(--accent-pink); margin-bottom: 10px;">Beyond</div>
-                            <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: var(--primary-blue);">Global Recognition</div>
-                            <div style="opacity: 0.8; line-height: 1.5;">Our ultimate vision: MENA becomes synonymous with cutting-edge innovation, with DataOrbit alumni leading the next generation of global tech giants born from our region.</div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">Beyond</div>
+                            <div class="timeline-title">Global Recognition</div>
+                            <div class="timeline-description">Our ultimate vision: MENA becomes synonymous with cutting-edge innovation, with DataOrbit alumni leading the next generation of global tech giants born from our region.</div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Values Section -->
-            <div style="margin-bottom: 100px;">
+            <div class="values-section">
                 <h3 class="section-title">Our Core Values</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px;">
-                    <div style="text-align: center; padding: 40px; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease;">
-                        <div style="font-size: 3rem; margin-bottom: 20px; background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple)); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">🔥</div>
-                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif;">Audacious Ambition</h4>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🔥</div>
+                        <h4>Audacious Ambition</h4>
                         <p>We don't just solve problems; we reimagine what's possible. Every project is an opportunity to push boundaries and set new standards.</p>
                     </div>
 
-                    <div style="text-align: center; padding: 40px; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease;">
-                        <div style="font-size: 3rem; margin-bottom: 20px; background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple)); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">🤝</div>
-                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif;">Radical Transparency</h4>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h4>Radical Transparency</h4>
                         <p>No hidden agendas, no surprises. We share our processes, challenges, and successes openly because trust is the foundation of transformation.</p>
                     </div>
 
-                    <div style="text-align: center; padding: 40px; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease;">
-                        <div style="font-size: 3rem; margin-bottom: 20px; background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple)); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">⚡</div>
-                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif;">Relentless Excellence</h4>
+                    <div class="value-card">
+                        <div class="value-icon">⚡</div>
+                        <h4>Relentless Excellence</h4>
                         <p>Good enough isn't good enough. We obsess over details, optimize for the future, and deliver solutions that stand the test of time.</p>
                     </div>
 
-                    <div style="text-align: center; padding: 40px; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease;">
-                        <div style="font-size: 3rem; margin-bottom: 20px; background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple)); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">🌱</div>
-                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif;">Ecosystem Thinking</h4>
+                    <div class="value-card">
+                        <div class="value-icon">🌱</div>
+                        <h4>Ecosystem Thinking</h4>
                         <p>We don't just build for today's needs; we architect solutions that grow, adapt, and empower entire ecosystems to flourish.</p>
                     </div>
 
-                    <div style="text-align: center; padding: 40px; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease;">
-                        <div style="font-size: 3rem; margin-bottom: 20px; background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple)); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">🎯</div>
-                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif;">Impact Over Revenue</h4>
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h4>Impact Over Revenue</h4>
                         <p>While we run a sustainable business, our true metric of success is the transformational impact we create for our partners and region.</p>
                     </div>
 
-                    <div style="text-align: center; padding: 40px; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease;">
-                        <div style="font-size: 3rem; margin-bottom: 20px; background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple)); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">🚀</div>
-                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif;">Future-First Mindset</h4>
+                    <div class="value-card">
+                        <div class="value-icon">🚀</div>
+                        <h4>Future-First Mindset</h4>
                         <p>We don't follow trends; we anticipate the technologies and approaches that will define the next decade of innovation.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Team Philosophy -->
-            <div style="margin-bottom: 100px;">
-                <div style="text-align: center; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.2rem; color: var(--primary-blue); margin-bottom: 20px;">Built by Believers</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9; margin-bottom: 25px;">Our team isn't just skilled in technology; we're believers in the transformative power of innovation. Every DataOrbit team member is carefully selected not just for their technical expertise, but for their passion for building something greater than themselves.</p>
-                    <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9;">We're entrepreneurs at heart, engineers by training, and visionaries by choice. We've experienced firsthand the challenges of building in emerging markets, and we're committed to ensuring the next generation doesn't face the same barriers.</p>
+            <div class="team-section">
+                <div class="team-philosophy">
+                    <h3>Built by Believers</h3>
+                    <p>Our team isn't just skilled in technology; we're believers in the transformative power of innovation. Every DataOrbit team member is carefully selected not just for their technical expertise, but for their passion for building something greater than themselves.</p>
+                    <p>We're entrepreneurs at heart, engineers by training, and visionaries by choice. We've experienced firsthand the challenges of building in emerging markets, and we're committed to ensuring the next generation doesn't face the same barriers.</p>
                 </div>
             </div>
 
             <!-- Vision Section -->
-            <div style="text-align: center; padding: 80px 40px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1)); border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 60px;">
-                <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; color: var(--accent-pink); margin-bottom: 25px;">The Future We're Building</h3>
-                <p style="font-size: 1.3rem; line-height: 1.6; opacity: 0.9; max-width: 700px; margin: 0 auto 25px;">Imagine a world where the most innovative companies, the most groundbreaking technologies, and the most transformative solutions emerge from the heart of the Middle East and North Africa. Where "Made in MENA" becomes synonymous with innovation, quality, and vision.</p>
-                <p style="font-size: 1.3rem; line-height: 1.6; opacity: 0.9; max-width: 700px; margin: 0 auto;">This isn't just our dream—it's our commitment. Every partnership, every project, every line of code is a step toward this future.</p>
+            <div class="vision-section">
+                <h3>The Future We're Building</h3>
+                <p>Imagine a world where the most innovative companies, the most groundbreaking technologies, and the most transformative solutions emerge from the heart of the Middle East and North Africa. Where "Made in MENA" becomes synonymous with innovation, quality, and vision.</p>
+                <p>This isn't just our dream—it's our commitment. Every partnership, every project, every line of code is a step toward this future.</p>
             </div>
 
             <!-- Call to Action -->
@@ -2869,74 +3516,46 @@
     </footer>
 
     <script>
-        // Enhanced Mobile-First Interactive Website
-        class MobileDataOrbitExperience {
+        // Enhanced JavaScript functionality
+        class DataOrbitWebsite {
             constructor() {
-                this.touchPoints = [];
-                this.constellations = [];
-                this.particles = [];
-                this.isInteracting = false;
                 this.init();
             }
 
             init() {
-                this.createInteractiveStarfield();
-                this.setupMobileNavigation();
-                this.setupTouchInteractions();
-                this.setupGestureControls();
+                this.createAdvancedStarfield();
                 this.setupScrollEffects();
+                this.setupNavigation();
+                this.setupPlanetInteractions();
+                this.setupContactForm();
+                this.setupHiddenLayer();
                 this.setupCounterAnimations();
                 this.setupLoadingScreen();
-                this.setupFormEnhancements();
-                this.setupPlanetInteractions();
-                this.setupSwipeNavigation();
-                this.setupConstellationEffect();
-                this.setupHiddenLayer();
-                console.log('Mobile DataOrbit Experience initialized!');
+                this.setupScrollIndicator();
+                this.setupParallaxEffects();
             }
 
-            // Create interactive starfield with touch responsiveness
-            createInteractiveStarfield() {
+            // Optimized starfield creation - single layer, fewer stars
+            createAdvancedStarfield() {
                 const starfield = document.getElementById('starfield');
-                const starCount = window.innerWidth <= 768 ? 60 : 100;
+                const starCount = window.innerWidth <= 768 ? 50 : 100; // Fewer stars on mobile
                 
                 for (let i = 0; i < starCount; i++) {
                     const star = document.createElement('div');
                     const size = Math.random() < 0.7 ? 'small' : (Math.random() < 0.9 ? 'medium' : 'large');
                     star.className = `star star-${size}`;
-                    
-                    // Make some stars interactive
-                    if (Math.random() < 0.3) {
-                        star.classList.add('interactive');
-                        star.addEventListener('touchstart', (e) => this.handleStarTouch(e, star));
-                        star.addEventListener('click', (e) => this.handleStarTouch(e, star));
-                    }
-                    
                     star.style.left = Math.random() * 100 + '%';
                     star.style.top = Math.random() * 100 + '%';
                     star.style.animationDelay = Math.random() * 3 + 's';
                     starfield.appendChild(star);
                 }
 
-                // Create fewer shooting stars for performance
+                // Reduced shooting star frequency
                 setInterval(() => {
-                    if (Math.random() < 0.05 && !this.isInteracting) {
+                    if (Math.random() < 0.1) { // Much less frequent
                         this.createShootingStar();
                     }
-                }, 8000);
-            }
-
-            handleStarTouch(e, star) {
-                e.preventDefault();
-                star.classList.add('touched');
-                
-                // Create ripple effect
-                this.createTouchRipple(e.touches ? e.touches[0] : e);
-                
-                // Reset after animation
-                setTimeout(() => {
-                    star.classList.remove('touched');
-                }, 1000);
+                }, 5000); // Less frequent interval
             }
 
             createShootingStar() {
@@ -2947,34 +3566,38 @@
                 document.getElementById('starfield').appendChild(shootingStar);
 
                 setTimeout(() => {
-                    if (shootingStar.parentNode) {
-                        shootingStar.remove();
-                    }
+                    shootingStar.remove();
                 }, 3000);
             }
 
-            // Enhanced mobile navigation
-            setupMobileNavigation() {
-                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-                const mobileNav = document.getElementById('mobileNav');
-                const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+            // Setup scroll effects and navbar behavior
+            setupScrollEffects() {
                 const navbar = document.getElementById('navbar');
+                let lastScrollTop = 0;
 
-                if (mobileMenuBtn && mobileNav && mobileNavOverlay) {
-                    mobileMenuBtn.addEventListener('touchstart', this.toggleMobileMenu.bind(this));
-                    mobileMenuBtn.addEventListener('click', this.toggleMobileMenu.bind(this));
-                    mobileNavOverlay.addEventListener('touchstart', this.closeMobileMenu.bind(this));
-                    mobileNavOverlay.addEventListener('click', this.closeMobileMenu.bind(this));
+                window.addEventListener('scroll', () => {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    // Navbar scroll behavior
+                    if (scrollTop > 100) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
 
-                    // Close on escape key
-                    document.addEventListener('keydown', (e) => {
-                        if (e.key === 'Escape') {
-                            this.closeMobileMenu();
-                        }
-                    });
-                }
+                    // Hide/show navbar on scroll
+                    if (scrollTop > lastScrollTop && scrollTop > 200) {
+                        navbar.style.transform = 'translateY(-100%)';
+                    } else {
+                        navbar.style.transform = 'translateY(0)';
+                    }
+                    lastScrollTop = scrollTop;
+                });
+            }
 
-                // Smooth scrolling for all links
+            // Setup navigation including mobile menu
+            setupNavigation() {
+                // Smooth scrolling for all navigation links
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                     anchor.addEventListener('click', (e) => {
                         e.preventDefault();
@@ -2985,31 +3608,32 @@
                                 block: 'start'
                             });
                         }
+                        // Close mobile menu if open
                         this.closeMobileMenu();
                     });
                 });
 
-                // Navbar scroll behavior
-                let lastScrollTop = 0;
-                window.addEventListener('scroll', () => {
-                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    
-                    if (scrollTop > 100) {
-                        navbar.classList.add('scrolled');
-                    } else {
-                        navbar.classList.remove('scrolled');
-                    }
+                // Mobile menu toggle functionality
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                const mobileNav = document.getElementById('mobileNav');
+                const mobileNavOverlay = document.getElementById('mobileNavOverlay');
 
-                    // Hide/show navbar on scroll (mobile only)
-                    if (window.innerWidth <= 768) {
-                        if (scrollTop > lastScrollTop && scrollTop > 200) {
-                            navbar.style.transform = 'translateY(-100%)';
-                        } else {
-                            navbar.style.transform = 'translateY(0)';
+                if (mobileMenuBtn && mobileNav && mobileNavOverlay) {
+                    mobileMenuBtn.addEventListener('click', () => {
+                        this.toggleMobileMenu();
+                    });
+
+                    mobileNavOverlay.addEventListener('click', () => {
+                        this.closeMobileMenu();
+                    });
+
+                    // Close mobile menu on escape key
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape') {
+                            this.closeMobileMenu();
                         }
-                    }
-                    lastScrollTop = scrollTop;
-                });
+                    });
+                }
             }
 
             toggleMobileMenu() {
@@ -3023,7 +3647,7 @@
                     mobileNav.classList.add('active');
                     mobileNavOverlay.classList.add('active');
                     mobileMenuBtn.textContent = '✕';
-                    document.body.style.overflow = 'hidden';
+                    document.body.style.overflow = 'hidden'; // Prevent body scroll
                 }
             }
 
@@ -3036,217 +3660,109 @@
                     mobileNav.classList.remove('active');
                     mobileNavOverlay.classList.remove('active');
                     mobileMenuBtn.textContent = '☰';
-                    document.body.style.overflow = '';
+                    document.body.style.overflow = ''; // Restore body scroll
                 }
             }
 
-            // Touch interactions and gestures
-            setupTouchInteractions() {
-                // Add touch feedback to all interactive elements
-                const interactiveElements = document.querySelectorAll('.btn, .planet, .stat-item, .submit-btn, .feature-orbit, .case-study-card, .advantage-constellation, .step-planet');
-                
-                interactiveElements.forEach(element => {
-                    element.addEventListener('touchstart', (e) => {
-                        this.handleElementTouch(e, element);
-                    });
-                });
-
-                // Global touch handler for creating space particles
-                document.addEventListener('touchstart', (e) => {
-                    if (e.target.closest('.planet, .central-hub')) return;
-                    if (e.target.closest('nav, .mobile-nav, .contact-form')) return;
-                    this.createTouchParticles(e.touches[0]);
-                });
-
-                // Prevent default touch behaviors that might interfere
-                document.addEventListener('touchmove', (e) => {
-                    if (e.target.closest('.orbital-system-3d')) {
-                        e.preventDefault();
-                    }
-                }, { passive: false });
-            }
-
-            handleElementTouch(e, element) {
-                element.classList.add('touched');
-                this.createTouchRipple(e.touches[0]);
-                
-                // Haptic feedback if available
-                if (navigator.vibrate) {
-                    navigator.vibrate(50);
-                }
-
-                setTimeout(() => {
-                    element.classList.remove('touched');
-                }, 300);
-            }
-
-            createTouchRipple(touch) {
-                const ripple = document.createElement('div');
-                ripple.className = 'touch-ripple';
-                
-                const rect = document.body.getBoundingClientRect();
-                const size = 60;
-                
-                ripple.style.left = (touch.clientX - size / 2) + 'px';
-                ripple.style.top = (touch.clientY - size / 2) + 'px';
-                ripple.style.width = size + 'px';
-                ripple.style.height = size + 'px';
-                
-                document.body.appendChild(ripple);
-                
-                setTimeout(() => {
-                    if (ripple.parentNode) {
-                        ripple.remove();
-                    }
-                }, 1000);
-            }
-
-            createTouchParticles(touch) {
-                for (let i = 0; i < 3; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'touch-particle';
-                    
-                    const angle = (Math.PI * 2 * i) / 3;
-                    const distance = Math.random() * 20 + 10;
-                    
-                    particle.style.left = (touch.clientX + Math.cos(angle) * distance) + 'px';
-                    particle.style.top = (touch.clientY + Math.sin(angle) * distance) + 'px';
-                    
-                    document.body.appendChild(particle);
-                    
-                    setTimeout(() => {
-                        if (particle.parentNode) {
-                            particle.remove();
-                        }
-                    }, 2000);
-                }
-            }
-
-            // Gesture controls for orbital system
-            setupGestureControls() {
-                const orbitalSystem = document.getElementById('orbitalSystem');
-                if (!orbitalSystem) return;
-
-                let startTouch = null;
-                let startRotation = 0;
-
-                orbitalSystem.addEventListener('touchstart', (e) => {
-                    if (e.touches.length === 1) {
-                        startTouch = {
-                            x: e.touches[0].clientX,
-                            y: e.touches[0].clientY
-                        };
-                        this.isInteracting = true;
-                    }
-                });
-
-                orbitalSystem.addEventListener('touchmove', (e) => {
-                    if (e.touches.length === 1 && startTouch) {
-                        e.preventDefault();
-                        
-                        const currentTouch = {
-                            x: e.touches[0].clientX,
-                            y: e.touches[0].clientY
-                        };
-                        
-                        const deltaX = currentTouch.x - startTouch.x;
-                        const deltaY = currentTouch.y - startTouch.y;
-                        
-                        // Rotate orbital system based on touch movement
-                        const rotation = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-                        orbitalSystem.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
-                        
-                        // Make orbits interactive
-                        const orbits = orbitalSystem.querySelectorAll('.orbit');
-                        orbits.forEach((orbit, index) => {
-                            orbit.classList.add('interactive');
-                            orbit.style.animationPlayState = 'paused';
-                        });
-                    }
-                });
-
-                orbitalSystem.addEventListener('touchend', (e) => {
-                    startTouch = null;
-                    this.isInteracting = false;
-                    
-                    // Resume normal rotation
-                    orbitalSystem.style.transform = 'translate(-50%, -50%) rotate(0deg)';
-                    
-                    const orbits = orbitalSystem.querySelectorAll('.orbit');
-                    orbits.forEach(orbit => {
-                        orbit.classList.remove('interactive');
-                        orbit.style.animationPlayState = 'running';
-                    });
-                });
-            }
-
-            // Enhanced planet interactions
+            // Enhanced planet interactions - scroll to planet sections
             setupPlanetInteractions() {
                 const planets = document.querySelectorAll('.planet');
-                const centralHub = document.getElementById('centralHub');
                 
                 planets.forEach(planet => {
-                    planet.addEventListener('touchstart', (e) => {
-                        e.preventDefault();
-                        this.handlePlanetTouch(planet);
+                    planet.addEventListener('click', () => {
+                        const service = planet.getAttribute('data-service');
+                        const targetSection = document.getElementById(service);
+                        
+                        if (targetSection) {
+                            targetSection.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
                     });
-                    
-                    planet.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        this.handlePlanetTouch(planet);
+
+                    // Enhanced hover effects
+                    planet.addEventListener('mouseenter', () => {
+                        planet.style.transform = 'scale(1.2)';
+                        planet.style.boxShadow = '0 20px 50px rgba(255, 255, 255, 0.3)';
+                    });
+
+                    planet.addEventListener('mouseleave', () => {
+                        planet.style.transform = 'scale(1)';
+                        planet.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
                     });
                 });
 
-                if (centralHub) {
-                    centralHub.addEventListener('touchstart', (e) => {
-                        e.preventDefault();
-                        this.handleCentralHubTouch();
+                // Add cosmic trail effect when scrolling between planets
+                this.setupCosmicTrail();
+            }
+
+            setupCosmicTrail() {
+                let activeSection = '';
+                const sections = ['orbit-incubator', 'erp-solutions', 'innovation'];
+                
+                const observerOptions = {
+                    threshold: 0.3,
+                    rootMargin: '-100px 0px -100px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const sectionId = entry.target.id;
+                            if (sections.includes(sectionId)) {
+                                this.updateActiveOrbit(sectionId);
+                            }
+                        }
                     });
+                }, observerOptions);
+
+                sections.forEach(sectionId => {
+                    const section = document.getElementById(sectionId);
+                    if (section) observer.observe(section);
+                });
+            }
+
+            updateActiveOrbit(activeSection) {
+                const planets = document.querySelectorAll('.planet');
+                planets.forEach(planet => {
+                    const service = planet.getAttribute('data-service');
+                    if (service === activeSection) {
+                        planet.style.boxShadow = '0 0 50px rgba(102, 126, 234, 0.8)';
+                        planet.style.transform = 'scale(1.1)';
+                    } else {
+                        planet.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
+                        planet.style.transform = 'scale(1)';
+                    }
+                });
+            }
+
+            // Setup contact form handling
+            setupContactForm() {
+                const form = document.getElementById('contactForm');
+                
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
                     
-                    centralHub.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        this.handleCentralHubTouch();
-                    });
-                }
-            }
-
-            handlePlanetTouch(planet) {
-                planet.classList.add('touched', 'pulse');
-                
-                // Haptic feedback
-                if (navigator.vibrate) {
-                    navigator.vibrate([50, 30, 50]);
-                }
-                
-                // Scroll to corresponding planet section
-                const service = planet.getAttribute('data-service');
-                const targetSection = document.getElementById(service);
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-                
-                setTimeout(() => {
-                    planet.classList.remove('touched', 'pulse');
-                }, 600);
-            }
-
-            handleCentralHubTouch() {
-                const centralHub = document.getElementById('centralHub');
-                centralHub.classList.add('touched');
-                
-                // Create constellation effect around the hub
-                this.createConstellationBurst(centralHub);
-                
-                if (navigator.vibrate) {
-                    navigator.vibrate([100, 50, 100, 50, 100]);
-                }
-                
-                setTimeout(() => {
-                    centralHub.classList.remove('touched');
-                }, 300);
+                    // Simulate form submission
+                    const submitBtn = form.querySelector('.submit-btn');
+                    const originalText = submitBtn.textContent;
+                    
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    
+                    setTimeout(() => {
+                        submitBtn.textContent = 'Message Sent! ✓';
+                        submitBtn.style.background = 'linear-gradient(45deg, #4caf50, #45a049)';
+                        
+                        setTimeout(() => {
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                            submitBtn.style.background = '';
+                            form.reset();
+                        }, 3000);
+                    }, 2000);
+                });
             }
 
             // Setup hidden layer functionality
@@ -3260,19 +3776,7 @@
                         this.showHiddenLayer();
                     });
 
-                    toggle.addEventListener('touchstart', (e) => {
-                        e.preventDefault();
-                        toggle.classList.add('touched');
-                        this.showHiddenLayer();
-                    });
-
                     close.addEventListener('click', () => {
-                        this.hideHiddenLayer();
-                    });
-
-                    close.addEventListener('touchstart', (e) => {
-                        e.preventDefault();
-                        close.classList.add('touched');
                         this.hideHiddenLayer();
                     });
 
@@ -3300,8 +3804,9 @@
                 layer.classList.add('active');
                 document.body.style.overflow = 'hidden';
                 
-                if (navigator.vibrate) {
-                    navigator.vibrate([100, 50, 100]);
+                // Track the reveal
+                if (typeof trackEvent === 'function') {
+                    trackEvent('hidden_layer_revealed', 'engagement', 'curiosity');
                 }
             }
 
@@ -3309,112 +3814,12 @@
                 const toggle = document.getElementById('hiddenLayerToggle');
                 const layer = document.getElementById('hiddenLayer');
                 
-                toggle.classList.remove('active', 'touched');
+                toggle.classList.remove('active');
                 layer.classList.remove('active');
                 document.body.style.overflow = '';
             }
 
-            // Swipe navigation between sections
-            setupSwipeNavigation() {
-                let startY = null;
-                let isScrolling = false;
-                
-                document.addEventListener('touchstart', (e) => {
-                    startY = e.touches[0].clientY;
-                });
-                
-                document.addEventListener('touchmove', (e) => {
-                    if (!startY) return;
-                    
-                    const currentY = e.touches[0].clientY;
-                    const diffY = startY - currentY;
-                    
-                    // Only handle significant swipes
-                    if (Math.abs(diffY) > 50) {
-                        isScrolling = true;
-                    }
-                });
-                
-                document.addEventListener('touchend', (e) => {
-                    startY = null;
-                    isScrolling = false;
-                });
-            }
-
-            getCurrentSection() {
-                const sections = ['home', 'orbit-incubator', 'erp-solutions', 'innovation', 'process', 'contact'];
-                const scrollPos = window.scrollY + window.innerHeight / 2;
-                
-                for (let section of sections) {
-                    const element = document.getElementById(section);
-                    if (element) {
-                        const rect = element.getBoundingClientRect();
-                        const elementTop = rect.top + window.scrollY;
-                        const elementBottom = elementTop + element.offsetHeight;
-                        
-                        if (scrollPos >= elementTop && scrollPos <= elementBottom) {
-                            return section;
-                        }
-                    }
-                }
-                return 'home';
-            }
-
-            // Constellation effect for touch interactions
-            setupConstellationEffect() {
-                this.constellationPoints = [];
-            }
-
-            createConstellationBurst(element) {
-                const rect = element.getBoundingClientRect();
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-                
-                // Create constellation points
-                for (let i = 0; i < 8; i++) {
-                    const angle = (Math.PI * 2 * i) / 8;
-                    const distance = 80;
-                    
-                    const point = document.createElement('div');
-                    point.className = 'constellation-point';
-                    point.style.left = (centerX + Math.cos(angle) * distance) + 'px';
-                    point.style.top = (centerY + Math.sin(angle) * distance) + 'px';
-                    
-                    document.body.appendChild(point);
-                    
-                    setTimeout(() => {
-                        if (point.parentNode) {
-                            point.remove();
-                        }
-                    }, 2000);
-                }
-            }
-
-            // Scroll effects and progress
-            setupScrollEffects() {
-                const progressBar = document.getElementById('scrollProgress');
-                
-                window.addEventListener('scroll', () => {
-                    const scrollTop = window.pageYOffset;
-                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-                    const scrollPercent = (scrollTop / docHeight) * 100;
-                    progressBar.style.width = scrollPercent + '%';
-                });
-                
-                // Parallax effect for orbital system
-                const orbitalSystem = document.getElementById('orbitalSystem');
-                if (orbitalSystem) {
-                    window.addEventListener('scroll', () => {
-                        if (this.isInteracting) return;
-                        
-                        const scrolled = window.pageYOffset;
-                        const rate = scrolled * -0.2;
-                        orbitalSystem.style.transform = `translate(-50%, -50%) translateY(${rate}px)`;
-                    });
-                }
-            }
-
-            // Counter animations
+            // Animated counters for stats
             setupCounterAnimations() {
                 const observerOptions = {
                     threshold: 0.7
@@ -3454,193 +3859,455 @@
                 }, 50);
             }
 
-            // Loading screen
+            // Loading screen animation
             setupLoadingScreen() {
                 window.addEventListener('load', () => {
                     setTimeout(() => {
-                        const loadingScreen = document.getElementById('loadingScreen');
-                        if (loadingScreen) {
-                            loadingScreen.classList.add('hidden');
-                        }
+                        document.getElementById('loadingScreen').classList.add('hidden');
                     }, 3000);
                 });
             }
 
-            // Enhanced form interactions
-            setupFormEnhancements() {
-                const form = document.getElementById('contactForm');
-                if (!form) return;
+            // Scroll progress indicator
+            setupScrollIndicator() {
+                const progressBar = document.getElementById('scrollProgress');
                 
-                // Add touch feedback to form elements
-                const formElements = form.querySelectorAll('input, textarea, select, button');
-                formElements.forEach(element => {
-                    element.addEventListener('touchstart', () => {
-                        element.style.transform = 'scale(1.02)';
-                    });
-                    
-                    element.addEventListener('touchend', () => {
-                        setTimeout(() => {
-                            element.style.transform = 'scale(1)';
-                        }, 100);
-                    });
-                    
-                    element.addEventListener('focus', () => {
-                        element.parentElement.style.background = 'rgba(102, 126, 234, 0.1)';
-                    });
-                    
-                    element.addEventListener('blur', () => {
-                        element.parentElement.style.background = '';
-                    });
-                });
-                
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    this.handleFormSubmission();
+                window.addEventListener('scroll', () => {
+                    const scrollTop = window.pageYOffset;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const scrollPercent = (scrollTop / docHeight) * 100;
+                    progressBar.style.width = scrollPercent + '%';
                 });
             }
 
-            handleFormSubmission() {
-                const submitBtn = document.querySelector('.submit-btn');
-                const originalText = submitBtn.textContent;
+            // Optimized parallax effects
+            setupParallaxEffects() {
+                let ticking = false;
                 
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-                
-                // Create success particles
-                this.createSuccessParticles(submitBtn);
-                
-                setTimeout(() => {
-                    submitBtn.textContent = 'Message Sent! ✓';
-                    submitBtn.style.background = 'linear-gradient(45deg, #4caf50, #45a049)';
+                function updateParallax() {
+                    const scrolled = window.pageYOffset;
+                    const rate = scrolled * -0.3; // Reduced parallax intensity
                     
-                    if (navigator.vibrate) {
-                        navigator.vibrate([100, 50, 100]);
+                    const orbitalSystem = document.querySelector('.orbital-system-3d');
+                    if (orbitalSystem) {
+                        orbitalSystem.style.transform = `translate(-50%, -50%) translateY(${rate}px)`;
                     }
                     
-                    setTimeout(() => {
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                        submitBtn.style.background = '';
-                        document.getElementById('contactForm').reset();
-                    }, 3000);
-                }, 2000);
-            }
-
-            createSuccessParticles(element) {
-                const rect = element.getBoundingClientRect();
-                
-                for (let i = 0; i < 10; i++) {
-                    const particle = document.createElement('div');
-                    particle.style.position = 'absolute';
-                    particle.style.width = '6px';
-                    particle.style.height = '6px';
-                    particle.style.background = '#4caf50';
-                    particle.style.borderRadius = '50%';
-                    particle.style.pointerEvents = 'none';
-                    particle.style.zIndex = '1000';
-                    
-                    const startX = rect.left + rect.width / 2;
-                    const startY = rect.top + rect.height / 2;
-                    
-                    particle.style.left = startX + 'px';
-                    particle.style.top = startY + 'px';
-                    
-                    const angle = (Math.PI * 2 * i) / 10;
-                    const distance = Math.random() * 100 + 50;
-                    
-                    document.body.appendChild(particle);
-                    
-                    particle.animate([
-                        { transform: 'scale(0) translate(0, 0)', opacity: 1 },
-                        { transform: `scale(1) translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px)`, opacity: 0 }
-                    ], {
-                        duration: 1000,
-                        easing: 'ease-out'
-                    }).onfinish = () => {
-                        if (particle.parentNode) {
-                            particle.remove();
-                        }
-                    };
+                    ticking = false;
                 }
+
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        requestAnimationFrame(updateParallax);
+                        ticking = true;
+                    }
+                });
             }
         }
 
-        // Performance monitoring for mobile
-        class MobilePerformanceMonitor {
+        // Enhanced intersection observer for animations
+        class AnimationObserver {
             constructor() {
-                this.monitor();
+                this.setupObserver();
             }
 
-            monitor() {
-                // Reduce animations on low-end devices
-                if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
-                    document.body.classList.add('reduced-motion');
-                }
-                
-                // Monitor memory usage
-                if ('memory' in performance) {
-                    const memory = performance.memory;
-                    if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.9) {
-                        this.reduceEffects();
-                    }
-                }
-                
-                // Monitor frame rate
-                let frames = 0;
-                let startTime = Date.now();
-                
-                const countFrames = () => {
-                    frames++;
-                    if (frames % 60 === 0) {
-                        const currentTime = Date.now();
-                        const fps = 60000 / (currentTime - startTime);
-                        
-                        if (fps < 30) {
-                            this.reduceEffects();
-                        }
-                        
-                        startTime = currentTime;
-                    }
-                    requestAnimationFrame(countFrames);
+            setupObserver() {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
                 };
-                
-                requestAnimationFrame(countFrames);
-            }
 
-            reduceEffects() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-in');
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all animatable elements
+                const animatableElements = document.querySelectorAll(
+                    '.service-card, .process-step, .case-study-card, .feature-item, .stat-item'
+                );
+
+                animatableElements.forEach((el, index) => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(50px)';
+                    el.style.transition = `all 0.6s ease ${index * 0.1}s`;
+                    observer.observe(el);
+                });
+
+                // Add CSS for animate-in class
                 const style = document.createElement('style');
                 style.textContent = `
-                    .star { animation: none !important; }
-                    .shooting-star { display: none !important; }
-                    .touch-particle { display: none !important; }
-                    .constellation-point { display: none !important; }
+                    .animate-in {
+                        opacity: 1 !important;
+                        transform: translateY(0) !important;
+                    }
                 `;
                 document.head.appendChild(style);
             }
         }
 
-        // Initialize when DOM is loaded
+        // Performance monitoring
+        class PerformanceMonitor {
+            constructor() {
+                this.monitor();
+            }
+
+            monitor() {
+                // Monitor loading performance
+                window.addEventListener('load', () => {
+                    const loadTime = performance.now();
+                    console.log(`Website loaded in ${loadTime.toFixed(2)}ms`);
+                    
+                    // Log performance metrics
+                    if ('performance' in window && 'navigation' in performance) {
+                        const perfData = performance.getEntriesByType('navigation')[0];
+                        console.log('Performance Metrics:', {
+                            DNS: perfData.domainLookupEnd - perfData.domainLookupStart,
+                            TCP: perfData.connectEnd - perfData.connectStart,
+                            Request: perfData.responseStart - perfData.requestStart,
+                            Response: perfData.responseEnd - perfData.responseStart,
+                            DOM: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart
+                        });
+                    }
+                });
+
+                // Monitor scroll performance
+                let isScrolling = false;
+                window.addEventListener('scroll', () => {
+                    if (!isScrolling) {
+                        requestAnimationFrame(() => {
+                            isScrolling = false;
+                        });
+                        isScrolling = true;
+                    }
+                });
+            }
+        }
+
+        // SEO and Analytics helpers
+        class SEOOptimizer {
+            constructor() {
+                this.optimizeImages();
+                this.setupStructuredData();
+            }
+
+            optimizeImages() {
+                // Lazy load images if any are added
+                const images = document.querySelectorAll('img[data-src]');
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+
+                images.forEach(img => imageObserver.observe(img));
+            }
+
+            setupStructuredData() {
+                const structuredData = {
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "DataOrbit LLC",
+                    "description": "Technology solutions and innovation company specializing in ERP optimization, custom development, and IoT integration.",
+                    "url": "https://dataorbitllc.com",
+                    "logo": "https://dataorbitllc.com/logo.png",
+                    "sameAs": [
+                        "https://linkedin.com/company/dataorbit",
+                        "https://github.com/dataorbit"
+                    ],
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "telephone": "+1-XXX-XXX-XXXX",
+                        "contactType": "customer service",
+                        "email": "info@dataorbitllc.com"
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressCountry": "US"
+                    },
+                    "foundingDate": "2024",
+                    "numberOfEmployees": "10-50",
+                    "industry": "Technology Services"
+                };
+
+                const script = document.createElement('script');
+                script.type = 'application/ld+json';
+                script.textContent = JSON.stringify(structuredData);
+                document.head.appendChild(script);
+            }
+        }
+
+        // Accessibility enhancements
+        class AccessibilityEnhancer {
+            constructor() {
+                this.setupKeyboardNavigation();
+                this.setupFocusManagement();
+                this.setupARIALabels();
+            }
+
+            setupKeyboardNavigation() {
+                // Escape key to close modal
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        const modal = document.getElementById('planetModal');
+                        if (modal && modal.classList.contains('active')) {
+                            modal.classList.remove('active');
+                        }
+                    }
+                });
+
+                // Tab navigation for planets
+                const planets = document.querySelectorAll('.planet');
+                planets.forEach(planet => {
+                    planet.setAttribute('tabindex', '0');
+                    planet.setAttribute('role', 'button');
+                    
+                    planet.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            planet.click();
+                        }
+                    });
+                });
+            }
+
+            setupFocusManagement() {
+                // Focus management for modal
+                const modal = document.getElementById('planetModal');
+                const modalClose = document.getElementById('modalClose');
+
+                if (modal && modalClose) {
+                    modal.addEventListener('transitionend', () => {
+                        if (modal.classList.contains('active')) {
+                            modalClose.focus();
+                        }
+                    });
+                }
+            }
+
+            setupARIALabels() {
+                // Add ARIA labels to interactive elements
+                const planets = document.querySelectorAll('.planet');
+                planets.forEach((planet, index) => {
+                    const services = ['Orbit Incubator', 'ERP Solutions', 'Innovation Orbit'];
+                    planet.setAttribute('aria-label', `Learn more about ${services[index]}`);
+                });
+
+                // Form accessibility
+                const form = document.getElementById('contactForm');
+                const requiredFields = form.querySelectorAll('[required]');
+                requiredFields.forEach(field => {
+                    field.setAttribute('aria-required', 'true');
+                });
+            }
+        }
+
+        // Optimized mobile performance
+        class MobileOptimizer {
+            constructor() {
+                this.setupTouchHandlers();
+                this.optimizeForMobile();
+            }
+
+            setupTouchHandlers() {
+                const planets = document.querySelectorAll('.planet');
+                planets.forEach(planet => {
+                    planet.addEventListener('touchstart', this.handleTouchStart, { passive: true });
+                    planet.addEventListener('touchend', this.handleTouchEnd, { passive: true });
+                });
+            }
+
+            handleTouchStart(e) {
+                this.touchStartTime = Date.now();
+            }
+
+            handleTouchEnd(e) {
+                const touchDuration = Date.now() - this.touchStartTime;
+                if (touchDuration < 300) {
+                    e.preventDefault();
+                    this.click();
+                }
+            }
+
+            optimizeForMobile() {
+                if (window.innerWidth <= 768) {
+                    document.body.classList.add('mobile');
+                    
+                    // Disable complex animations on mobile
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        @media (max-width: 768px) {
+                            .planet { animation: none !important; }
+                            .central-hub { animation: none !important; }
+                            .shooting-star { display: none !important; }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }
+        }
+
+        // Initialize all classes when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            new MobileDataOrbitExperience();
-            new MobilePerformanceMonitor();
+            new DataOrbitWebsite();
+            new AnimationObserver();
+            new PerformanceMonitor();
+            new SEOOptimizer();
+            new AccessibilityEnhancer();
+            new MobileOptimizer();
+            
+            // Initialize hidden layer functionality directly
+            initializeHiddenLayer();
         });
 
-        // Error handling
+        // Hidden layer functionality
+        function initializeHiddenLayer() {
+            const toggle = document.getElementById('hiddenLayerToggle');
+            const layer = document.getElementById('hiddenLayer');
+            const close = document.getElementById('hiddenLayerClose');
+
+            if (toggle && layer && close) {
+                console.log('Hidden layer elements found, setting up listeners...');
+                
+                toggle.addEventListener('click', () => {
+                    console.log('Toggle clicked!');
+                    showHiddenLayer();
+                });
+
+                close.addEventListener('click', () => {
+                    console.log('Close clicked!');
+                    hideHiddenLayer();
+                });
+
+                // Close on escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && layer.classList.contains('active')) {
+                        hideHiddenLayer();
+                    }
+                });
+
+                // Close on overlay click
+                layer.addEventListener('click', (e) => {
+                    if (e.target === layer) {
+                        hideHiddenLayer();
+                    }
+                });
+            } else {
+                console.log('Hidden layer elements not found:', { toggle, layer, close });
+            }
+        }
+
+        function showHiddenLayer() {
+            const toggle = document.getElementById('hiddenLayerToggle');
+            const layer = document.getElementById('hiddenLayer');
+            
+            console.log('Showing hidden layer...');
+            toggle.classList.add('active');
+            layer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Track the reveal
+            if (typeof trackEvent === 'function') {
+                trackEvent('hidden_layer_revealed', 'engagement', 'curiosity');
+            }
+        }
+
+        function hideHiddenLayer() {
+            const toggle = document.getElementById('hiddenLayerToggle');
+            const layer = document.getElementById('hiddenLayer');
+            
+            console.log('Hiding hidden layer...');
+            toggle.classList.remove('active');
+            layer.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Service Worker for offline functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Analytics tracking (placeholder)
+        function trackEvent(action, category, label) {
+            // Google Analytics or other tracking service
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    event_category: category,
+                    event_label: label
+                });
+            }
+        }
+
+        // Track planet interactions
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('planet')) {
+                const service = e.target.getAttribute('data-service');
+                trackEvent('planet_click', 'engagement', service);
+            }
+        });
+
+        // Track form submissions
+        document.getElementById('contactForm').addEventListener('submit', () => {
+            trackEvent('form_submit', 'conversion', 'contact_form');
+        });
+
+        // Error handling and logging
         window.addEventListener('error', (e) => {
-            console.error('Mobile Experience Error:', e);
+            console.error('JavaScript Error:', {
+                message: e.message,
+                filename: e.filename,
+                lineno: e.lineno,
+                colno: e.colno,
+                error: e.error
+            });
+            
+            // Send error to logging service if available
+            if (typeof logError === 'function') {
+                logError(e);
+            }
+        });
+
+        // Performance optimization: Preload critical resources
+        const preloadLinks = [
+            { href: 'https://fonts.googleapis.com', rel: 'preconnect' },
+            { href: 'https://fonts.gstatic.com', rel: 'preconnect', crossorigin: '' }
+        ];
+
+        preloadLinks.forEach(link => {
+            const linkElement = document.createElement('link');
+            Object.keys(link).forEach(attr => {
+                linkElement.setAttribute(attr, link[attr]);
+            });
+            document.head.appendChild(linkElement);
         });
 
         // Console welcome message
         console.log(`
-        🌌 Welcome to DataOrbit Mobile Experience
-        ========================================
-        🚀 Touch the stars to create ripples
-        ⭐ Interact with planets for haptic feedback  
-        🌟 Swipe to explore the cosmic interface
-        📱 Optimized for mobile touch interactions
-        🔮 Find the hidden layer for our true mission
+        🌌 Welcome to the DataOrbit Universe
+        ===================================
+        Explore our cosmic ecosystem of technology solutions
+        🚀 Orbit Incubator - Development Planet
+        🔧 ERP Solutions - Manufacturing Planet  
+        💡 Innovation Orbit - Future Technology Planet
         
         Contact: info@dataorbitllc.com
+        Navigate the cosmos at: dataorbitllc.com
         `);
     </script>
 </body>
